@@ -113,7 +113,7 @@ def Recommend():
 if __name__ == '__main__':
     # serve(app, host="0.0.0.0", port=5000)
     # app.run(debug=True) # host = 127.0.0.1 port = 5000
-    app.run(host='127.0.0.1', port='5000', debug=True)
+    app.run(host='0.0.0.0', port='80', debug=True)
 # debug=True이므로 코드 수정 중에도 알아서 다시 시작해줌
 
 
