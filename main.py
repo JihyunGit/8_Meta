@@ -4,6 +4,7 @@ from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 
 
+print(pymongo.__version__)
 # DB 불러오기
 client = pymongo.MongoClient("mongodb+srv://metaverse123:hongil123@accidentlyunity.ts7ta4j.mongodb.net/?retryWrites=true&w=majority", server_api=ServerApi('1'))
 db = client.test
@@ -113,7 +114,7 @@ def Recommend():
 if __name__ == '__main__':
     # serve(app, host="0.0.0.0", port=5000)
     # app.run(debug=True) # host = 127.0.0.1 port = 5000
-    app.run(host='0.0.0.0', port='80', debug=True)
+    app.run(host='0.0.0.0', port='5080', debug=True)
 # debug=True이므로 코드 수정 중에도 알아서 다시 시작해줌
 
 
