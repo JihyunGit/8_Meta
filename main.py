@@ -102,7 +102,7 @@ def Save():
     print(deviceId)
     print(map)
 
-    ##memberDB.update({'DeviceId':deviceId},{'DeviceId':deviceId,'Map':map},upsert=True)
+    memberDB.update({'DeviceId':deviceId},{'DeviceId':deviceId,'Map':map},upsert=True)
 
     return MakeResultJson(True)
 
