@@ -1,0 +1,29 @@
+[
+	{
+		"Category": "CHAIR",
+		"Color": "Red",
+		"Title": "보조의자 간이 플라스틱 의자 행사 보조",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=11433093069",
+		"Image": "https://shopping-phinf.pstatic.net/main_1143309/11433093069.12.jpg",
+		"Brand": "",
+		"Price": "2700"
+	},
+	{
+		"Category": "CHAIR",
+		"Color": "Red",
+		"Title": "제닉스 NEW ARENA-X ZERO AIR ",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=25010901525",
+		"Image": "https://shopping-phinf.pstatic.net/main_2501090/25010901525.20201127174527.jpg",
+		"Brand": "제닉스",
+		"Price": "149000"
+	},
+	{
+		"Category": "CHAIR",
+		"Color": "Red",
+		"Title": "제닉스 ARENA TYPE-1 ",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=23386914490",
+		"Image": "https://shopping-phinf.pstatic.net/main_2338691/23386914490.20200708112601.jpg",
+		"Brand": "제닉스",
+		"Price": "158170"
+	}
+]

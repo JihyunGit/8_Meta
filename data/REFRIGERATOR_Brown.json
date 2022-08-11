@@ -1,0 +1,29 @@
+[
+	{
+		"Category": "REFRIGERATOR",
+		"Color": "Brown",
+		"Title": "캐리어",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=31306431818",
+		"Image": "https://shopping-phinf.pstatic.net/main_3130643/31306431818.jpg",
+		"Brand": "",
+		"Price": "180960"
+	},
+	{
+		"Category": "REFRIGERATOR",
+		"Color": "Brown",
+		"Title": "Meiling 테디베어 초미니 ",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=33847402804",
+		"Image": "https://shopping-phinf.pstatic.net/main_3384740/33847402804.jpg",
+		"Brand": "",
+		"Price": "75700"
+	},
+	{
+		"Category": "REFRIGERATOR",
+		"Color": "Brown",
+		"Title": "Meiling 테디베어 초미니 ",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=33847361338",
+		"Image": "https://shopping-phinf.pstatic.net/main_3384736/33847361338.jpg",
+		"Brand": "",
+		"Price": "75700"
+	}
+]

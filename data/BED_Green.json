@@ -1,0 +1,29 @@
+[
+	{
+		"Category": "BED",
+		"Color": "Green",
+		"Title": "여름",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=33673902707",
+		"Image": "https://shopping-phinf.pstatic.net/main_3367390/33673902707.20220725063706.jpg",
+		"Brand": "",
+		"Price": "101490"
+	},
+	{
+		"Category": "BED",
+		"Color": "Green",
+		"Title": "하마잡화점 곰돌이",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=83625493785",
+		"Image": "https://shopping-phinf.pstatic.net/main_8362549/83625493785.jpg",
+		"Brand": "",
+		"Price": "74900"
+	},
+	{
+		"Category": "BED",
+		"Color": "Green",
+		"Title": "여름",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=33656947911",
+		"Image": "https://shopping-phinf.pstatic.net/main_3365694/33656947911.jpg",
+		"Brand": "",
+		"Price": "89320"
+	}
+]

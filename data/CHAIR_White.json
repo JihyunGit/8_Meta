@@ -1,0 +1,29 @@
+[
+	{
+		"Category": "CHAIR",
+		"Color": "White",
+		"Title": "안다시트 비앙코 화이트 게이밍",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=83265712429",
+		"Image": "https://shopping-phinf.pstatic.net/main_8326571/83265712429.jpg",
+		"Brand": "안다시트",
+		"Price": "298000"
+	},
+	{
+		"Category": "CHAIR",
+		"Color": "White",
+		"Title": "마지스퍼피 달마시안 볼드체어 라지 강아지",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=33673178510",
+		"Image": "https://shopping-phinf.pstatic.net/main_3367317/33673178510.20220725054222.jpg",
+		"Brand": "",
+		"Price": "177610"
+	},
+	{
+		"Category": "CHAIR",
+		"Color": "White",
+		"Title": "마지스퍼피 달마시안 볼드체어 라지 강아지",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=33674943026",
+		"Image": "https://shopping-phinf.pstatic.net/main_3367494/33674943026.20220725083122.jpg",
+		"Brand": "",
+		"Price": "185680"
+	}
+]

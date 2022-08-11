@@ -1,0 +1,29 @@
+[
+	{
+		"Category": "CHAIR",
+		"Color": "Green",
+		"Title": "파리 카페 ",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=29287823990",
+		"Image": "https://shopping-phinf.pstatic.net/main_2928782/29287823990.20211019013336.jpg",
+		"Brand": "",
+		"Price": "85560"
+	},
+	{
+		"Category": "CHAIR",
+		"Color": "Green",
+		"Title": "레트로 그린 카페 의자 인테리어 ",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=32509053306",
+		"Image": "https://shopping-phinf.pstatic.net/main_3250905/32509053306.20220521182849.jpg",
+		"Brand": "",
+		"Price": "87200"
+	},
+	{
+		"Category": "CHAIR",
+		"Color": "Green",
+		"Title": "3컬러 벨벳 체어 식탁 카페 인테리어 의자 ",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=33982259892",
+		"Image": "https://shopping-phinf.pstatic.net/main_3398225/33982259892.20220810161159.jpg",
+		"Brand": "",
+		"Price": "111260"
+	}
+]

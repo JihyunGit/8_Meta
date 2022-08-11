@@ -1,0 +1,29 @@
+[
+	{
+		"Category": "REFRIGERATOR",
+		"Color": "Red",
+		"Title": "씨엔컴퍼니 쿠잉 REF-C153",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=27014253522",
+		"Image": "https://shopping-phinf.pstatic.net/main_2701425/27014253522.20220314154639.jpg",
+		"Brand": "쿠잉",
+		"Price": "369000"
+	},
+	{
+		"Category": "REFRIGERATOR",
+		"Color": "Red",
+		"Title": "코스텔 레트로 ",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=10705857106",
+		"Image": "https://shopping-phinf.pstatic.net/main_1070585/10705857106.20220722161116.jpg",
+		"Brand": "코스텔",
+		"Price": "399000"
+	},
+	{
+		"Category": "REFRIGERATOR",
+		"Color": "Red",
+		"Title": "씨엔컴퍼니 쿠잉 REF-D121R",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=17702246793",
+		"Image": "https://shopping-phinf.pstatic.net/main_1770224/17702246793.20200907174408.jpg",
+		"Brand": "쿠잉",
+		"Price": "299000"
+	}
+]

@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, jsonify
 import pymongo
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
+from apscheduler.schedulers.background import BackgroundScheduler    # apscheduler 라이브러리 선언
 
 
 print(pymongo.__version__)
@@ -50,6 +51,7 @@ def login():
 
     result = memberDB.find_one({'DeviceId':deviceId})
     print(result)
+    print(result['Map'])
 
     # 신규회원의 경우
     if result == None:

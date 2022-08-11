@@ -1,0 +1,29 @@
+[
+	{
+		"Category": "REFRIGERATOR",
+		"Color": "Yellow",
+		"Title": "씨엔컴퍼니 쿠잉 REF-S92Y",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=31056900618",
+		"Image": "https://shopping-phinf.pstatic.net/main_3105690/31056900618.20220707150753.jpg",
+		"Brand": "쿠잉",
+		"Price": "219000"
+	},
+	{
+		"Category": "REFRIGERATOR",
+		"Color": "Yellow",
+		"Title": "라인프렌즈 꼬모 샐리 (C031CU)",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=26333995522",
+		"Image": "https://shopping-phinf.pstatic.net/main_2633399/26333995522.20210312104102.jpg",
+		"Brand": "꼬모",
+		"Price": "350000"
+	},
+	{
+		"Category": "REFRIGERATOR",
+		"Color": "Yellow",
+		"Title": "윈텍 윈세프 WC-32C",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=30014579618",
+		"Image": "https://shopping-phinf.pstatic.net/main_3001457/30014579618.20211209122128.jpg",
+		"Brand": "윈세프",
+		"Price": "539000"
+	}
+]
