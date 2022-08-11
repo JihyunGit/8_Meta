@@ -1,6 +1,6 @@
 [
 	{
-		"Category": "REFRIGERATOR",
+		"Category": "Refrigerator",
 		"Color": "Red",
 		"Title": "씨엔컴퍼니 쿠잉 REF-C",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=27014253522",
@@ -9,7 +9,7 @@
 		"Price": "369000"
 	},
 	{
-		"Category": "REFRIGERATOR",
+		"Category": "Refrigerator",
 		"Color": "Red",
 		"Title": "코스텔 레트로 냉장고 CRS-G L",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=10705857106",
@@ -18,16 +18,7 @@
 		"Price": "399000"
 	},
 	{
-		"Category": "REFRIGERATOR",
-		"Color": "Red",
-		"Title": "씨엔컴퍼니 쿠잉 REF-DR",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=17702246793",
-		"Image": "https://shopping-phinf.pstatic.net/main_1770224/17702246793.20200907174408.jpg",
-		"Brand": "쿠잉",
-		"Price": "299000"
-	},
-	{
-		"Category": "REFRIGERATOR",
+		"Category": "Refrigerator",
 		"Color": "Red",
 		"Title": "씨엔컴퍼니 쿠잉 REF-SR",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=17702153053",
@@ -36,7 +27,16 @@
 		"Price": "209000"
 	},
 	{
-		"Category": "REFRIGERATOR",
+		"Category": "Refrigerator",
+		"Color": "Red",
+		"Title": "씨엔컴퍼니 쿠잉 REF-DR",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=17702246793",
+		"Image": "https://shopping-phinf.pstatic.net/main_1770224/17702246793.20200907174408.jpg",
+		"Brand": "쿠잉",
+		"Price": "299000"
+	},
+	{
+		"Category": "Refrigerator",
 		"Color": "Red",
 		"Title": "서울전자 BELLE RCACM",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=13879166210",
@@ -45,7 +45,7 @@
 		"Price": "507990"
 	},
 	{
-		"Category": "REFRIGERATOR",
+		"Category": "Refrigerator",
 		"Color": "Red",
 		"Title": "코스텔 냉장고 렌탈 미니 일반 L 술 장고약정 개월등록비 면제",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=31806644516",

@@ -2,14 +2,14 @@ import requests
 import json
 import re
 
-item_dict = {'CHAIR': '의자', 'SOFA': '소파', 'BED': '이불', 'REFRIGERATOR':'냉장고'}
+item_dict = {'Chair': '의자', 'Sofa': '소파', 'Bed': '이불', 'Refrigerator': '냉장고'}
 color_dict = {'Yellow': '노란색', 'Blue': '파란색', 'Green':'초록색', 'White':'흰색', 'Red':'빨간색', 'Brown':'갈색'}
 
 def item_info(item_name, color_type):
     client_id = 'bdpWYU7e70Thq9gFsYAU'
     client_secret = '9JU2hmkHTD'
 
-    item_dict = {'CHAIR': '의자', 'SOFA': '소파', 'BED': '이불', 'REFRIGERATOR':'냉장고'}
+    item_dict = {'Chair': '의자', 'Sofa': '소파', 'Bed': '이불', 'Refrigerator': '냉장고'}
     color_dict = {'Yellow': '노란색', 'Blue': '파란색', 'Green':'초록색', 'White':'흰색', 'Red':'빨간색', 'Brown':'갈색'}
     item_color = f"{item_dict[item_name]} {color_dict[color_type]}"
     name = item_name +'_'+ color_type
@@ -45,7 +45,7 @@ def item_info(item_name, color_type):
 #         item_info(i,j)
 
 def makeJsonItem():
-    item_dict = {'CHAIR': '의자', 'SOFA': '소파', 'BED': '이불', 'REFRIGERATOR': '냉장고'}
+    item_dict = {'Chair': '의자', 'Sofa': '소파', 'Bed': '이불', 'Refrigerator': '냉장고'}
     color_dict = {'Yellow': '노란색', 'Blue': '파란색', 'Green': '초록색', 'White': '흰색', 'Red': '빨간색', 'Brown': '갈색'}
     for i in item_dict.keys():
         for j in color_dict.keys():

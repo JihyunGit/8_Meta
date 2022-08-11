@@ -8,6 +8,7 @@ import time
 import json
 import pymongo
 import glob
+from bson.json_util import dumps
 
 
 # DB 불러오기
@@ -112,32 +113,41 @@ def Recommend():
 
     json_data = request.get_json()
     RecommendRequestData = json_data['RecommendRequestData']
-    Index = RecommendRequestData['Index']
+    #Index = RecommendRequestData['Index']
     FurnitureType = RecommendRequestData['FurnitureType']
     ColorType = RecommendRequestData['ColorType']
 
-    """
-    DB 혹은 CSV 파일에서 찾는 로직
-    """
+    # 테이블에서 검색해서 결과 가져오기
+    product_list = list(productDB.find({'Category':FurnitureType, 'Color':ColorType}))
 
-    """
-    일단은 가데이터
-    """
+    result_bool = False
 
-    RecommendResponseDataList = []
-    RecommendResponseDataList.append(MakeRecommendResponseDataJson("https://img.freepik.com/free-photo/white-wall-living-room-have-sofa-and-decoration-3d-rendering_41470-3282.jpg", "쇼파1", "https://www.naver.com"))
-    RecommendResponseDataList.append(MakeRecommendResponseDataJson("https://img.freepik.com/free-photo/white-wall-living-room-have-sofa-and-decoration-3d-rendering_41470-3282.jpg", "쇼파2", "https://www.naver.com"))
-    RecommendResponseDataList.append(MakeRecommendResponseDataJson("https://img.freepik.com/free-photo/white-wall-living-room-have-sofa-and-decoration-3d-rendering_41470-3282.jpg", "쇼파3", "https://www.naver.com"))
+    # DB에 결과 있으면
+    if len(product_list) > 0:
+        result_bool = True
 
-    dic = {
-        "Result": True,
-        "Data": RecommendResponseDataList
-    }
+    # 결과값과 데이터
+    data_list = {"Result":result_bool,"Data":product_list}
 
-    print(Index, FurnitureType, ColorType)
+    # bson -> json 형태로
+    result = dumps(data_list, ensure_ascii=False)
 
-    return jsonify(dic)
+    return result
 
+    #
+    # RecommendResponseDataList = []
+    # RecommendResponseDataList.append(MakeRecommendResponseDataJson("https://img.freepik.com/free-photo/white-wall-living-room-have-sofa-and-decoration-3d-rendering_41470-3282.jpg", "쇼파1", "https://www.naver.com"))
+    # RecommendResponseDataList.append(MakeRecommendResponseDataJson("https://img.freepik.com/free-photo/white-wall-living-room-have-sofa-and-decoration-3d-rendering_41470-3282.jpg", "쇼파2", "https://www.naver.com"))
+    # RecommendResponseDataList.append(MakeRecommendResponseDataJson("https://img.freepik.com/free-photo/white-wall-living-room-have-sofa-and-decoration-3d-rendering_41470-3282.jpg", "쇼파3", "https://www.naver.com"))
+    #
+    # dic = {
+    #     "Result": True,
+    #     "Data": RecommendResponseDataList
+    # }
+    #
+    # print(Index, FurnitureType, ColorType)
+    #
+    # return jsonify(dic)
 
 
 
