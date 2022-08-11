@@ -99,7 +99,10 @@ def Save():
     deviceId = json_data['DeviceId']
     map = json_data['Map']
 
-    memberDB.update({'DeviceId':deviceId},{'DeviceId':deviceId,'Map':map},upsert=True)
+    print(deviceId)
+    print(map)
+
+    ##memberDB.update({'DeviceId':deviceId},{'DeviceId':deviceId,'Map':map},upsert=True)
 
     return MakeResultJson(True)
 
