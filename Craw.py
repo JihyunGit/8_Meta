@@ -1,5 +1,6 @@
 import requests
 import json
+import re
 
 item_dict = {'CHAIR': '의자', 'SOFA': '소파', 'BED': '이불', 'REFRIGERATOR':'냉장고'}
 color_dict = {'Yellow': '노란색', 'Blue': '파란색', 'Green':'초록색', 'White':'흰색', 'Red':'빨간색', 'Brown':'갈색'}
@@ -24,13 +25,13 @@ def item_info(item_name, color_type):
             item_tmp = {}
             item_tmp['Category'] = item_name
             item_tmp['Color'] = color_type
-            item_tmp['Title'] = item['title'].split('<')[0]
+            item_tmp['Title'] = re.sub(r'[0-9|<|>|b|\/]+', '', item['title'])
             item_tmp['Link'] = item['link']
             item_tmp['Image'] = item['image']
             item_tmp['Brand'] = item['brand']
             item_tmp['Price'] = item['lprice']
             item_information.append(item_tmp)
-            if index >= 2:
+            if index >= 5:
                 break
     else:
         print ("Error Code:", res.status_code)
@@ -39,7 +40,13 @@ def item_info(item_name, color_type):
     with open('.\\data\\{}.json'.format(name), 'w', encoding='utf-8') as file:
         json.dump(item_information, file, ensure_ascii=False, indent='\t')
 
-for i in item_dict.keys():
-    for j in color_dict.keys():
-        item_info(i,j)
+# for i in item_dict.keys():
+#     for j in color_dict.keys():
+#         item_info(i,j)
 
+def makeJsonItem():
+    item_dict = {'CHAIR': '의자', 'SOFA': '소파', 'BED': '이불', 'REFRIGERATOR': '냉장고'}
+    color_dict = {'Yellow': '노란색', 'Blue': '파란색', 'Green': '초록색', 'White': '흰색', 'Red': '빨간색', 'Brown': '갈색'}
+    for i in item_dict.keys():
+        for j in color_dict.keys():
+            item_info(i, j)

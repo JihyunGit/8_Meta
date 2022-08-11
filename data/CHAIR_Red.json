@@ -2,7 +2,7 @@
 	{
 		"Category": "CHAIR",
 		"Color": "Red",
-		"Title": "보조의자 간이 플라스틱 의자 행사 보조",
+		"Title": "보조의자 간이 플라스틱 의자 행사 보조의자 레드 그레이 블루",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=11433093069",
 		"Image": "https://shopping-phinf.pstatic.net/main_1143309/11433093069.12.jpg",
 		"Brand": "",
@@ -11,7 +11,7 @@
 	{
 		"Category": "CHAIR",
 		"Color": "Red",
-		"Title": "제닉스 NEW ARENA-X ZERO AIR ",
+		"Title": "제닉스 NEW ARENA-X ZERO AIR RED CHAIR 게임용 게이밍 의자",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=25010901525",
 		"Image": "https://shopping-phinf.pstatic.net/main_2501090/25010901525.20201127174527.jpg",
 		"Brand": "제닉스",
@@ -20,10 +20,37 @@
 	{
 		"Category": "CHAIR",
 		"Color": "Red",
-		"Title": "제닉스 ARENA TYPE-1 ",
+		"Title": "제닉스 ARENA TYPE- Chair RED Edition 게이밍 컴퓨터 의자",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=23386914490",
 		"Image": "https://shopping-phinf.pstatic.net/main_2338691/23386914490.20200708112601.jpg",
 		"Brand": "제닉스",
 		"Price": "158170"
+	},
+	{
+		"Category": "CHAIR",
+		"Color": "Red",
+		"Title": "스파크의자 까페의자 레드의자",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=30260313175",
+		"Image": "https://shopping-phinf.pstatic.net/main_3026031/30260313175.20211222235141.jpg",
+		"Brand": "",
+		"Price": "31380"
+	},
+	{
+		"Category": "CHAIR",
+		"Color": "Red",
+		"Title": "홈카페 GMEN-내추럴 특이한 암체어 레드 카페",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=33703064447",
+		"Image": "https://shopping-phinf.pstatic.net/main_3370306/33703064447.jpg",
+		"Brand": "",
+		"Price": "330000"
+	},
+	{
+		"Category": "CHAIR",
+		"Color": "Red",
+		"Title": "매장용 인테리어용 KI 드럼체어레드 디자인",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=29019313060",
+		"Image": "https://shopping-phinf.pstatic.net/main_2901931/29019313060.20220131004939.jpg",
+		"Brand": "",
+		"Price": "24200"
 	}
 ]

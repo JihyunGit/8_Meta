@@ -2,7 +2,7 @@
 	{
 		"Category": "SOFA",
 		"Color": "White",
-		"Title": "레이지 ",
+		"Title": "레이지 소파 흰색 벨벳 싱글 소파 올리브그린",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=84137677192",
 		"Image": "https://shopping-phinf.pstatic.net/main_8413767/84137677192.jpg",
 		"Brand": "",
@@ -11,7 +11,7 @@
 	{
 		"Category": "SOFA",
 		"Color": "White",
-		"Title": "귀여운 1인쇼파 파스텔 체어 패브릭 ",
+		"Title": "귀여운 인쇼파 파스텔 체어 패브릭 소파  흰색 소파 의자",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=33999924824",
 		"Image": "https://shopping-phinf.pstatic.net/main_3399992/33999924824.jpg",
 		"Brand": "",
@@ -20,10 +20,37 @@
 	{
 		"Category": "SOFA",
 		"Color": "White",
-		"Title": "1인용쇼파 1인 미니 소형 원룸 패브릭 소파 ",
+		"Title": "인용쇼파 인 미니 소형 원룸 패브릭 소파 쇼파 흰색",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=31649915217",
 		"Image": "https://shopping-phinf.pstatic.net/main_3164991/31649915217.jpg",
 		"Brand": "",
 		"Price": "278090"
+	},
+	{
+		"Category": "SOFA",
+		"Color": "White",
+		"Title": "인용쇼파 인 미니 소형 원룸 패브릭 소파 쇼파 흰색",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=31633178771",
+		"Image": "https://shopping-phinf.pstatic.net/main_3163317/31633178771.jpg",
+		"Brand": "",
+		"Price": "323350"
+	},
+	{
+		"Category": "SOFA",
+		"Color": "White",
+		"Title": "인용쇼파 인 미니 소형 원룸 패브릭 소파 쇼파 흰색",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=84052715686",
+		"Image": "https://shopping-phinf.pstatic.net/main_8405271/84052715686.jpg",
+		"Brand": "",
+		"Price": "323350"
+	},
+	{
+		"Category": "SOFA",
+		"Color": "White",
+		"Title": "북유럽 소파 흰색 화이트 카페 호텔 고급 갬성",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=84048629641",
+		"Image": "https://shopping-phinf.pstatic.net/main_8404862/84048629641.jpg",
+		"Brand": "",
+		"Price": "244600"
 	}
 ]

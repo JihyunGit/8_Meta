@@ -2,7 +2,7 @@
 	{
 		"Category": "SOFA",
 		"Color": "Yellow",
-		"Title": "우아미 루앙 3인용 ",
+		"Title": "우아미 루앙 인용 소파",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=25746649526",
 		"Image": "https://shopping-phinf.pstatic.net/main_2574664/25746649526.20220318161208.jpg",
 		"Brand": "우아미",
@@ -11,7 +11,7 @@
 	{
 		"Category": "SOFA",
 		"Color": "Yellow",
-		"Title": "더리체 멜로디 6인용 등받이 모듈",
+		"Title": "더리체 멜로디 인용 등받이 모듈소파",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=21629141734",
 		"Image": "https://shopping-phinf.pstatic.net/main_2162914/21629141734.20191230142530.jpg",
 		"Brand": "더리체",
@@ -20,10 +20,37 @@
 	{
 		"Category": "SOFA",
 		"Color": "Yellow",
-		"Title": "폴로까사 로한 4인용 아쿠아텍스 스웨이드 패브릭",
+		"Title": "폴로까사 로한 인용 아쿠아텍스 스웨이드 패브릭소파",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=18029130472",
 		"Image": "https://shopping-phinf.pstatic.net/main_1802913/18029130472.20220629162948.jpg",
 		"Brand": "폴로까사",
 		"Price": "479000"
+	},
+	{
+		"Category": "SOFA",
+		"Color": "Yellow",
+		"Title": "폴로까사 플란 인용 아쿠아텍스 스웨이드 코너형 패브릭 소파",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=27423203524",
+		"Image": "https://shopping-phinf.pstatic.net/main_2742320/27423203524.20211022152029.jpg",
+		"Brand": "폴로까사",
+		"Price": "697000"
+	},
+	{
+		"Category": "SOFA",
+		"Color": "Yellow",
+		"Title": "리벨로 인 이지클린 사하라 원단 카우치 소파",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=22696377495",
+		"Image": "https://shopping-phinf.pstatic.net/main_2269637/22696377495.20200429164508.jpg",
+		"Brand": "",
+		"Price": "957000"
+	},
+	{
+		"Category": "SOFA",
+		"Color": "Yellow",
+		"Title": "장인가구 칸타타 아쿠아텍스 패브릭 인 인용 쇼파",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=82906643878",
+		"Image": "https://shopping-phinf.pstatic.net/main_8290664/82906643878.jpg",
+		"Brand": "장인가구",
+		"Price": "269000"
 	}
 ]

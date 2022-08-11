@@ -2,16 +2,7 @@
 	{
 		"Category": "SOFA",
 		"Color": "Green",
-		"Title": "캐릭터 쇼파 인용",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=33848966197",
-		"Image": "https://shopping-phinf.pstatic.net/main_3384896/33848966197.jpg",
-		"Brand": "",
-		"Price": "23910"
-	},
-	{
-		"Category": "SOFA",
-		"Color": "Green",
-		"Title": "현대 디자인 거실 ",
+		"Title": "현대 디자인 거실 소파 녹색 벨벳 패브릭 소파, 단면",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=32712042795",
 		"Image": "https://shopping-phinf.pstatic.net/main_3271204/32712042795.jpg",
 		"Brand": "",
@@ -20,10 +11,46 @@
 	{
 		"Category": "SOFA",
 		"Color": "Green",
-		"Title": "[현대 디자인 거실 ",
+		"Title": "[현대 디자인 거실 소파 녹색 벨벳 패브릭 소파, 단면]",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=31782360766",
 		"Image": "https://shopping-phinf.pstatic.net/main_3178236/31782360766.jpg",
 		"Brand": "",
 		"Price": "2878200"
+	},
+	{
+		"Category": "SOFA",
+		"Color": "Green",
+		"Title": "인 의자 바나나 흔들 패브릭 소파  녹색 가죽",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=33023011371",
+		"Image": "https://shopping-phinf.pstatic.net/main_3302301/33023011371.jpg",
+		"Brand": "",
+		"Price": "130190"
+	},
+	{
+		"Category": "SOFA",
+		"Color": "Green",
+		"Title": "북유럽 스타일 미니 페브릭 가정용 쇼파  초록색 + 인석",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=31616962234",
+		"Image": "https://shopping-phinf.pstatic.net/main_3161696/31616962234.jpg",
+		"Brand": "",
+		"Price": "173800"
+	},
+	{
+		"Category": "SOFA",
+		"Color": "Green",
+		"Title": "예쁜 디자인 원룸 인테리어 쇼파 일인용 인용 소파  초록체크",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=29196340537",
+		"Image": "https://shopping-phinf.pstatic.net/main_2919634/29196340537.2.jpg",
+		"Brand": "",
+		"Price": "214400"
+	},
+	{
+		"Category": "SOFA",
+		"Color": "Green",
+		"Title": "북유럽 빈티지 독특한 싱글 인용 패브릭 쇼파  녹색 질경이",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=26341437568",
+		"Image": "https://shopping-phinf.pstatic.net/main_2634143/26341437568.30.jpg",
+		"Brand": "",
+		"Price": "153680"
 	}
 ]

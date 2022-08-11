@@ -3,16 +3,21 @@ import pymongo
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 from apscheduler.schedulers.background import BackgroundScheduler    # apscheduler 라이브러리 선언
+import Craw
+import time
+import json
+import pymongo
+import glob
 
 
-print(pymongo.__version__)
 # DB 불러오기
 client = pymongo.MongoClient("mongodb+srv://metaverse123:hongil123@accidentlyunity.ts7ta4j.mongodb.net/?retryWrites=true&w=majority", server_api=ServerApi('1'))
 db = client.test
 # memberDB 없으면 생성하고 있으면 불러옴, 그냥 table임
 memberDB = db.members
+productDB = db.product
 print("DB 연동 완료")
-
+sched_num = 0
 
 # 맵있는지 결과 bool값과, 맵 정보 json 형식으로 보내기
 def MakeResultJson(result, data=None):
@@ -32,7 +37,27 @@ def MakeRecommendResponseDataJson(imageUrl, name, link):
 
     return dic
 
+# Json To DB
+def FromJsonToDB():
+    # json 파일 만들고
+    print('몇번실행인지')
+    Craw.makeJsonItem()
+
+    # json -> DB
+    file_list = glob.glob('./data/*.json')
+    print(len(file_list))
+
+    for file_name in file_list:
+        with open(file_name, "r", encoding='UTF-8') as json_file:
+            json_data = json.load(json_file)
+
+            for i in range(len(json_data)):
+                json_dict = json_data[i]
+                result = productDB.update({'Link': json_dict['Link']}, json_dict, upsert=True)
+                print(result)
+
 app = Flask(__name__)
+
 
 @app.route('/')
 def index():
@@ -113,10 +138,25 @@ def Recommend():
 
     return jsonify(dic)
 
+
+
+
+# 스케쥴 설정
+sched = BackgroundScheduler(daemon=True)
+# sched_result = sched.add_job(Craw.makeJsonItem, 'cron', week='1-4', day_of_week='0-6', minute='2', 'interval')
+sched.start()
+# sched.add_job(job, 'interval', seconds=3, id="test_2")
+
+# 1분마다
+#sched_result = sched.add_job(FromJsonToDB, 'cron', minute='*/1')
+# 6시간마다
+sched_result = sched.add_job(FromJsonToDB, 'cron', hour='*/6')
+
 if __name__ == '__main__':
     # serve(app, host="0.0.0.0", port=5000)
     # app.run(debug=True) # host = 127.0.0.1 port = 5000
-    app.run(host='0.0.0.0', port='5080', debug=True)
+    app.run(host='0.0.0.0', port='5080', debug=False)
+
 # debug=True이므로 코드 수정 중에도 알아서 다시 시작해줌
 
 
