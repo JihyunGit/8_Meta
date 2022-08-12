@@ -83,7 +83,7 @@ def login():
         memberDB.insert_one({'DeviceId':deviceId})
         return MakeResultJson(False)
     # 아이디는 있지만 인테리어 정보가 없는 경우
-    elif result['Map'] == None:
+    elif "Map" not in result:
         return MakeResultJson(False)
     # 아이디도 존재하고 인테리어 정보도 있는 경우
     else:
