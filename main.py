@@ -77,7 +77,6 @@ def login():
 
     result = memberDB.find_one({'DeviceId':deviceId})
     print(result)
-    print(result['Map'])
 
     # 신규회원의 경우
     if result == None:
