@@ -152,6 +152,34 @@ def Recommend():
     #
     # return jsonify(dic)
 
+@app.route('/RecommendRandom', methods=['POST'])
+def RandomRecommend():
+    cate_list = ['Bed', 'BookShelf','Chair','Desk','FlowerPot','PhotoFrame','Sofa','Stand']
+
+    random_list = []
+
+    for category in cate_list:
+        # Get one random document matching {a: 10} from the mycoll collection.
+        random_record = list(productDB.aggregate([{'$match': {'Category': category}},{'$sample': {'size': 1}}]))
+        print(random_record)
+        # 1개씩 찾아오므로 1개일 때만 리스트에 추가
+        if len(random_record) == 1:
+            random_list.append(random_record[0])
+
+    result_bool = False
+
+    # DB에 결과 있으면
+    if len(random_list) > 0:
+        result_bool = True
+
+    # 결과값과 데이터
+    data_list = {"Result":result_bool,"Data":random_list}
+
+    # bson -> json 형태로
+    result = dumps(data_list, ensure_ascii=False)
+
+    return result
+
 
 
 # 스케쥴 설정
