@@ -20,7 +20,7 @@ def load_best_area(furType, colType):
     recom_best_df = pd.read_csv('./data_csv/recom_area.csv')
     # 조건을 만족하는 것들, 리스트일 확률도 있음
     pos_df = recom_best_df[(recom_best_df['Furniture'] == furType) & (recom_best_df['color'] == colType)]
-s
+
     pos_list = list(pos_df.T.to_dict().values())
 
     recom_list = []
