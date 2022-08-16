@@ -47,7 +47,7 @@ all_member = list(memberDB.find({},{'Map':1,'_id':0}))
 
 # now we will open a file for writing
 # 디렉토리 및 파일명 설정
-filename = os.path.join("./random_data.csv")
+filename = os.path.join("./data_csv/random_data.csv")
 
 type_list = []
 furstr = 'FurnitureType'
@@ -88,7 +88,7 @@ with open(filename, "w", newline="") as result_file :
 
 
 def makeAreaCsv():
-    filename = os.path.join("./user_map.csv")
+    filename = os.path.join("./data_csv/user_map.csv")
 
     # 파일 생성 및 헤더 붙임
     with open(filename, "w", newline="") as result_file:
@@ -128,5 +128,5 @@ def makeAreaCsv():
                     csv_writer.writerow(tmp)
 
 
-df = pd.read_csv('user_map.csv')
+df = pd.read_csv('./data_csv/user_map.csv')
 

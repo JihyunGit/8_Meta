@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import os
 
-filepath = './user_map.csv'
+filepath = './data_csv/user_map.csv'
 df = pd.read_csv(filepath)
 
 temp_x = df.groupby(['Furniture','color'])[['area_x','area_y']].value_counts()
@@ -25,8 +25,8 @@ df_tmp = pd.merge(df, df_tmp_uni, how='left', on=['Furniture','color'])
 df_tmp = df_tmp.rename(columns={'area_x_x':'area_x', 'area_y_x':'area_y', 'area_x_y':'recom_x', 'area_y_y':'recom_y'})
 
 # 가구별 색상별 추천 위치 csv로 저장, max빈도수가 아니므로 여러 위치를 반환할 수 있음
-df_tmp_max.to_csv('recom_area.csv')
+df_tmp_max.to_csv('./data_csv/recom_area.csv')
 
 # 실제 member의 가구별 색상별 추천 위치 csv로 저장
-df_tmp.to_csv('recommend_position.csv')
+df_tmp.to_csv('./data_csv/recommend_position.csv')
 df_tmp
