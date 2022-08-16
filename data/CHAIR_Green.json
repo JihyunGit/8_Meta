@@ -20,11 +20,20 @@
 	{
 		"Category": "Chair",
 		"Color": "Green",
+		"Title": "미용실의자 헤어 전용 의자 회전 미용 실 이발 의자 녹색",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=34046027036",
+		"Image": "https://shopping-phinf.pstatic.net/main_3404602/34046027036.20220813201424.jpg",
+		"Brand": "",
+		"Price": "292760"
+	},
+	{
+		"Category": "Chair",
+		"Color": "Green",
 		"Title": "컬러 벨벳 체어 식탁 카페 인테리어 의자 의자 녹색",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=33982259892",
 		"Image": "https://shopping-phinf.pstatic.net/main_3398225/33982259892.20220810161159.jpg",
 		"Brand": "",
-		"Price": "111260"
+		"Price": "97910"
 	},
 	{
 		"Category": "Chair",
@@ -43,14 +52,5 @@
 		"Image": "https://shopping-phinf.pstatic.net/main_3324732/33247323491.20220702124533.jpg",
 		"Brand": "",
 		"Price": "146500"
-	},
-	{
-		"Category": "Chair",
-		"Color": "Green",
-		"Title": "철 의자 녹색 등받이 레트로 식당 카페 촬영 라멘",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=32134163080",
-		"Image": "https://shopping-phinf.pstatic.net/main_3213416/32134163080.20220502190504.jpg",
-		"Brand": "",
-		"Price": "64780"
 	}
 ]

@@ -29,15 +29,6 @@
 	{
 		"Category": "Sofa",
 		"Color": "Brown",
-		"Title": "북유럽 감성 인 달팽이 쇼파 안락 의자 거실 서재 카페 회전식 소파  갈색 의자",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=34000035414",
-		"Image": "https://shopping-phinf.pstatic.net/main_3400003/34000035414.jpg",
-		"Brand": "",
-		"Price": "760500"
-	},
-	{
-		"Category": "Sofa",
-		"Color": "Brown",
 		"Title": "파란문화공방 미첼 인용 브라운소파 갈색쇼파 헤드레스트 클래식소파",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=83383003089",
 		"Image": "https://shopping-phinf.pstatic.net/main_8338300/83383003089.jpg",
@@ -52,5 +43,14 @@
 		"Image": "https://shopping-phinf.pstatic.net/main_3391416/33914162068.jpg",
 		"Brand": "",
 		"Price": "779510"
+	},
+	{
+		"Category": "Sofa",
+		"Color": "Brown",
+		"Title": "갈색 소파",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=84284681911",
+		"Image": "https://shopping-phinf.pstatic.net/main_8428468/84284681911.jpg",
+		"Brand": "",
+		"Price": "300000"
 	}
 ]

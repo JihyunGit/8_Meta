@@ -15,7 +15,7 @@
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=8764943398",
 		"Image": "https://shopping-phinf.pstatic.net/main_8764943/8764943398.20210219130806.jpg",
 		"Brand": "에보니아",
-		"Price": "79180"
+		"Price": "82800"
 	},
 	{
 		"Category": "Sofa",
@@ -24,7 +24,16 @@
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=27317053523",
 		"Image": "https://shopping-phinf.pstatic.net/main_2731705/27317053523.20210526164548.jpg",
 		"Brand": "리바트",
-		"Price": "1084040"
+		"Price": "1110420"
+	},
+	{
+		"Category": "Sofa",
+		"Color": "Red",
+		"Title": "부산가구 부산소파 [레드플래닛] 구스 캄포소파 테티스",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=83574174301",
+		"Image": "https://shopping-phinf.pstatic.net/main_8357417/83574174301.3.jpg",
+		"Brand": "레드플래닛",
+		"Price": "2190000"
 	},
 	{
 		"Category": "Sofa",
@@ -33,24 +42,15 @@
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=31404884618",
 		"Image": "https://shopping-phinf.pstatic.net/main_3140488/31404884618.20220321124403.jpg",
 		"Brand": "에싸",
-		"Price": "2667960"
+		"Price": "2614660"
 	},
 	{
 		"Category": "Sofa",
 		"Color": "Red",
-		"Title": "리바트 온드 인 패브릭 소파",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=27317028524",
-		"Image": "https://shopping-phinf.pstatic.net/main_2731702/27317028524.20210526165512.jpg",
-		"Brand": "리바트",
-		"Price": "821640"
-	},
-	{
-		"Category": "Sofa",
-		"Color": "Red",
-		"Title": "리코르소가구 빈츠 사하라 임팔라 인용 아쿠아 패브릭 소파",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=82761316529",
-		"Image": "https://shopping-phinf.pstatic.net/main_8276131/82761316529.1.jpg",
-		"Brand": "RICORSO",
-		"Price": "1230000"
+		"Title": "에보니아 루비 인 패브릭소파",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=8014189833",
+		"Image": "https://shopping-phinf.pstatic.net/main_8014189/8014189833.20210224113342.jpg",
+		"Brand": "에보니아",
+		"Price": "100870"
 	}
 ]

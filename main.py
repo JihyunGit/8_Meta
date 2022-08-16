@@ -9,6 +9,8 @@ import json
 import pymongo
 import glob
 from bson.json_util import dumps
+import recom_position_unity
+import numpy as np
 
 
 # DB 불러오기
@@ -58,6 +60,17 @@ def FromJsonToDB():
                 print(result)
 
 app = Flask(__name__)
+
+
+# 온갖 변수들
+x_scale = 2.2
+y_scale = 1.25
+
+x_start = -4.16
+y_start = -1.45
+
+x_pos_list = [-3.06,-0.86,1.34,3.54]
+y_pos_list = [-0.82,0.43,1.68,2.92]
 
 
 @app.route('/')
@@ -180,6 +193,34 @@ def RandomRecommend():
     return result
 
 
+# 유니티에서 가구 선택시 추천 위치 반환
+# input : furniture type, color type
+# output : pos_x,pos_y 추천 위치
+@app.route('/RecommendPos', methods=['POST'])
+def RecommendPosition():
+    json_data = request.get_json()
+    PosRequestData = json_data['PosRequestData']
+
+    recom_list = recom_position_unity.load_best_area(PosRequestData['furniture'], PosRequestData['color'])
+
+    print(recom_list)
+
+    result_bool = False
+
+    if len(recom_list) > 0:
+        result_bool = True
+
+    # list to json format
+    # json.dumps(리스트,)
+    # https://pythonexamples.org/python-list-to-json/
+    recom_json = dumps(recom_list)
+
+    data_list = {"Result": result_bool, "Data": recom_json}
+    print(data_list)
+
+    return data_list
+
+
 
 @app.after_request
 def after_request(response):
@@ -187,6 +228,7 @@ def after_request(response):
     response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
     response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE')
     return response
+
 
 
 
