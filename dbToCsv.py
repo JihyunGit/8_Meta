@@ -130,9 +130,3 @@ def makeAreaCsv():
 
 df = pd.read_csv('user_map.csv')
 
-temp_x = df.groupby(['Furniture','color'])['area_x'].value_counts()
-temp_y = df.groupby(['Furniture','color'])['area_y'].value_counts()
-
-print(temp_x)
-print(temp_y)
-
