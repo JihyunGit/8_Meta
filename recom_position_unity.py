@@ -27,8 +27,8 @@ def load_best_area(furType, colType):
 
     for tmp in pos_list:
         recom = {}
-        recom['pos_x'] = x_pos_list[tmp['area_x']]
-        recom['pos_y'] = y_pos_list[tmp['area_y']]
+        recom['PosX'] = x_pos_list[tmp['area_x']]
+        recom['PosY'] = y_pos_list[tmp['area_y']]
 
         recom_list.append(recom)
 

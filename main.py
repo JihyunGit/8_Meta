@@ -201,7 +201,7 @@ def RecommendPosition():
     json_data = request.get_json()
     PosRequestData = json_data['PosRequestData']
 
-    recom_list = recom_position_unity.load_best_area(PosRequestData['furniture'], PosRequestData['color'])
+    recom_list = recom_position_unity.load_best_area(PosRequestData['FurnitureType'], PosRequestData['ColorType'])
 
     print(recom_list)
 
