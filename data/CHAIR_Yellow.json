@@ -24,7 +24,7 @@
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=32456490392",
 		"Image": "https://shopping-phinf.pstatic.net/main_3245649/32456490392.20220519122357.jpg",
 		"Brand": "",
-		"Price": "20920"
+		"Price": "20680"
 	},
 	{
 		"Category": "Chair",
@@ -38,19 +38,19 @@
 	{
 		"Category": "Chair",
 		"Color": "Yellow",
-		"Title": "이노메싸 피암 Spaghetti  S 스파게티 암 체어옐로우 GI",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=27279071337",
-		"Image": "https://shopping-phinf.pstatic.net/main_2727907/27279071337.20210523175912.jpg",
-		"Brand": "",
-		"Price": "434000"
-	},
-	{
-		"Category": "Chair",
-		"Color": "Yellow",
 		"Title": "히츠 의자 마스터체어 옐로우Hits CL",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=26721407116",
 		"Image": "https://shopping-phinf.pstatic.net/main_2672140/26721407116.20210411165102.jpg",
 		"Brand": "",
 		"Price": "29280"
+	},
+	{
+		"Category": "Chair",
+		"Color": "Yellow",
+		"Title": "이노메싸 피암 Spaghetti  S 스파게티 암 체어옐로우 GI",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=27279071337",
+		"Image": "https://shopping-phinf.pstatic.net/main_2727907/27279071337.20210523175912.jpg",
+		"Brand": "",
+		"Price": "434000"
 	}
 ]

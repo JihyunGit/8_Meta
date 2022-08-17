@@ -11,6 +11,7 @@ import glob
 from bson.json_util import dumps
 import recom_position_unity
 import numpy as np
+import CrawRelative
 
 
 # DB 불러오기
@@ -19,6 +20,8 @@ db = client.test
 # memberDB 없으면 생성하고 있으면 불러옴, 그냥 table임
 memberDB = db.members
 productDB = db.product
+## 추천 상품
+relativeDB = db.relative
 print("DB 연동 완료")
 sched_num = 0
 
@@ -41,7 +44,7 @@ def MakeRecommendResponseDataJson(imageUrl, name, link):
     return dic
 
 # Json To DB
-def FromJsonToDB():
+def MakeJsonToDB():
     # json 파일 만들고
     print('몇번실행인지')
     Craw.makeJsonItem()
@@ -56,8 +59,51 @@ def FromJsonToDB():
 
             for i in range(len(json_data)):
                 json_dict = json_data[i]
-                result = productDB.update({'Link': json_dict['Link']}, json_dict, upsert=True)
-                print(result)
+
+                ## 실제 상품과 관련된 상품을 DB에 저장
+                relative_list = CrawRelative.relative_product(json_dict['Title'])
+
+                print(relative_list)
+
+                print('---------------------')
+
+                for relative in relative_list:
+                    result = relativeDB.update({'Link':relative['Link']}, relative, upsert=True)
+                    print(result)
+
+                #result = productDB.update({'Link': json_dict['Link']}, json_dict, upsert=True)
+                #print(result)
+
+def FromJsonToDB():
+    file_list = glob.glob('./data/*.json')
+    print(len(file_list))
+    
+    for file_name in file_list:
+        with open(file_name, "r", encoding='UTF-8') as json_file:
+            json_data = json.load(json_file)
+
+            for i in range(len(json_data)):
+                json_dict = json_data[i]
+
+                ## 실제 상품과 관련된 상품들 불러오기
+                relative_list = CrawRelative.relative_product(json_dict['Title'])
+
+                print(relative_list)
+
+                # for relative in relative_list:
+                #     result = relativeDB.update({'Link':relative['Link']}, relative, upsert=True)
+                #     print(result)
+
+# 이미 저장된 상품들의 관련 상품들 불러와서 DB에 저장
+def LoadDBProduct():
+    cursor = productDB.find({})
+    for document in cursor:
+        relative_list = CrawRelative.relative_product(document['Title'])
+
+        for relative in relative_list:
+            result = relativeDB.update({'Link':relative['Link']}, relative, upsert=True)
+
+
 
 app = Flask(__name__)
 
@@ -194,8 +240,8 @@ def RandomRecommend():
 
 
 # 유니티에서 가구 선택시 추천 위치 반환
-# input : furniture type, color type
-# output : pos_x,pos_y 추천 위치
+# input : furniture type, color type (str)
+# output : Result, pos_x,pos_y 추천 위치
 @app.route('/RecommendPos', methods=['POST'])
 def RecommendPosition():
     json_data = request.get_json()
@@ -241,9 +287,13 @@ sched.start()
 # sched.add_job(job, 'interval', seconds=3, id="test_2")
 
 # 1분마다
-#sched_result = sched.add_job(FromJsonToDB, 'cron', minute='*/1')
+#sched_result = sched.add_job(MakeJsonToDB, 'cron', minute='*/1')
 # 6시간마다
-sched_result = sched.add_job(FromJsonToDB, 'cron', hour='*/6')
+sched_result = sched.add_job(MakeJsonToDB, 'cron', hour='*/6')
+
+##LoadDBProduct()
+##FromJsonToDB()
+
 
 if __name__ == '__main__':
     # serve(app, host="0.0.0.0", port=5000)
