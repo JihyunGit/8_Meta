@@ -16,12 +16,22 @@ y_pos_list = [-0.82,0.43,1.68,2.92]
 # input_dict['x_coordinate'] = round(-4.16 + input_dict['area']['x'] * x_scale + x_scale / 2, 2)
 # input_dict['y_coordinate'] = round(-1.45 + input_dict['area']['y'] * y_scale + y_scale / 2, 2)
 
+## string값으로 input받음
 def load_best_area(furType, colType):
     recom_best_df = pd.read_csv('./data_csv/recom_area.csv')
+
+    FurnitureType = {'Floor':0,'Bed':1,'BookShelf':2,'Chair':3,'Desk':4,'FlowerPot':5,'PhotoFrame':6,'Sofa':7,'Stand':8}
+    ColorType = {'Yellow':0,'Blue':1,'Green':2,'White':3,'Red':4,'Brown':5,'None':6}
+
     # 조건을 만족하는 것들, 리스트일 확률도 있음
-    pos_df = recom_best_df[(recom_best_df['Furniture'] == furType) & (recom_best_df['color'] == colType)]
+    pos_df = recom_best_df[(recom_best_df['Furniture'] == int(FurnitureType[furType])) & (recom_best_df['color'] == int(ColorType[colType]))]
+
+    print('------------------------------')
+    print(list(pos_df.T.to_dict()))
 
     pos_list = list(pos_df.T.to_dict().values())
+
+    print(pos_list)
 
     recom_list = []
 

@@ -201,6 +201,8 @@ def RecommendPosition():
     json_data = request.get_json()
     PosRequestData = json_data['PosRequestData']
 
+    print(PosRequestData)
+
     recom_list = recom_position_unity.load_best_area(PosRequestData['FurnitureType'], PosRequestData['ColorType'])
 
     print(recom_list)
@@ -213,9 +215,9 @@ def RecommendPosition():
     # list to json format
     # json.dumps(리스트,)
     # https://pythonexamples.org/python-list-to-json/
-    recom_json = dumps(recom_list)
+    ## recom_json = dumps(recom_list)
 
-    data_list = {"Result": result_bool, "Data": recom_json}
+    data_list = {"Result": result_bool, "Data": recom_list}
     print(data_list)
 
     return data_list
