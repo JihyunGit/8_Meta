@@ -22,6 +22,9 @@ memberDB = db.members
 productDB = db.product
 ## 추천 상품
 relativeDB = db.relative
+## 장바구니
+basketDB = db.basket
+
 print("DB 연동 완료")
 sched_num = 0
 
@@ -268,7 +271,98 @@ def RecommendPosition():
 
     return data_list
 
-# dasdsaaas
+
+## Basket ------------------------------- 장바구니
+
+# 장바구니에 추가
+# input : deviceId, Link컬럼의 id=에 있는 id 리스트만 저장
+# output : result_bool
+
+# 장바구니 업데이트
+# input : deviceId, id리스트
+# output : result_bool
+
+## 장바구니 Create and update
+@app.route('/UpdateBasket', methods=['POST'])
+def UpdateBasketDB():
+    json_data = request.get_json()
+
+    deviceId = json_data['DeviceId']
+    productList = json_data['Product']
+
+    # DeviceId에 장바구니 없으면 생성하고 있으면 update한다
+    result = basketDB.update({'DeviceId': deviceId}, {'DeviceId': deviceId, 'ProductList': productList}, upsert=True)
+
+    result_bool = False
+
+    if (len(result) > 0):
+        result_bool = True
+
+    Data = {'Result':result_bool}
+
+    print(Data)
+
+    return jsonify(Data)
+
+
+# 장바구니 불러오기
+# input : deviceId
+# 있으면 불러오기
+# output : id로 product테이블의 상품들 정보 찾아옴
+@app.route('/LoadBasket', methods=['POST'])
+def LoadBasketDB():
+    json_data = request.get_json()
+    loadRequestData = json_data['BasketLoadRequestData']
+
+    deviceId = loadRequestData['DeviceId']
+
+    result = basketDB.find_one({'DeviceId':deviceId})
+
+    product_list = result['ProductList']
+
+    tmp_str = '.*'
+
+    result_data = []
+
+    result_bool = False
+
+    if (len(product_list) > 0):
+        result_bool = True
+        for prod in product_list:
+            product_info = productDB.find_one({'Link':{'$regex' : tmp_str+prod}})
+            result_data.append(product_info)
+
+    data_list = {"Result":result_bool,"Data":result_data}
+
+    # bson -> json 형태로
+    result = dumps(data_list, ensure_ascii=False)
+
+    return result
+
+
+# 장바구니 삭제?
+# input : deviceId
+# output : result_bool
+@app.route('/DeleteBasket', methods=['POST'])
+def DeleteBasketDB():
+    json_data = request.get_json()
+    deleteRequestData = json_data['DeleteBasketRequestData']
+
+    deviceId = deleteRequestData['DeviceId']
+
+    result = basketDB.delete_one({'DeviceId':deviceId})
+
+    result_bool = False
+    # 삭제된 개수
+    print('삭제된 개수:',result.deleted_count)
+
+    if (result.deleted_count > 0):
+        result_bool = True
+
+    result_data = {'Result':result_bool}
+
+    return result_data
+
 
 @app.after_request
 def after_request(response):

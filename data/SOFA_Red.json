@@ -38,19 +38,19 @@
 	{
 		"Category": "Sofa",
 		"Color": "Red",
-		"Title": "리바트 온드 인 패브릭 소파 와이드형",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=27317053523",
-		"Image": "https://shopping-phinf.pstatic.net/main_2731705/27317053523.20210526164548.jpg",
-		"Brand": "리바트",
-		"Price": "1089000"
-	},
-	{
-		"Category": "Sofa",
-		"Color": "Red",
 		"Title": "에보니아 루비 인 패브릭소파",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=8014189833",
 		"Image": "https://shopping-phinf.pstatic.net/main_8014189/8014189833.20210224113342.jpg",
 		"Brand": "에보니아",
 		"Price": "100870"
+	},
+	{
+		"Category": "Sofa",
+		"Color": "Red",
+		"Title": "리바트 온드 인 패브릭 소파 와이드형",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=27317053523",
+		"Image": "https://shopping-phinf.pstatic.net/main_2731705/27317053523.20210526164548.jpg",
+		"Brand": "리바트",
+		"Price": "1089000"
 	}
 ]

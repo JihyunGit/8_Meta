@@ -1,1 +1,56 @@
-[]
+[
+	{
+		"Category": "Refrigerator",
+		"Color": "Yellow",
+		"Title": "컬러냉장고 노란색냉장고 레트로 빈티지 소형 원룸",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=33855147472",
+		"Image": "https://shopping-phinf.pstatic.net/main_3385514/33855147472.jpg",
+		"Brand": "",
+		"Price": "199890"
+	},
+	{
+		"Category": "Refrigerator",
+		"Color": "Yellow",
+		"Title": "윈텍 무소음 레트로 냉장고 소형 인테리어 냉장고 옐로우",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=84317057399",
+		"Image": "https://shopping-phinf.pstatic.net/main_8431705/84317057399.jpg",
+		"Brand": "윈세프",
+		"Price": "539000"
+	},
+	{
+		"Category": "Refrigerator",
+		"Color": "Yellow",
+		"Title": "윈텍 무소음 레트로 소형 인테리어 냉장고 옐로우",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=32943844481",
+		"Image": "https://shopping-phinf.pstatic.net/main_3294384/32943844481.jpg",
+		"Brand": "",
+		"Price": "539000"
+	},
+	{
+		"Category": "Refrigerator",
+		"Color": "Yellow",
+		"Title": "윈텍 무소음 레트로 소형 인테리어 냉장고 옐로우",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=32856030412",
+		"Image": "https://shopping-phinf.pstatic.net/main_3285603/32856030412.jpg",
+		"Brand": "",
+		"Price": "539000"
+	},
+	{
+		"Category": "Refrigerator",
+		"Color": "Yellow",
+		"Title": "컬러냉장고 노란색냉장고 레트로 빈티지 소형 원룸",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=34095064040",
+		"Image": "https://shopping-phinf.pstatic.net/main_3409506/34095064040.jpg",
+		"Brand": "",
+		"Price": "205910"
+	},
+	{
+		"Category": "Refrigerator",
+		"Color": "Yellow",
+		"Title": "컬러냉장고 노란색냉장고 레트로 빈티지 소형 원룸",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=33877941432",
+		"Image": "https://shopping-phinf.pstatic.net/main_3387794/33877941432.jpg",
+		"Brand": "",
+		"Price": "231880"
+	}
+]

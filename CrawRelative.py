@@ -12,9 +12,11 @@ def relative_product(str):
     naver_open_api = 'https://openapi.naver.com/v1/search/shop.json?query=' + str
     header_params = {"X-Naver-Client-Id":client_id, "X-Naver-Client-Secret":client_secret}
 
+    second_params = {'User-agent':'Mozilla/5.0'}
+
     res = requests.get(naver_open_api, headers=header_params)
 
-    url = "https://search.shopping.naver.com/catalog/"
+    url = f"https://search.shopping.naver.com/catalog/"
 
     product_list = []
 
@@ -30,7 +32,7 @@ def relative_product(str):
             print(re_link)
 
             # 링크 다시 연결
-            res = requests.get(re_link)
+            res = requests.get(re_link, headers=second_params)
 
             time.sleep(1)
 
