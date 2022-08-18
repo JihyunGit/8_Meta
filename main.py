@@ -71,11 +71,10 @@ def MakeJsonToDB():
                 print('---------------------')
 
                 for relative in relative_list:
-                    result = relativeDB.update({'Link':relative['Link']}, relative, upsert=True)
+                    ## 이미지 링크 기준으로 중복이면 추가 안 함
+                    result = relativeDB.update({'Image':relative['Image']}, relative, upsert=True)
                     print(result)
 
-                #result = productDB.update({'Link': json_dict['Link']}, json_dict, upsert=True)
-                #print(result)
 
 def FromJsonToDB():
     file_list = glob.glob('./data/*.json')
@@ -93,9 +92,9 @@ def FromJsonToDB():
 
                 print(relative_list)
 
-                # for relative in relative_list:
-                #     result = relativeDB.update({'Link':relative['Link']}, relative, upsert=True)
-                #     print(result)
+                for relative in relative_list:
+                    result = relativeDB.update({'Image':relative['Image']}, relative, upsert=True)
+                    print(result)
 
 # 이미 저장된 상품들의 관련 상품들 불러와서 DB에 저장
 def LoadDBProduct():
@@ -104,7 +103,7 @@ def LoadDBProduct():
         relative_list = CrawRelative.relative_product(document['Title'])
 
         for relative in relative_list:
-            result = relativeDB.update({'Link':relative['Link']}, relative, upsert=True)
+            result = relativeDB.update({'Image':relative['Image']}, relative, upsert=True)
 
 
 
