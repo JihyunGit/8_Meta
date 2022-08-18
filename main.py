@@ -321,6 +321,9 @@ def LoadBasketDB():
 
         product_list = basket_list['ProductList']
 
+        print(product_list)
+        print(type(product_list))
+
         tmp_str = '.*'
 
         result_data = []
