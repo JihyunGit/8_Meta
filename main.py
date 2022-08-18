@@ -319,10 +319,14 @@ def LoadBasketDB():
 
     if (basket_list):
 
-        product_list = basket_list['ProductList']
+        product_list_str = basket_list['ProductList']
+
+        print(product_list_str)
+        print(type(product_list_str))
+
+        product_list = json.loads(product_list_str)
 
         print(product_list)
-        print(type(product_list))
 
         tmp_str = '.*'
 
