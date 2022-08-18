@@ -24,7 +24,7 @@ def relative_product(str):
     if res.status_code == 200:
         data = res.json()
         # 검색 상품 중 상위 것만
-        if (len(data) > 0):
+        if (len(data['items']) > 0):
 
             item = data['items'][0]
             id = item['link'].split('=')[1]
