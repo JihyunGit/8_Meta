@@ -5,6 +5,19 @@ import os
 filepath = './data_csv/user_map.csv'
 df = pd.read_csv(filepath)
 
+# db에 없는 furniture,color의 위치값들 -1,-1로 추천해서 널 에러 안 나게
+df_tmp_empty = pd.DataFrame(columns=['index','Furniture','color','x','y','area_x','area_y'])
+
+cnt = 0
+
+for i in range(9):
+    for j in range(7):
+        tmp_list = [cnt,i,j,0,0,-1,-1]
+        df_tmp_empty.loc[cnt] = tmp_list
+        cnt += 1
+
+df = pd.concat([df, df_tmp_empty])
+
 temp_x = df.groupby(['Furniture','color'])[['area_x','area_y']].value_counts()
 
 df_x = pd.DataFrame(temp_x)
