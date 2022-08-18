@@ -376,7 +376,9 @@ def DeleteBasketDB():
 @app.route('/LoadRelative', methods=['POST'])
 def LoadRelativeDB():
     json_data = request.get_json()
-    product_name = json_data['Title']
+    relative_data = json_data['relativeRequestData']
+
+    product_name = relative_data['Title']
 
     # list로 감싸서 가져오기, 문자열이 일치하는 것과 포함하는 경우 둘 다 가져옴
     relative_list = list(relativeDB.find({'Relative':{'$regex':product_name}}))
