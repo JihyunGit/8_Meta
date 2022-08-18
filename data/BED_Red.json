@@ -20,20 +20,20 @@
 	{
 		"Category": "Bed",
 		"Color": "Red",
+		"Title": "스타일링홈 호텔식 고밀도 바이오워싱 차렵이불 S",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=28588820554",
+		"Image": "https://shopping-phinf.pstatic.net/main_2858882/28588820554.20211005164335.jpg",
+		"Brand": "스타일링홈",
+		"Price": "62500"
+	},
+	{
+		"Category": "Bed",
+		"Color": "Red",
 		"Title": "홈 인테리어 침대 침구 세트 순면 침구 세트 신혼집 이불 빨간 이불 침대 홑치마",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=31680117728",
 		"Image": "https://shopping-phinf.pstatic.net/main_3168011/31680117728.20220408212418.jpg",
 		"Brand": "",
 		"Price": "194140"
-	},
-	{
-		"Category": "Bed",
-		"Color": "Red",
-		"Title": "체리 플라워 아사 면 여름이불 레드,세트 여름 간절기 가벼운",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=31825633474",
-		"Image": "https://shopping-phinf.pstatic.net/main_3182563/31825633474.jpg",
-		"Brand": "규아르",
-		"Price": "68000"
 	},
 	{
 		"Category": "Bed",
@@ -47,10 +47,10 @@
 	{
 		"Category": "Bed",
 		"Color": "Red",
-		"Title": "진 알러지케어 간절기 차렵이불 레드,세트 여름 가벼운 먼지없는",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=31301790553",
-		"Image": "https://shopping-phinf.pstatic.net/main_3130179/31301790553.jpg",
+		"Title": "체리 플라워 아사 면 여름이불 레드,세트 여름 간절기 가벼운",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=31825633474",
+		"Image": "https://shopping-phinf.pstatic.net/main_3182563/31825633474.jpg",
 		"Brand": "규아르",
-		"Price": "44000"
+		"Price": "68000"
 	}
 ]

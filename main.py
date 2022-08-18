@@ -12,6 +12,8 @@ from bson.json_util import dumps
 import recom_position_unity
 import numpy as np
 import CrawRelative
+import pandas as pd
+import MetaRecommend
 
 
 # DB 불러오기
@@ -19,15 +21,40 @@ client = pymongo.MongoClient("mongodb+srv://metaverse123:hongil123@accidentlyuni
 db = client.test
 # memberDB 없으면 생성하고 있으면 불러옴, 그냥 table임
 memberDB = db.members
+# 상품 정보
 productDB = db.product
-## 추천 상품
+## 추천 상품 정보
 relativeDB = db.relative
 ## 장바구니
 basketDB = db.basket
 
+## 메타버스 월드 내 가구 추천 코사인 유사도 데이터 프레임
+cosine_df = pd.read_csv('./data_csv/result.csv')
+cosine_df = cosine_df.set_index('Unnamed: 0')
+
+
 print("DB 연동 완료")
+
+
+## ------------------ 온갖 변수들 --------------------------------------
+## 스케줄
 sched_num = 0
 
+x_scale = 2.2
+y_scale = 1.25
+
+x_start = -4.16
+y_start = -1.45
+
+x_pos_list = [-3.06,-0.86,1.34,3.54]
+y_pos_list = [-0.82,0.43,1.68,2.92]
+
+# 카테고리
+furlist = ['Bed', 'BookShelf', 'Chair', 'Desk', 'FlowerPot', 'PhotoFrame', 'Sofa', 'Stand', 'Floor']
+colorlist = ['Yellow', 'Blue', 'Green', 'White', 'Red', 'Brown', 'None']
+
+
+## -------------------------- 함수 ---------------------------------
 # 맵있는지 결과 bool값과, 맵 정보 json 형식으로 보내기
 def MakeResultJson(result, data=None):
     resultDic = {
@@ -46,10 +73,9 @@ def MakeRecommendResponseDataJson(imageUrl, name, link):
 
     return dic
 
-# Json To DB
+# json 파일 만들고 그 관련 상품들을 DB에 저장하기
 def MakeJsonToDB():
     # json 파일 만들고
-    print('몇번실행인지')
     Craw.makeJsonItem()
 
     # json -> DB
@@ -76,6 +102,7 @@ def MakeJsonToDB():
                     print(result)
 
 
+## 이미 있는 json파일들 불러와서 관련 상품 찾고 DB에 저장
 def FromJsonToDB():
     file_list = glob.glob('./data/*.json')
     print(len(file_list))
@@ -106,19 +133,36 @@ def LoadDBProduct():
             result = relativeDB.update({'Image':relative['Image']}, relative, upsert=True)
 
 
+## FurnitureType, index의 숫자 값을 받아서
+## dict형태로 반환
+def ReturnCategory(FurnitureType, ColorType):
+    tmp_dict = {}
+    tmp_dict['furniture'] = furlist[FurnitureType]
+    tmp_dict['color'] = colorlist[ColorType]
+
+    return tmp_dict
+
+## dict형을 가구타입/컬러타입 형태의 문자열로 변경
+def MakeStringCategory(tmp_dict):
+    return str(tmp_dict['furniture']+'/'+tmp_dict['color'])
+
+
+## 메타버스 월드 내 가구 추천 결과
+## category는 Bed/Yellow의 형태임
+def FindMetaRecommend(df, category):
+    result = MetaRecommend.recommend_stuff(df, category)
+    return result
+
+## 하나로 합친 함수 (df, 가구타입, 색상타입) 넣으면 반환
+def SimpleMetaRecommend(df, FurnitureType, ColorType):
+    tmp_dict = ReturnCategory(FurnitureType, ColorType)
+    tmp_str = MakeStringCategory(tmp_dict)
+    return FindMetaRecommend(df, tmp_str)
+
+
+
 
 app = Flask(__name__)
-
-
-# 온갖 변수들
-x_scale = 2.2
-y_scale = 1.25
-
-x_start = -4.16
-y_start = -1.45
-
-x_pos_list = [-3.06,-0.86,1.34,3.54]
-y_pos_list = [-0.82,0.43,1.68,2.92]
 
 
 @app.route('/')
@@ -136,7 +180,8 @@ def login():
     json_data = request.get_json()
     deviceId = json_data['DeviceId']
 
-    result = memberDB.find_one({'DeviceId':deviceId})
+    # 가장 최신 데이터 하나만 찾아오기
+    result = memberDB.find_one({'DeviceId':deviceId},sort=[('_id', pymongo.DESCENDING)])
     print(result)
 
     # 신규회원의 경우
@@ -197,20 +242,6 @@ def Recommend():
 
     return result
 
-    #
-    # RecommendResponseDataList = []
-    # RecommendResponseDataList.append(MakeRecommendResponseDataJson("https://img.freepik.com/free-photo/white-wall-living-room-have-sofa-and-decoration-3d-rendering_41470-3282.jpg", "쇼파1", "https://www.naver.com"))
-    # RecommendResponseDataList.append(MakeRecommendResponseDataJson("https://img.freepik.com/free-photo/white-wall-living-room-have-sofa-and-decoration-3d-rendering_41470-3282.jpg", "쇼파2", "https://www.naver.com"))
-    # RecommendResponseDataList.append(MakeRecommendResponseDataJson("https://img.freepik.com/free-photo/white-wall-living-room-have-sofa-and-decoration-3d-rendering_41470-3282.jpg", "쇼파3", "https://www.naver.com"))
-    #
-    # dic = {
-    #     "Result": True,
-    #     "Data": RecommendResponseDataList
-    # }
-    #
-    # print(Index, FurnitureType, ColorType)
-    #
-    # return jsonify(dic)
 
 @app.route('/RecommendRandom', methods=['POST'])
 def RandomRecommend():
@@ -396,7 +427,64 @@ def LoadRelativeDB():
     result = dumps(data_list, ensure_ascii=False)
 
     return result
+
+
+## 메타버스 내의 가구 타입과 색상에 따른
+## input : 가구타입, 색상타입 (string)
+## output : 추천 가구의 타입,색상조합 리스트와 코사인유사도
+@app.route('/MetaRecommendType', methods=['POST'])
+def MetaRecommendType():
+    json_data = request.get_json()
+    relative_data = json_data['MetaRecommendRequestData']
+
+    # string형임
+    furniture_type = relative_data['FurnitureType']
+    color_type = relative_data['ColorType']
     
+    # string -> int형
+    fur_index = furlist.index(furniture_type)
+    color_index = colorlist.index(color_type)
+
+    ## 코사인 유사도
+    recom_df = SimpleMetaRecommend(cosine_df, fur_index, color_index)
+
+    result_bool = False
+
+    result_data = []
+
+    if len(recom_df) > 0:
+        result_bool = True
+
+        result_index = recom_df.index.to_list()
+        result_value = recom_df.to_list()
+        
+        # 리스트 2개를 dict로 묶기
+        for index,value in zip(result_index, result_value):
+            tmp_dict = {}
+            tmp_dict['index'] = index
+            tmp_dict['value'] = value
+            result_data.append(tmp_dict)
+
+        print(result_data)
+
+        data_list = {"Result": result_bool, "Data": result_data}
+
+    return data_list
+
+
+
+
+        
+
+    # DB에 결과 있으면
+
+
+    
+    
+
+
+
+
 
 
 @app.after_request
@@ -419,6 +507,14 @@ sched.start()
 #sched_result = sched.add_job(MakeJsonToDB, 'cron', minute='*/1')
 # 6시간마다
 sched_result = sched.add_job(MakeJsonToDB, 'cron', hour='*/6')
+
+# 가구 타입, 색상 타입은 숫자로
+result_df = SimpleMetaRecommend(cosine_df, 0, 1)
+print(result_df)
+result_index = result_df.index.to_list()
+result_value = result_df.to_list()
+print(result_index)
+print(result_value)
 
 if __name__ == '__main__':
     # serve(app, host="0.0.0.0", port=5000)

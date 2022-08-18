@@ -11,24 +11,6 @@
 	{
 		"Category": "Chair",
 		"Color": "Green",
-		"Title": "레트로 그린 카페 의자 인테리어 체어 초록색 SEROS",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=32509053306",
-		"Image": "https://shopping-phinf.pstatic.net/main_3250905/32509053306.20220521182849.jpg",
-		"Brand": "",
-		"Price": "87200"
-	},
-	{
-		"Category": "Chair",
-		"Color": "Green",
-		"Title": "미용실의자 헤어 전용 의자 회전 미용 실 이발 의자 녹색",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=34046027036",
-		"Image": "https://shopping-phinf.pstatic.net/main_3404602/34046027036.20220813201424.jpg",
-		"Brand": "",
-		"Price": "292760"
-	},
-	{
-		"Category": "Chair",
-		"Color": "Green",
 		"Title": "Kartell 카르텔 마스터 체어 식탁 의자 녹색",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=33780862389",
 		"Image": "https://shopping-phinf.pstatic.net/main_3378086/33780862389.20220731072939.jpg",
@@ -52,5 +34,23 @@
 		"Image": "https://shopping-phinf.pstatic.net/main_3213416/32134163080.20220502190504.jpg",
 		"Brand": "",
 		"Price": "64780"
+	},
+	{
+		"Category": "Chair",
+		"Color": "Green",
+		"Title": "철 의자 녹색 등받이 레트로 식당 카페 촬영 라멘",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=32107659359",
+		"Image": "https://shopping-phinf.pstatic.net/main_3210765/32107659359.20220430181308.jpg",
+		"Brand": "",
+		"Price": "55720"
+	},
+	{
+		"Category": "Chair",
+		"Color": "Green",
+		"Title": "foppapedretti 의자 녹색 li lu ",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=31412730980",
+		"Image": "https://shopping-phinf.pstatic.net/main_3141273/31412730980.20220322045722.jpg",
+		"Brand": "",
+		"Price": "212600"
 	}
 ]

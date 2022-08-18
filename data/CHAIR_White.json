@@ -15,7 +15,7 @@
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=33673178510",
 		"Image": "https://shopping-phinf.pstatic.net/main_3367317/33673178510.20220725054222.jpg",
 		"Brand": "",
-		"Price": "177340"
+		"Price": "177310"
 	},
 	{
 		"Category": "Chair",
@@ -38,19 +38,19 @@
 	{
 		"Category": "Chair",
 		"Color": "White",
-		"Title": "블루 의자 흰색 연철 정원 모임 회의실 카페 다이닝",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=32117949028",
-		"Image": "https://shopping-phinf.pstatic.net/main_3211794/32117949028.20220501155420.jpg",
-		"Brand": "",
-		"Price": "73010"
-	},
-	{
-		"Category": "Chair",
-		"Color": "White",
 		"Title": "카페의자 인테리어 새집 식당 의자 흰색",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=33215449130",
 		"Image": "https://shopping-phinf.pstatic.net/main_3321544/33215449130.20220630175922.jpg",
 		"Brand": "",
 		"Price": "58310"
+	},
+	{
+		"Category": "Chair",
+		"Color": "White",
+		"Title": "블루 의자 흰색 연철 정원 모임 회의실 카페 다이닝",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=32117949028",
+		"Image": "https://shopping-phinf.pstatic.net/main_3211794/32117949028.20220501155420.jpg",
+		"Brand": "",
+		"Price": "73010"
 	}
 ]

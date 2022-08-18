@@ -11,6 +11,15 @@
 	{
 		"Category": "Sofa",
 		"Color": "White",
+		"Title": "흰색 양털 고탄력 스폰지 부드러운 좌석 소파  흰색 소파 의자",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=34140575005",
+		"Image": "https://shopping-phinf.pstatic.net/main_3414057/34140575005.jpg",
+		"Brand": "",
+		"Price": "758500"
+	},
+	{
+		"Category": "Sofa",
+		"Color": "White",
 		"Title": "레이지 소파 흰색 벨벳 싱글 소파 올리브그린",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=84137677192",
 		"Image": "https://shopping-phinf.pstatic.net/main_8413767/84137677192.jpg",
@@ -43,14 +52,5 @@
 		"Image": "https://shopping-phinf.pstatic.net/main_8405271/84052715686.jpg",
 		"Brand": "",
 		"Price": "323350"
-	},
-	{
-		"Category": "Sofa",
-		"Color": "White",
-		"Title": "북유럽 소파 흰색 화이트 카페 호텔 고급 갬성",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=84048629641",
-		"Image": "https://shopping-phinf.pstatic.net/main_8404862/84048629641.jpg",
-		"Brand": "",
-		"Price": "244600"
 	}
 ]

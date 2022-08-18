@@ -2,6 +2,15 @@
 	{
 		"Category": "Refrigerator",
 		"Color": "Red",
+		"Title": "복고풍 싱글 및 더블 도어 소형 기숙사 냉장고 레드",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=31140642629",
+		"Image": "https://shopping-phinf.pstatic.net/main_3114064/31140642629.jpg",
+		"Brand": "",
+		"Price": "243920"
+	},
+	{
+		"Category": "Refrigerator",
+		"Color": "Red",
 		"Title": "창홍 냉장고리터 디자인 이쁜 빨간 컬러 냉장고 레드",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=31622226765",
 		"Image": "https://shopping-phinf.pstatic.net/main_3162222/31622226765.jpg",
@@ -29,15 +38,6 @@
 	{
 		"Category": "Refrigerator",
 		"Color": "Red",
-		"Title": "복고풍 싱글 및 더블 도어 소형 기숙사 냉장고 레드",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=31140642629",
-		"Image": "https://shopping-phinf.pstatic.net/main_3114064/31140642629.jpg",
-		"Brand": "",
-		"Price": "243920"
-	},
-	{
-		"Category": "Refrigerator",
-		"Color": "Red",
 		"Title": "시원한us미니냉장고 레드 음료수냉장고 USB냉장고",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=33596506207",
 		"Image": "https://shopping-phinf.pstatic.net/main_3359650/33596506207.jpg",
@@ -51,6 +51,6 @@
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=28875776475",
 		"Image": "https://shopping-phinf.pstatic.net/main_2887577/28875776475.11.jpg",
 		"Brand": "창홍",
-		"Price": "534970"
+		"Price": "548610"
 	}
 ]

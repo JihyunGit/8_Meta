@@ -3,28 +3,19 @@
 		"Category": "Chair",
 		"Color": "Blue",
 		"Title": "블루 의자 체어 파란색 감성 카페 인테리어 옷가게",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=34104421134",
-		"Image": "https://shopping-phinf.pstatic.net/main_3410442/34104421134.20220816133603.jpg",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=34108103774",
+		"Image": "https://shopping-phinf.pstatic.net/main_3410810/34108103774.20220816173002.jpg",
 		"Brand": "",
-		"Price": "126820"
+		"Price": "112240"
 	},
 	{
 		"Category": "Chair",
 		"Color": "Blue",
 		"Title": "블루 의자 체어 파란색 감성 카페 인테리어 옷가게",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=34108103774",
-		"Image": "https://shopping-phinf.pstatic.net/main_3410810/34108103774.20220816173002.jpg",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=34104421134",
+		"Image": "https://shopping-phinf.pstatic.net/main_3410442/34104421134.20220816133603.jpg",
 		"Brand": "",
 		"Price": "126820"
-	},
-	{
-		"Category": "Chair",
-		"Color": "Blue",
-		"Title": "카페 테라스 야외 플라스틱 의자 등받이 디자인 체어 파란색",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=34042551621",
-		"Image": "https://shopping-phinf.pstatic.net/main_3404255/34042551621.20220813142809.jpg",
-		"Brand": "",
-		"Price": "47610"
 	},
 	{
 		"Category": "Chair",
@@ -47,10 +38,19 @@
 	{
 		"Category": "Chair",
 		"Color": "Blue",
-		"Title": "컬러 의자 디자인 스툴 체어 벤치 홈 카페 작은 의자 파란색",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=31484206380",
-		"Image": "https://shopping-phinf.pstatic.net/main_3148420/31484206380.20220326222025.jpg",
+		"Title": "사각 플라스틱 포장마차 간이의자 파란색",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=34099915664",
+		"Image": "https://shopping-phinf.pstatic.net/main_3409991/34099915664.jpg",
 		"Brand": "",
-		"Price": "107070"
+		"Price": "8790"
+	},
+	{
+		"Category": "Chair",
+		"Color": "Blue",
+		"Title": "인테리어식탁의자 카페 플라스틱 의자 파란색",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=33760415321",
+		"Image": "https://shopping-phinf.pstatic.net/main_3376041/33760415321.jpg",
+		"Brand": "",
+		"Price": "49540"
 	}
 ]
