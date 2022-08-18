@@ -311,30 +311,32 @@ def UpdateBasketDB():
 @app.route('/LoadBasket', methods=['POST'])
 def LoadBasketDB():
     json_data = request.get_json()
-    loadRequestData = json_data['BasketLoadRequestData']
+    deviceId = json_data['DeviceId']
 
-    deviceId = loadRequestData['DeviceId']
+    basket_list = basketDB.find_one({'DeviceId':deviceId})
 
-    result = basketDB.find_one({'DeviceId':deviceId})
+    result = 'saaaaaa'
 
-    product_list = result['ProductList']
+    if (basket_list):
 
-    tmp_str = '.*'
+        product_list = basket_list['ProductList']
 
-    result_data = []
+        tmp_str = '.*'
 
-    result_bool = False
+        result_data = []
 
-    if (len(product_list) > 0):
-        result_bool = True
-        for prod in product_list:
-            product_info = productDB.find_one({'Link':{'$regex' : tmp_str+prod}})
-            result_data.append(product_info)
+        result_bool = False
 
-    data_list = {"Result":result_bool,"Data":result_data}
+        if (len(product_list) > 0):
+            result_bool = True
+            for prod in product_list:
+                product_info = productDB.find_one({'Link':{'$regex' : tmp_str+prod}})
+                result_data.append(product_info)
 
-    # bson -> json 형태로
-    result = dumps(data_list, ensure_ascii=False)
+        data_list = {"Result":result_bool,"Data":result_data}
+
+        # bson -> json 형태로
+        result = dumps(data_list, ensure_ascii=False)
 
     return result
 
@@ -345,9 +347,8 @@ def LoadBasketDB():
 @app.route('/DeleteBasket', methods=['POST'])
 def DeleteBasketDB():
     json_data = request.get_json()
-    deleteRequestData = json_data['DeleteBasketRequestData']
 
-    deviceId = deleteRequestData['DeviceId']
+    deviceId = json_data['DeviceId']
 
     result = basketDB.delete_one({'DeviceId':deviceId})
 
