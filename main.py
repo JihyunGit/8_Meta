@@ -321,9 +321,6 @@ def LoadBasketDB():
 
         product_list_str = basket_list['ProductList']
 
-        print(product_list_str)
-        print(type(product_list_str))
-
         product_list = json.loads(product_list_str)
 
         print(product_list)
@@ -369,6 +366,35 @@ def DeleteBasketDB():
     result_data = {'Result':result_bool}
 
     return result_data
+
+## ------------------------------------장바구니 끝
+
+## 관련 상품 추천 Load
+## input : 상품의 상품명
+## Relative컬럼에 조건문 걸어서 일치하는 것 가져옴
+## output : RelativeDB의 일치하는 상품 리스트
+@app.route('/LoadRelative', methods=['POST'])
+def LoadRelativeDB():
+    json_data = request.get_json()
+    product_name = json_data['Title']
+
+    # list로 감싸서 가져오기, 문자열이 일치하는 것과 포함하는 경우 둘 다 가져옴
+    relative_list = list(relativeDB.find({'Relative':{'$regex':product_name}}))
+
+    result_bool = False
+
+    # DB에 결과 있으면
+    if len(relative_list) > 0:
+        result_bool = True
+
+    # 결과값과 데이터
+    data_list = {"Result":result_bool,"Data":relative_list}
+
+    # bson -> json 형태로
+    result = dumps(data_list, ensure_ascii=False)
+
+    return result
+    
 
 
 @app.after_request
