@@ -29,6 +29,15 @@
 	{
 		"Category": "Chair",
 		"Color": "Brown",
+		"Title": "가죽 인암체어 업소용 바퀴없는 의자 카페의자 갈색",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=34172335079",
+		"Image": "https://shopping-phinf.pstatic.net/main_3417233/34172335079.jpg",
+		"Brand": "",
+		"Price": "154980"
+	},
+	{
+		"Category": "Chair",
+		"Color": "Brown",
 		"Title": "북유럽 홈 등받이 탁 컴퓨터 책상 보스 레저 인테리어 의자  갈색 좌석",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=32837126986",
 		"Image": "https://shopping-phinf.pstatic.net/main_3283712/32837126986.jpg",
@@ -43,14 +52,5 @@
 		"Image": "https://shopping-phinf.pstatic.net/main_3362995/33629958554.jpg",
 		"Brand": "",
 		"Price": "99000"
-	},
-	{
-		"Category": "Chair",
-		"Color": "Brown",
-		"Title": "(대여)렌탈 나무 의자 접이식의자 실내 야외 목재 나무의자 갈색 브라운",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=81226873448",
-		"Image": "https://shopping-phinf.pstatic.net/main_8122687/81226873448.1.jpg",
-		"Brand": "",
-		"Price": "3500"
 	}
 ]

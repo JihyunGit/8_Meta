@@ -28,18 +28,17 @@ relativeDB = db.relative
 ## 장바구니
 basketDB = db.basket
 
+print("DB 연동 완료")
+
 ## 메타버스 월드 내 가구 추천 코사인 유사도 데이터 프레임
 cosine_df = pd.read_csv('./data_csv/result.csv')
 cosine_df = cosine_df.set_index('Unnamed: 0')
 
-
-print("DB 연동 완료")
-
-
-## ------------------ 온갖 변수들 --------------------------------------
+## ------------------ 변수들 --------------------------------------
 ## 스케줄
 sched_num = 0
 
+# 위치 추천 관련 x,y
 x_scale = 2.2
 y_scale = 1.25
 
@@ -52,7 +51,6 @@ y_pos_list = [-0.82,0.43,1.68,2.92]
 # 카테고리
 furlist = ['Bed', 'BookShelf', 'Chair', 'Desk', 'FlowerPot', 'PhotoFrame', 'Sofa', 'Stand', 'Floor']
 colorlist = ['Yellow', 'Blue', 'Green', 'White', 'Red', 'Brown', 'None']
-
 
 ## -------------------------- 함수 ---------------------------------
 # 맵있는지 결과 bool값과, 맵 정보 json 형식으로 보내기
@@ -88,18 +86,18 @@ def MakeJsonToDB():
 
             for i in range(len(json_data)):
                 json_dict = json_data[i]
+                
+                ## Product DB에 넣기
+                result_prod = productDB.update({'Image':json_dict['Image']}, json_dict, upsert=True)
 
                 ## 실제 상품과 관련된 상품을 DB에 저장
                 relative_list = CrawRelative.relative_product(json_dict['Title'])
 
                 print(relative_list)
 
-                print('---------------------')
-
                 for relative in relative_list:
                     ## 이미지 링크 기준으로 중복이면 추가 안 함
                     result = relativeDB.update({'Image':relative['Image']}, relative, upsert=True)
-                    print(result)
 
 
 ## 이미 있는 json파일들 불러와서 관련 상품 찾고 DB에 저장
@@ -113,6 +111,9 @@ def FromJsonToDB():
 
             for i in range(len(json_data)):
                 json_dict = json_data[i]
+
+                ## Product DB에 넣기
+                result_prod = productDB.update({'Image':json_dict['Image']}, json_dict, upsert=True)
 
                 ## 실제 상품과 관련된 상품들 불러오기
                 relative_list = CrawRelative.relative_product(json_dict['Title'])
@@ -472,21 +473,6 @@ def MetaRecommendType():
     return data_list
 
 
-
-
-        
-
-    # DB에 결과 있으면
-
-
-    
-    
-
-
-
-
-
-
 @app.after_request
 def after_request(response):
     response.headers.add('Access-Control-Allow-Origin', '*')
@@ -505,16 +491,16 @@ sched.start()
 
 # 1분마다
 #sched_result = sched.add_job(MakeJsonToDB, 'cron', minute='*/1')
-# 6시간마다
-sched_result = sched.add_job(MakeJsonToDB, 'cron', hour='*/6')
+# 3시간마다
+sched_result = sched.add_job(MakeJsonToDB, 'cron', hour='*/3')
 
-# 가구 타입, 색상 타입은 숫자로
-result_df = SimpleMetaRecommend(cosine_df, 0, 1)
-print(result_df)
-result_index = result_df.index.to_list()
-result_value = result_df.to_list()
-print(result_index)
-print(result_value)
+#MakeJsonToDB()
+#FromJsonToDB()
+
+## DB 최신순
+# results = list(productDB.find({}).sort("_id",-1))
+# for result in results:
+#     print(result)
 
 if __name__ == '__main__':
     # serve(app, host="0.0.0.0", port=5000)

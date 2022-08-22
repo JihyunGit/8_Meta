@@ -6,7 +6,25 @@
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=29287823990",
 		"Image": "https://shopping-phinf.pstatic.net/main_2928782/29287823990.20211019013336.jpg",
 		"Brand": "",
-		"Price": "85560"
+		"Price": "87610"
+	},
+	{
+		"Category": "Chair",
+		"Color": "Green",
+		"Title": "M-투명 의자 녹색 프레임 투명",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=34148299452",
+		"Image": "https://shopping-phinf.pstatic.net/main_3414829/34148299452.20220818182558.jpg",
+		"Brand": "",
+		"Price": "40500"
+	},
+	{
+		"Category": "Chair",
+		"Color": "Green",
+		"Title": "컬러 벨벳 체어 식탁 카페 인테리어 의자 의자 녹색",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=33982259892",
+		"Image": "https://shopping-phinf.pstatic.net/main_3398225/33982259892.20220810161159.jpg",
+		"Brand": "",
+		"Price": "97910"
 	},
 	{
 		"Category": "Chair",
@@ -34,23 +52,5 @@
 		"Image": "https://shopping-phinf.pstatic.net/main_3213416/32134163080.20220502190504.jpg",
 		"Brand": "",
 		"Price": "64780"
-	},
-	{
-		"Category": "Chair",
-		"Color": "Green",
-		"Title": "철 의자 녹색 등받이 레트로 식당 카페 촬영 라멘",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=32107659359",
-		"Image": "https://shopping-phinf.pstatic.net/main_3210765/32107659359.20220430181308.jpg",
-		"Brand": "",
-		"Price": "55720"
-	},
-	{
-		"Category": "Chair",
-		"Color": "Green",
-		"Title": "foppapedretti 의자 녹색 li lu ",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=31412730980",
-		"Image": "https://shopping-phinf.pstatic.net/main_3141273/31412730980.20220322045722.jpg",
-		"Brand": "",
-		"Price": "212600"
 	}
 ]

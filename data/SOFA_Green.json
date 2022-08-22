@@ -11,15 +11,6 @@
 	{
 		"Category": "Sofa",
 		"Color": "Green",
-		"Title": "인 의자 바나나 흔들 패브릭 소파  녹색 가죽",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=33023011371",
-		"Image": "https://shopping-phinf.pstatic.net/main_3302301/33023011371.jpg",
-		"Brand": "",
-		"Price": "130190"
-	},
-	{
-		"Category": "Sofa",
-		"Color": "Green",
 		"Title": "현대 디자인 거실 소파 녹색 벨벳 패브릭 소파, 단면",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=32712042795",
 		"Image": "https://shopping-phinf.pstatic.net/main_3271204/32712042795.jpg",
@@ -29,11 +20,11 @@
 	{
 		"Category": "Sofa",
 		"Color": "Green",
-		"Title": "[현대 디자인 거실 소파 녹색 벨벳 패브릭 소파, 단면]",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=31782360766",
-		"Image": "https://shopping-phinf.pstatic.net/main_3178236/31782360766.jpg",
+		"Title": "인 의자 바나나 흔들 패브릭 소파  녹색 가죽",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=33023011371",
+		"Image": "https://shopping-phinf.pstatic.net/main_3302301/33023011371.jpg",
 		"Brand": "",
-		"Price": "2828200"
+		"Price": "130190"
 	},
 	{
 		"Category": "Sofa",
@@ -52,5 +43,14 @@
 		"Image": "https://shopping-phinf.pstatic.net/main_2919634/29196340537.3.jpg",
 		"Brand": "",
 		"Price": "216070"
+	},
+	{
+		"Category": "Sofa",
+		"Color": "Green",
+		"Title": "북유럽 소파 녹색 가죽 싱글 커피 의자 현대 미니멀리스트 디자이너 의자",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=84507098648",
+		"Image": "https://shopping-phinf.pstatic.net/main_8450709/84507098648.jpg",
+		"Brand": "",
+		"Price": "411600"
 	}
 ]

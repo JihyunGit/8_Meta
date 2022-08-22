@@ -20,6 +20,24 @@
 	{
 		"Category": "Chair",
 		"Color": "Red",
+		"Title": "최다판매 까페 GMEN-비스트로 상담실 체어 레드 스틸",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=34148579618",
+		"Image": "https://shopping-phinf.pstatic.net/main_3414857/34148579618.jpg",
+		"Brand": "",
+		"Price": "130000"
+	},
+	{
+		"Category": "Chair",
+		"Color": "Red",
+		"Title": "GMFM TON정품 이벤트 에라 의자 레드 특이한 체어",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=34148773565",
+		"Image": "https://shopping-phinf.pstatic.net/main_3414877/34148773565.jpg",
+		"Brand": "",
+		"Price": "451000"
+	},
+	{
+		"Category": "Chair",
+		"Color": "Red",
 		"Title": "제닉스 ARENA TYPE- Chair RED Edition 게이밍 컴퓨터 의자",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=23386914490",
 		"Image": "https://shopping-phinf.pstatic.net/main_2338691/23386914490.20200708112601.jpg",
@@ -29,28 +47,10 @@
 	{
 		"Category": "Chair",
 		"Color": "Red",
-		"Title": "특가전 GMEN-비스트로 할인 체어 레드 스틸 기획전",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=34026336859",
-		"Image": "https://shopping-phinf.pstatic.net/main_3402633/34026336859.jpg",
-		"Brand": "",
-		"Price": "130000"
-	},
-	{
-		"Category": "Chair",
-		"Color": "Red",
-		"Title": "홈카페 GMEN-내추럴 특이한 암체어 레드 카페",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=33703064447",
-		"Image": "https://shopping-phinf.pstatic.net/main_3370306/33703064447.jpg",
-		"Brand": "",
-		"Price": "330000"
-	},
-	{
-		"Category": "Chair",
-		"Color": "Red",
-		"Title": "매장용 인테리어용 KI 드럼체어레드 디자인",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=29019313060",
-		"Image": "https://shopping-phinf.pstatic.net/main_2901931/29019313060.20220131004939.jpg",
-		"Brand": "",
-		"Price": "24200"
+		"Title": "이케아 ADDE 아데 의자 레드 화이트 안전포장포함",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=82519940716",
+		"Image": "https://shopping-phinf.pstatic.net/main_8251994/82519940716.jpg",
+		"Brand": "이케아",
+		"Price": "15000"
 	}
 ]
