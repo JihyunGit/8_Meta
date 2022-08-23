@@ -24,7 +24,7 @@
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=32963430809",
 		"Image": "https://shopping-phinf.pstatic.net/main_3296343/32963430809.jpg",
 		"Brand": "",
-		"Price": "2829800"
+		"Price": "2879800"
 	},
 	{
 		"Category": "Desk",
@@ -56,15 +56,6 @@
 	{
 		"Category": "Desk",
 		"Color": "Blue",
-		"Title": "리프트 책상 의자 세트 독서 학생 테이블 높이조절  M 파란색과 흰색 싱글 테이블",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=31509669303",
-		"Image": "https://shopping-phinf.pstatic.net/main_3150966/31509669303.jpg",
-		"Brand": "",
-		"Price": "711050"
-	},
-	{
-		"Category": "Desk",
-		"Color": "Blue",
 		"Title": "리프팅 책상 의자 세트 독서 학생 테이블 각도조절  M 파란색과 흰색 싱글 테이블",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=31510825123",
 		"Image": "https://shopping-phinf.pstatic.net/main_3151082/31510825123.jpg",
@@ -74,19 +65,28 @@
 	{
 		"Category": "Desk",
 		"Color": "Blue",
-		"Title": "원목 서랍 책상 수납 테이블 고급 가족 단단한 나무 파란색 컴퓨터 연구 가구 ",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=84603600113",
-		"Image": "https://shopping-phinf.pstatic.net/main_8460360/84603600113.jpg",
+		"Title": "리프트 책상 의자 세트 독서 학생 테이블 높이조절  M 파란색과 흰색 싱글 테이블",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=31509669303",
+		"Image": "https://shopping-phinf.pstatic.net/main_3150966/31509669303.jpg",
 		"Brand": "",
-		"Price": "832200"
+		"Price": "711050"
 	},
 	{
 		"Category": "Desk",
 		"Color": "Blue",
-		"Title": "원목 서랍 책상 수납 테이블 고급 가족 단단한 나무 파란색 컴퓨터 연구 가구 ",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=84513777743",
-		"Image": "https://shopping-phinf.pstatic.net/main_8451377/84513777743.jpg",
+		"Title": "독서실 데스크탑 학생 공부 사무실 스터디카페 책상 - 파란색",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=34226395315",
+		"Image": "https://shopping-phinf.pstatic.net/main_3422639/34226395315.jpg",
 		"Brand": "",
-		"Price": "832200"
+		"Price": "222200"
+	},
+	{
+		"Category": "Desk",
+		"Color": "Blue",
+		"Title": "독서실 데스크탑 학생 공부 사무실 스터디카페 책상 - 파란색",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=34226488963",
+		"Image": "https://shopping-phinf.pstatic.net/main_3422648/34226488963.jpg",
+		"Brand": "",
+		"Price": "222200"
 	}
 ]

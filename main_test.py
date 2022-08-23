@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, redirect
 from werkzeug.utils import secure_filename
 import pymongo
 from pymongo.mongo_client import MongoClient
@@ -15,7 +15,7 @@ import numpy as np
 import CrawRelative
 import pandas as pd
 import MetaRecommend
-import os
+import ssl
 
 
 
@@ -483,11 +483,8 @@ def MetaRecommendType():
 @app.route('/GetImageClass', methods=['POST'])
 def GetImageClass():
     img_file = request.files['file']
-
-    os.makedirs('./upload_images', exist_ok=True)
-
     # 해킹 방지용 파일이름
-    img_file.save('./upload_images/' + secure_filename(img_file.filename))
+    img_file.save(secure_filename(img_file.filename))
 
     print(secure_filename(img_file.filename))
 
@@ -520,7 +517,7 @@ def InsertUsed():
     results = list(usedDB.find({}).sort("_id", -1))
 
     ## 테이블에 데이터가 하나라도 있어야 조건에 걸림
-    if (len(results) > 0):
+    if 'index' in results[0]:
         index = int(results[0]['index']) + index
 
     form_data['index'] = index
@@ -531,9 +528,6 @@ def InsertUsed():
     form_data['imgName'] = tmp_name
 
     print(form_data)
-
-    ## 이미지 저장할 폴더 없으면
-    os.makedirs('./upload_images', exist_ok=True)
     
     ## 이미지 파일 저장
     img_file.save('./upload_images/' + tmp_name)
@@ -553,49 +547,11 @@ def InsertUsed():
     return result_data
 
     
-## 게시판 글 수정
-## input : 인덱스 및 카테고리, 가구명, 사진, 가격, 게시판제목, 내용
-## output : 결과값
-@app.route('/UpdateUsedBoard', methods=['POST'])
-def UpdatetUsed():
-    # 이미지 파일 받고
-    img_file = request.files['file']
 
-    # 파일명
-    file_name = secure_filename(img_file.filename)
 
-    # 확장자
-    extension = file_name.split('.')[-1]
 
-    # form 데이터 받기
-    form_data = request.form.to_dict()
 
-    # 수정할 글의 인덱스
-    index = form_data['index']
 
-    # 저장할 폴더, 없으면 생성
-    os.makedirs('./upload_images', exist_ok=True)
-    
-    # 파일명
-    tmp_name = str(index) + '.' + extension
-    # 파일명 변경
-    form_data['imgName'] = tmp_name
-    
-    # DB 테이블에 업데이트
-    result = usedDB.update({'index':index}, form_data, upsert=True)
-
-    print(result)
-
-    result_bool = False
-
-    if (len(result) > 0):
-        ## 이미지 파일 저장
-        img_file.save('./upload_images/' + tmp_name)
-        result_bool = True
-
-    result_data = {'result_bool':result_bool}
-
-    return result_data
 
 
 
@@ -638,7 +594,9 @@ sched_result = sched.add_job(MakeJsonToDB, 'cron', hour='*/3')
 if __name__ == '__main__':
     # serve(app, host="0.0.0.0", port=5000)
     # app.run(debug=True) # host = 127.0.0.1 port = 5000
-    app.run(host='0.0.0.0', port='5080', debug=False)
+    ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS)
+    ssl_context.load_cert_chain(certfile='./ssl/private.crt', keyfile='./ssl/private.pem', password='meta0226')
+    app.run(host='0.0.0.0', port='5080', debug=False, ssl_context=ssl_context)
 
 # debug=True이므로 코드 수정 중에도 알아서 다시 시작해줌
 

@@ -24,7 +24,7 @@
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=33982259892",
 		"Image": "https://shopping-phinf.pstatic.net/main_3398225/33982259892.20220810161159.jpg",
 		"Brand": "",
-		"Price": "97910"
+		"Price": "98470"
 	},
 	{
 		"Category": "Chair",
@@ -65,28 +65,28 @@
 	{
 		"Category": "Chair",
 		"Color": "Green",
-		"Title": "foppapedretti 의자 녹색 li lu ",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=31412730980",
-		"Image": "https://shopping-phinf.pstatic.net/main_3141273/31412730980.20220322045722.jpg",
-		"Brand": "",
-		"Price": "212600"
-	},
-	{
-		"Category": "Chair",
-		"Color": "Green",
-		"Title": "가정용 사무실 동물 인테리어 체어 수납의자 녹색 공룡",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=30317514151",
-		"Image": "https://shopping-phinf.pstatic.net/main_3031751/30317514151.20211227204359.jpg",
-		"Brand": "",
-		"Price": "116160"
-	},
-	{
-		"Category": "Chair",
-		"Color": "Green",
 		"Title": "비트라 팬톤 Vitra Panton 체어 의자 녹색",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=30921919154",
 		"Image": "https://shopping-phinf.pstatic.net/main_3092191/30921919154.20220214030650.jpg",
 		"Brand": "",
 		"Price": "56940"
+	},
+	{
+		"Category": "Chair",
+		"Color": "Green",
+		"Title": "체커보더 테이블 인테리어의자 체크무늬의자 초록색 체커보더 의자만 있습니다",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=34029020104",
+		"Image": "https://shopping-phinf.pstatic.net/main_3402902/34029020104.20220812190327.jpg",
+		"Brand": "",
+		"Price": "112180"
+	},
+	{
+		"Category": "Chair",
+		"Color": "Green",
+		"Title": "유니크 원형 거실 식당 대기 의자 녹색 벤치",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=84376021308",
+		"Image": "https://shopping-phinf.pstatic.net/main_8437602/84376021308.jpg",
+		"Brand": "",
+		"Price": "89000"
 	}
 ]

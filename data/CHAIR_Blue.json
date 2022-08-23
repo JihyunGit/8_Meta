@@ -38,6 +38,15 @@
 	{
 		"Category": "Chair",
 		"Color": "Blue",
+		"Title": "컬러 의자 디자인 스툴 체어 벤치 홈 카페 작은 의자 파란색",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=31484206380",
+		"Image": "https://shopping-phinf.pstatic.net/main_3148420/31484206380.20220326222025.jpg",
+		"Brand": "",
+		"Price": "107070"
+	},
+	{
+		"Category": "Chair",
+		"Color": "Blue",
 		"Title": "인테리어식탁 카페 의자 플라스틱 편한식탁의자 파란색",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=34207862151",
 		"Image": "https://shopping-phinf.pstatic.net/main_3420786/34207862151.jpg",
@@ -60,7 +69,7 @@
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=34099915664",
 		"Image": "https://shopping-phinf.pstatic.net/main_3409991/34099915664.jpg",
 		"Brand": "",
-		"Price": "8790"
+		"Price": "8090"
 	},
 	{
 		"Category": "Chair",
@@ -79,14 +88,5 @@
 		"Image": "https://shopping-phinf.pstatic.net/main_3372300/33723001765.jpg",
 		"Brand": "",
 		"Price": "31470"
-	},
-	{
-		"Category": "Chair",
-		"Color": "Blue",
-		"Title": "플라스틱 편한식탁의자 인테리어식탁 카페 의자 파란색",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=33722927231",
-		"Image": "https://shopping-phinf.pstatic.net/main_3372292/33722927231.jpg",
-		"Brand": "",
-		"Price": "31480"
 	}
 ]
