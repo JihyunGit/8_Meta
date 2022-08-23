@@ -483,7 +483,7 @@ def MetaRecommendType():
 def GetImageClass():
     img_file = request.files['file']
     # 해킹 방지용 파일이름
-    img_file.save('./upload_images/' + secure_filename(img_file.filename))
+    img_file.save(secure_filename(img_file.filename))
 
     print(secure_filename(img_file.filename))
 
