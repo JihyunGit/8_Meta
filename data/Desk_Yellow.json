@@ -52,5 +52,41 @@
 		"Image": "https://shopping-phinf.pstatic.net/main_2997942/29979427275.2.jpg",
 		"Brand": "리퍼스",
 		"Price": "117000"
+	},
+	{
+		"Category": "Desk",
+		"Color": "Yellow",
+		"Title": "로닌 책상  컴퓨터책상 독서실책상 사무용책상  옐로우",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=30345777293",
+		"Image": "https://shopping-phinf.pstatic.net/main_3034577/30345777293.3.jpg",
+		"Brand": "리퍼스",
+		"Price": "101760"
+	},
+	{
+		"Category": "Desk",
+		"Color": "Yellow",
+		"Title": "DIY 패션 테이블 다리 메탈 심플 책상 옐로우 cm ",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=33045585798",
+		"Image": "https://shopping-phinf.pstatic.net/main_3304558/33045585798.jpg",
+		"Brand": "",
+		"Price": "75850"
+	},
+	{
+		"Category": "Desk",
+		"Color": "Yellow",
+		"Title": "DIY 패션 테이블 다리 메탈 심플 책상 옐로우 cm ",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=33044895948",
+		"Image": "https://shopping-phinf.pstatic.net/main_3304489/33044895948.jpg",
+		"Brand": "",
+		"Price": "75860"
+	},
+	{
+		"Category": "Desk",
+		"Color": "Yellow",
+		"Title": "단 효율적 수납 정리 서랍형 수납장 깔끔한책상  옐로우",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=31488948442",
+		"Image": "https://shopping-phinf.pstatic.net/main_3148894/31488948442.jpg",
+		"Brand": "SYSMAX",
+		"Price": "48800"
 	}
 ]

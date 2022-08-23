@@ -6,7 +6,7 @@
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=83265712429",
 		"Image": "https://shopping-phinf.pstatic.net/main_8326571/83265712429.jpg",
 		"Brand": "안다시트",
-		"Price": "298000"
+		"Price": "289000"
 	},
 	{
 		"Category": "Chair",
@@ -15,7 +15,7 @@
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=33673178510",
 		"Image": "https://shopping-phinf.pstatic.net/main_3367317/33673178510.20220725054222.jpg",
 		"Brand": "",
-		"Price": "177110"
+		"Price": "177080"
 	},
 	{
 		"Category": "Chair",
@@ -33,7 +33,7 @@
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=21671475491",
 		"Image": "https://shopping-phinf.pstatic.net/main_2167147/21671475491.20200106220359.jpg",
 		"Brand": "디디퍼니처",
-		"Price": "32000"
+		"Price": "29000"
 	},
 	{
 		"Category": "Chair",
@@ -52,5 +52,41 @@
 		"Image": "https://shopping-phinf.pstatic.net/main_3367494/33674943026.20220725083122.jpg",
 		"Brand": "",
 		"Price": "163400"
+	},
+	{
+		"Category": "Chair",
+		"Color": "White",
+		"Title": "wc 의자 볼트체어 흰색 완제품 WXDXHXS",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=24331440249",
+		"Image": "https://shopping-phinf.pstatic.net/main_2433144/24331440249.20201001165145.jpg",
+		"Brand": "",
+		"Price": "31873"
+	},
+	{
+		"Category": "Chair",
+		"Color": "White",
+		"Title": "카페의자 인테리어 새집 식당 의자 흰색",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=33215449130",
+		"Image": "https://shopping-phinf.pstatic.net/main_3321544/33215449130.20220630175922.jpg",
+		"Brand": "",
+		"Price": "58310"
+	},
+	{
+		"Category": "Chair",
+		"Color": "White",
+		"Title": "클라인 의자 흰색 작은 원형 테이블 카페 테이블",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=33979459226",
+		"Image": "https://shopping-phinf.pstatic.net/main_3397945/33979459226.20220810133033.jpg",
+		"Brand": "",
+		"Price": "64970"
+	},
+	{
+		"Category": "Chair",
+		"Color": "White",
+		"Title": "블루 의자 흰색 연철 정원 모임 회의실 카페 다이닝",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=32117949028",
+		"Image": "https://shopping-phinf.pstatic.net/main_3211794/32117949028.20220501155420.jpg",
+		"Brand": "",
+		"Price": "73010"
 	}
 ]

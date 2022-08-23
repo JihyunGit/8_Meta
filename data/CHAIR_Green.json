@@ -6,7 +6,7 @@
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=29287823990",
 		"Image": "https://shopping-phinf.pstatic.net/main_2928782/29287823990.20211019013336.jpg",
 		"Brand": "",
-		"Price": "87610"
+		"Price": "87630"
 	},
 	{
 		"Category": "Chair",
@@ -52,5 +52,41 @@
 		"Image": "https://shopping-phinf.pstatic.net/main_3213416/32134163080.20220502190504.jpg",
 		"Brand": "",
 		"Price": "64780"
+	},
+	{
+		"Category": "Chair",
+		"Color": "Green",
+		"Title": "철 의자 녹색 등받이 레트로 식당 카페 촬영 라멘",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=32107659359",
+		"Image": "https://shopping-phinf.pstatic.net/main_3210765/32107659359.20220430181308.jpg",
+		"Brand": "",
+		"Price": "55720"
+	},
+	{
+		"Category": "Chair",
+		"Color": "Green",
+		"Title": "foppapedretti 의자 녹색 li lu ",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=31412730980",
+		"Image": "https://shopping-phinf.pstatic.net/main_3141273/31412730980.20220322045722.jpg",
+		"Brand": "",
+		"Price": "212600"
+	},
+	{
+		"Category": "Chair",
+		"Color": "Green",
+		"Title": "가정용 사무실 동물 인테리어 체어 수납의자 녹색 공룡",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=30317514151",
+		"Image": "https://shopping-phinf.pstatic.net/main_3031751/30317514151.20211227204359.jpg",
+		"Brand": "",
+		"Price": "116160"
+	},
+	{
+		"Category": "Chair",
+		"Color": "Green",
+		"Title": "비트라 팬톤 Vitra Panton 체어 의자 녹색",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=30921919154",
+		"Image": "https://shopping-phinf.pstatic.net/main_3092191/30921919154.20220214030650.jpg",
+		"Brand": "",
+		"Price": "56940"
 	}
 ]

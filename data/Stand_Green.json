@@ -42,7 +42,7 @@
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=27704775722",
 		"Image": "https://shopping-phinf.pstatic.net/main_2770477/27704775722.20210623231740.jpg",
 		"Brand": "",
-		"Price": "33950"
+		"Price": "33970"
 	},
 	{
 		"Category": "Stand",
@@ -51,6 +51,42 @@
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=32186713199",
 		"Image": "https://shopping-phinf.pstatic.net/main_3218671/32186713199.20220505182918.jpg",
 		"Brand": "",
-		"Price": "36890"
+		"Price": "36860"
+	},
+	{
+		"Category": "Stand",
+		"Color": "Green",
+		"Title": "독서 테이블 스탠드 녹색 눈 보호 침실 테이블 램프",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=32962765544",
+		"Image": "https://shopping-phinf.pstatic.net/main_3296276/32962765544.20220615162743.jpg",
+		"Brand": "",
+		"Price": "38700"
+	},
+	{
+		"Category": "Stand",
+		"Color": "Green",
+		"Title": "빈티지 녹색 드라마 스탠드 녹색 청동 본체 LED전구",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=30317762492",
+		"Image": "https://shopping-phinf.pstatic.net/main_3031776/30317762492.20211227211859.jpg",
+		"Brand": "",
+		"Price": "49800"
+	},
+	{
+		"Category": "Stand",
+		"Color": "Green",
+		"Title": "미송 스탠드 녹색",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=20752902329",
+		"Image": "https://shopping-phinf.pstatic.net/main_2075290/20752902329.20190827123028.jpg",
+		"Brand": "",
+		"Price": "250000"
+	},
+	{
+		"Category": "Stand",
+		"Color": "Green",
+		"Title": "앤틱 협탁스탠드 뱅크스탠드 뱅커스탠드 초록 w LED 조광전구",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=30577223569",
+		"Image": "https://shopping-phinf.pstatic.net/main_3057722/30577223569.20220119032408.jpg",
+		"Brand": "",
+		"Price": "40360"
 	}
 ]

@@ -52,5 +52,41 @@
 		"Image": "https://shopping-phinf.pstatic.net/main_3327784/33277841968.jpg",
 		"Brand": "UNKNOWN",
 		"Price": "44830"
+	},
+	{
+		"Category": "Bed",
+		"Color": "White",
+		"Title": "저상형침대깔판 호텔침대프레임 침대깔판 쌀침대 하얀목문 다다미 일체형",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=82775500456",
+		"Image": "https://shopping-phinf.pstatic.net/main_8277550/82775500456.jpg",
+		"Brand": "",
+		"Price": "440000"
+	},
+	{
+		"Category": "Bed",
+		"Color": "White",
+		"Title": "[인형집 나무 싱글 침대   미니어처 가구 싱글 침대 흰색 침실]",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=32903940231",
+		"Image": "https://shopping-phinf.pstatic.net/main_3290394/32903940231.jpg",
+		"Brand": "",
+		"Price": "50540"
+	},
+	{
+		"Category": "Bed",
+		"Color": "White",
+		"Title": "침대가드아기 침대 흰색 유아용 침대 범퍼 U 자형 분리형 지퍼 면화 침대프레임 ",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=83477437047",
+		"Image": "https://shopping-phinf.pstatic.net/main_8347743/83477437047.jpg",
+		"Brand": "",
+		"Price": "51800"
+	},
+	{
+		"Category": "Bed",
+		"Color": "White",
+		"Title": "유럽풍 호텔형침대 호텔식침대 - 하얀색 x",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=33682608151",
+		"Image": "https://shopping-phinf.pstatic.net/main_3368260/33682608151.jpg",
+		"Brand": "",
+		"Price": "976100"
 	}
 ]

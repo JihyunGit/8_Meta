@@ -52,5 +52,41 @@
 		"Image": "https://shopping-phinf.pstatic.net/main_8251994/82519940716.jpg",
 		"Brand": "이케아",
 		"Price": "15000"
+	},
+	{
+		"Category": "Chair",
+		"Color": "Red",
+		"Title": "홈카페 GMEN-내추럴 특이한 암체어 레드 카페",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=33703064447",
+		"Image": "https://shopping-phinf.pstatic.net/main_3370306/33703064447.jpg",
+		"Brand": "",
+		"Price": "330000"
+	},
+	{
+		"Category": "Chair",
+		"Color": "Red",
+		"Title": "매장용 인테리어용 KI 드럼체어레드 디자인",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=29019313060",
+		"Image": "https://shopping-phinf.pstatic.net/main_2901931/29019313060.20220131004939.jpg",
+		"Brand": "",
+		"Price": "24200"
+	},
+	{
+		"Category": "Chair",
+		"Color": "Red",
+		"Title": "미니막스 인테리어 식탁 카페 의자 레드쿠션 SVCI",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=29824620208",
+		"Image": "https://shopping-phinf.pstatic.net/main_2982462/29824620208.20211125020749.jpg",
+		"Brand": "미니막스",
+		"Price": "260000"
+	},
+	{
+		"Category": "Chair",
+		"Color": "Red",
+		"Title": "나무와공간 마르세유체어 레드파인다이닝",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=28620492761",
+		"Image": "https://shopping-phinf.pstatic.net/main_2862049/28620492761.20210829000428.jpg",
+		"Brand": "",
+		"Price": "121000"
 	}
 ]

@@ -2,6 +2,15 @@
 	{
 		"Category": "Chair",
 		"Color": "Yellow",
+		"Title": "코비아 의자-옐로우 의자 사출의자 카페의자 다용도의",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=32456490392",
+		"Image": "https://shopping-phinf.pstatic.net/main_3245649/32456490392.20220519122357.jpg",
+		"Brand": "",
+		"Price": "24820"
+	},
+	{
+		"Category": "Chair",
+		"Color": "Yellow",
 		"Title": "러플 우드 부클 인테리어 체어  의자 옐로우 ",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=33949304748",
 		"Image": "https://shopping-phinf.pstatic.net/main_3394930/33949304748.20220809063033.jpg",
@@ -16,15 +25,6 @@
 		"Image": "https://shopping-phinf.pstatic.net/main_2959677/29596771153.20211110031923.jpg",
 		"Brand": "모던하우스",
 		"Price": "86430"
-	},
-	{
-		"Category": "Chair",
-		"Color": "Yellow",
-		"Title": "코비아 의자-옐로우 의자 사출의자 카페의자 다용도의",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=32456490392",
-		"Image": "https://shopping-phinf.pstatic.net/main_3245649/32456490392.20220519122357.jpg",
-		"Brand": "",
-		"Price": "24820"
 	},
 	{
 		"Category": "Chair",
@@ -52,5 +52,41 @@
 		"Image": "https://shopping-phinf.pstatic.net/main_2672140/26721407116.20210411165102.jpg",
 		"Brand": "",
 		"Price": "29280"
+	},
+	{
+		"Category": "Chair",
+		"Color": "Yellow",
+		"Title": "코비아 의자옐로우",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=33863654546",
+		"Image": "https://shopping-phinf.pstatic.net/main_3386365/33863654546.20220804152745.jpg",
+		"Brand": "",
+		"Price": "67298"
+	},
+	{
+		"Category": "Chair",
+		"Color": "Yellow",
+		"Title": "P-원색 등나무 의자 노란손잡이 좌석높이",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=33543771329",
+		"Image": "https://shopping-phinf.pstatic.net/main_3354377/33543771329.20220717125616.jpg",
+		"Brand": "",
+		"Price": "158600"
+	},
+	{
+		"Category": "Chair",
+		"Color": "Yellow",
+		"Title": "페드랄리 놀리타 암체어 옐로 pedrali nolita armchair",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=31892315446",
+		"Image": "https://shopping-phinf.pstatic.net/main_3189231/31892315446.20220418180209.jpg",
+		"Brand": "",
+		"Price": "475000"
+	},
+	{
+		"Category": "Chair",
+		"Color": "Yellow",
+		"Title": "체어 노란 북유럽 디자인 높이 팔걸이 라탄식탁의자",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=31278739636",
+		"Image": "https://shopping-phinf.pstatic.net/main_3127873/31278739636.20220313002544.jpg",
+		"Brand": "",
+		"Price": "92200"
 	}
 ]

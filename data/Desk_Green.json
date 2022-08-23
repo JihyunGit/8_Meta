@@ -52,5 +52,41 @@
 		"Image": "https://shopping-phinf.pstatic.net/main_8310667/83106677038.jpg",
 		"Brand": "",
 		"Price": "166200"
+	},
+	{
+		"Category": "Desk",
+		"Color": "Green",
+		"Title": "화이트 접이식 책상 흰색 소형책상 대학생 침대 위 작은책상 알루미늄 컴퓨터 녹색카드",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=83772214071",
+		"Image": "https://shopping-phinf.pstatic.net/main_8377221/83772214071.jpg",
+		"Brand": "",
+		"Price": "69840"
+	},
+	{
+		"Category": "Desk",
+		"Color": "Green",
+		"Title": "모션 데스크 스탠딩 높낮이 초록거능 침대 위 작은 책상, 게으른 승강조절 책상 보드",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=34158419708",
+		"Image": "https://shopping-phinf.pstatic.net/main_3415841/34158419708.jpg",
+		"Brand": "",
+		"Price": "269500"
+	},
+	{
+		"Category": "Desk",
+		"Color": "Green",
+		"Title": "모션 데스크 스탠딩 높낮이 초록거능 침대 위 작은 책상, 게으른 승강조절 책상 보드",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=34155240175",
+		"Image": "https://shopping-phinf.pstatic.net/main_3415524/34155240175.jpg",
+		"Brand": "",
+		"Price": "269500"
+	},
+	{
+		"Category": "Desk",
+		"Color": "Green",
+		"Title": "조정 가능한 휴대용 노트북 테이블 스탠드 접이식 컴퓨터 독서 책상 침대 트레이, 녹색",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=32282565654",
+		"Image": "https://shopping-phinf.pstatic.net/main_3228256/32282565654.jpg",
+		"Brand": "",
+		"Price": "77500"
 	}
 ]

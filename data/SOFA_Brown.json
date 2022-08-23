@@ -52,5 +52,41 @@
 		"Image": "https://shopping-phinf.pstatic.net/main_8428468/84284681911.jpg",
 		"Brand": "",
 		"Price": "300000"
+	},
+	{
+		"Category": "Sofa",
+		"Color": "Brown",
+		"Title": "동양 바닥 좌석 코너 소파 세트 갈색 아랍어 마글리스",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=34061081877",
+		"Image": "https://shopping-phinf.pstatic.net/main_3406108/34061081877.jpg",
+		"Brand": "",
+		"Price": "3080600"
+	},
+	{
+		"Category": "Sofa",
+		"Color": "Brown",
+		"Title": "인테리어쇼파 페브릭소파 북유럽풍쇼파 -갈색  더블",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=33475144389",
+		"Image": "https://shopping-phinf.pstatic.net/main_3347514/33475144389.jpg",
+		"Brand": "",
+		"Price": "259500"
+	},
+	{
+		"Category": "Sofa",
+		"Color": "Brown",
+		"Title": "인테리어쇼파 페브릭소파 북유럽풍쇼파 -갈색  큰 받침대 쇼파",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=33475289496",
+		"Image": "https://shopping-phinf.pstatic.net/main_3347528/33475289496.jpg",
+		"Brand": "",
+		"Price": "156500"
+	},
+	{
+		"Category": "Sofa",
+		"Color": "Brown",
+		"Title": "인테리어쇼파 페브릭소파 북유럽풍쇼파 -갈색  큰 받침대 쇼파",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=33475265640",
+		"Image": "https://shopping-phinf.pstatic.net/main_3347526/33475265640.jpg",
+		"Brand": "",
+		"Price": "156500"
 	}
 ]

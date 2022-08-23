@@ -52,5 +52,41 @@
 		"Image": "https://shopping-phinf.pstatic.net/main_3353841/33538411930.jpg",
 		"Brand": "",
 		"Price": "482310"
+	},
+	{
+		"Category": "Sofa",
+		"Color": "Blue",
+		"Title": "조약돌 패브릭 소파-파란색 - 대형",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=33538747407",
+		"Image": "https://shopping-phinf.pstatic.net/main_3353874/33538747407.1.jpg",
+		"Brand": "",
+		"Price": "170000"
+	},
+	{
+		"Category": "Sofa",
+		"Color": "Blue",
+		"Title": "조약돌 패브릭 소파-파란색 - 중형",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=33538469571",
+		"Image": "https://shopping-phinf.pstatic.net/main_3353846/33538469571.1.jpg",
+		"Brand": "",
+		"Price": "140500"
+	},
+	{
+		"Category": "Sofa",
+		"Color": "Blue",
+		"Title": "조약돌 패브릭 소파-파란색 - 대형",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=33538516223",
+		"Image": "https://shopping-phinf.pstatic.net/main_3353851/33538516223.1.jpg",
+		"Brand": "",
+		"Price": "170000"
+	},
+	{
+		"Category": "Sofa",
+		"Color": "Blue",
+		"Title": "조약돌 패브릭 소파-파란색 - 중형",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=33538340412",
+		"Image": "https://shopping-phinf.pstatic.net/main_3353834/33538340412.1.jpg",
+		"Brand": "",
+		"Price": "140500"
 	}
 ]

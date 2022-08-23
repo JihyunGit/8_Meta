@@ -52,5 +52,41 @@
 		"Image": "https://shopping-phinf.pstatic.net/main_3280831/32808315849.jpg",
 		"Brand": "",
 		"Price": "684490"
+	},
+	{
+		"Category": "BookShelf",
+		"Color": "Brown",
+		"Title": "심플한 모듈 아크릴 디자인 공간 활용 갈색 책장",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=84315892084",
+		"Image": "https://shopping-phinf.pstatic.net/main_8431589/84315892084.jpg",
+		"Brand": "",
+		"Price": "713010"
+	},
+	{
+		"Category": "BookShelf",
+		"Color": "Brown",
+		"Title": "오피스보이 [PN] 월넛 단책장 (갈색유리)",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=10621999825",
+		"Image": "https://shopping-phinf.pstatic.net/main_1062199/10621999825.jpg",
+		"Brand": "파트너",
+		"Price": "96800"
+	},
+	{
+		"Category": "BookShelf",
+		"Color": "Brown",
+		"Title": "Martin Furniture Grafton Industrial Wood 수납 공간 거실 책장 책꽂이 갈색",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=27866725883",
+		"Image": "https://shopping-phinf.pstatic.net/main_2786672/27866725883.jpg",
+		"Brand": "",
+		"Price": "824600"
+	},
+	{
+		"Category": "BookShelf",
+		"Color": "Brown",
+		"Title": "단 만화 철제 낮은 서랍식 사이드 국내 이케아 빌리크버 책장 갈색 유리책장 심플   오크 컬러",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=28838567121",
+		"Image": "https://shopping-phinf.pstatic.net/main_2883856/28838567121.jpg",
+		"Brand": "",
+		"Price": "429720"
 	}
 ]

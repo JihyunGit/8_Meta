@@ -52,5 +52,41 @@
 		"Image": "https://shopping-phinf.pstatic.net/main_3317221/33172217073.jpg",
 		"Brand": "",
 		"Price": "460900"
+	},
+	{
+		"Category": "Desk",
+		"Color": "Brown",
+		"Title": "사무실용 테슬라 학생 월넛 책상 갈색유리 고품질",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=32933937304",
+		"Image": "https://shopping-phinf.pstatic.net/main_3293393/32933937304.jpg",
+		"Brand": "",
+		"Price": "460900"
+	},
+	{
+		"Category": "Desk",
+		"Color": "Brown",
+		"Title": "PT 사무용데스크 테슬라 월넛 책상갈색유리 사무용 임원용 고급",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=27441429890",
+		"Image": "https://shopping-phinf.pstatic.net/main_2744142/27441429890.jpg",
+		"Brand": "",
+		"Price": "460900"
+	},
+	{
+		"Category": "Desk",
+		"Color": "Brown",
+		"Title": "사무용데스크 EWD 사무용 월낫 테이블 일자형책상 갈색유리포함",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=33016116636",
+		"Image": "https://shopping-phinf.pstatic.net/main_3301611/33016116636.jpg",
+		"Brand": "",
+		"Price": "220000"
+	},
+	{
+		"Category": "Desk",
+		"Color": "Brown",
+		"Title": "사무용 가우디 오피스 월넛 책상 갈색유리포함 고품질",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=33016023130",
+		"Image": "https://shopping-phinf.pstatic.net/main_3301602/33016023130.jpg",
+		"Brand": "",
+		"Price": "738100"
 	}
 ]

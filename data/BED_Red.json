@@ -52,5 +52,41 @@
 		"Image": "https://shopping-phinf.pstatic.net/main_2567548/25675487033.3.jpg",
 		"Brand": "",
 		"Price": "335000"
+	},
+	{
+		"Category": "Bed",
+		"Color": "Red",
+		"Title": "편백나무침대 레드파인원목 평상 침대프레임 킹",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=26369811372",
+		"Image": "https://shopping-phinf.pstatic.net/main_2636981/26369811372.2.jpg",
+		"Brand": "",
+		"Price": "359000"
+	},
+	{
+		"Category": "Bed",
+		"Color": "Red",
+		"Title": "편백나무침대 레드파인원목 평상 침대프레임 이스턴킹",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=26528268455",
+		"Image": "https://shopping-phinf.pstatic.net/main_2652826/26528268455.3.jpg",
+		"Brand": "",
+		"Price": "415000"
+	},
+	{
+		"Category": "Bed",
+		"Color": "Red",
+		"Title": "편백나무침대 레드파인원목 평상 침대프레임 싱글",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=25675348299",
+		"Image": "https://shopping-phinf.pstatic.net/main_2567534/25675348299.3.jpg",
+		"Brand": "",
+		"Price": "299000"
+	},
+	{
+		"Category": "Bed",
+		"Color": "Red",
+		"Title": "[코코소프트] D형 침대  레드샌드 투톤컬러 SSQK",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=32491689867",
+		"Image": "https://shopping-phinf.pstatic.net/main_3249168/32491689867.jpg",
+		"Brand": "베이직가구",
+		"Price": "1404770"
 	}
 ]

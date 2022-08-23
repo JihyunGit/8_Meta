@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, jsonify
+from werkzeug.utils import secure_filename
 import pymongo
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
@@ -16,6 +17,7 @@ import pandas as pd
 import MetaRecommend
 
 
+
 # DB 불러오기
 client = pymongo.MongoClient("mongodb+srv://metaverse123:hongil123@accidentlyunity.ts7ta4j.mongodb.net/?retryWrites=true&w=majority", server_api=ServerApi('1'))
 db = client.test
@@ -27,6 +29,8 @@ productDB = db.product
 relativeDB = db.relative
 ## 장바구니
 basketDB = db.basket
+## 중고거래 게시판
+usedDB = db.usedBoard
 
 print("DB 연동 완료")
 
@@ -471,6 +475,90 @@ def MetaRecommendType():
         data_list = {"Result": result_bool, "Data": result_data}
 
     return data_list
+
+## --------------------------- 중고거래 게시판 시작 --------------------------
+
+## 이미지 하나 가져오기 및 저장
+@app.route('/GetImageClass', methods=['POST'])
+def GetImageClass():
+    img_file = request.files['file']
+    # 해킹 방지용 파일이름
+    img_file.save('./upload_images/' + secure_filename(img_file.filename))
+
+    print(secure_filename(img_file.filename))
+
+    return 'done!'
+
+## 게시판 글 등록
+@app.route('/InsertUsedBoard', methods=['POST'])
+def InsertUsed():
+    # 파일 제외한 것들은 json 혹은 form으로 보내기
+    # request.form dict형태
+    ## request.form['input_name']
+
+    # 이미지 파일 받기
+    ## request.files.getlist("file[]") -> 만약 리스트 형식이면 파라미터명은 file[]
+    img_file = request.files['file']
+
+    # 파일명
+    file_name = secure_filename(img_file.filename)
+    # 확장자
+    extension = file_name.split('.')[-1]
+
+    # form 데이터 받기
+    form_data = request.form.to_dict()
+    
+    ## 글 정보 보냈으면
+    # 카테고리, 가구명, 사진, 가격, 게시판 제목, 내용, 등록자id, 게시판 인덱스
+
+    ## 게시판 인덱스는 최근 추가된 데이터의 인덱스 + 1
+    index = 1
+    results = list(usedDB.find({}).sort("_id", -1))
+
+    ## 테이블에 데이터가 하나라도 있어야 조건에 걸림
+    if 'index' in results[0]:
+        index = int(results[0]['index']) + index
+
+    form_data['index'] = index
+
+    # 이미지 파일명 (경로는 폴더명 변경에 유의해 넣지 않음)
+    # 그대로 넣으면 찾아오기 힘드니까 index + 확장자명 (1.jpg)
+    tmp_name = str(index) + '.' + extension
+    form_data['imgName'] = tmp_name
+
+    print(form_data)
+    
+    ## 이미지 파일 저장
+    img_file.save('./upload_images/' + tmp_name)
+
+    ## 게시판에 글 등록하기
+    result = usedDB.insert_one(form_data)
+
+    ## 결과값 저장
+    result_bool = False
+
+    ## 게시판에 글이 등록되었으면
+    if (result.acknowledged):
+        result_bool = True
+
+    result_data = {'Result': result_bool}
+
+    return result_data
+
+    
+
+
+
+
+
+
+
+
+
+
+## --------------------------- 중고거래 게시판 끝 --------------------------
+
+
 
 
 @app.after_request

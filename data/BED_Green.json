@@ -52,5 +52,41 @@
 		"Image": "https://shopping-phinf.pstatic.net/main_8356391/83563917820.jpg",
 		"Brand": "",
 		"Price": "840000"
+	},
+	{
+		"Category": "Bed",
+		"Color": "Green",
+		"Title": "벨벳 침대 스툴 엔틱 베드 벤치 현관 보조 의자 동양 화이트 세라믹 정원 소재 침대  초록",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=32015343028",
+		"Image": "https://shopping-phinf.pstatic.net/main_3201534/32015343028.jpg",
+		"Brand": "",
+		"Price": "209200"
+	},
+	{
+		"Category": "Bed",
+		"Color": "Green",
+		"Title": "Bonenjoy  pc 녹색 크리스탈 벨벳 침대 커버 탄성 퀸 킹 사이즈 침구",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=31725095007",
+		"Image": "https://shopping-phinf.pstatic.net/main_3172509/31725095007.jpg",
+		"Brand": "",
+		"Price": "44840"
+	},
+	{
+		"Category": "Bed",
+		"Color": "Green",
+		"Title": "퀸 침대 프레임 퀸 더블 싱글 철제 원목 접이식 현대 침실 가구 접시 수납 침대 대형  육군 녹색",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=32025244953",
+		"Image": "https://shopping-phinf.pstatic.net/main_3202524/32025244953.2.jpg",
+		"Brand": "",
+		"Price": "2441000"
+	},
+	{
+		"Category": "Bed",
+		"Color": "Green",
+		"Title": "프레임 매트리스 노헤드 사이즈 이키아가그림스부침대인 인용 철제침대철예상녹색철침대",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=34155404812",
+		"Image": "https://shopping-phinf.pstatic.net/main_3415540/34155404812.jpg",
+		"Brand": "",
+		"Price": "349700"
 	}
 ]

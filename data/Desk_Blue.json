@@ -52,5 +52,41 @@
 		"Image": "https://shopping-phinf.pstatic.net/main_8450533/84505339866.jpg",
 		"Brand": "",
 		"Price": "290200"
+	},
+	{
+		"Category": "Desk",
+		"Color": "Blue",
+		"Title": "리프트 책상 의자 세트 독서 학생 테이블 높이조절  M 파란색과 흰색 싱글 테이블",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=31509669303",
+		"Image": "https://shopping-phinf.pstatic.net/main_3150966/31509669303.jpg",
+		"Brand": "",
+		"Price": "711050"
+	},
+	{
+		"Category": "Desk",
+		"Color": "Blue",
+		"Title": "리프팅 책상 의자 세트 독서 학생 테이블 각도조절  M 파란색과 흰색 싱글 테이블",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=31510825123",
+		"Image": "https://shopping-phinf.pstatic.net/main_3151082/31510825123.jpg",
+		"Brand": "",
+		"Price": "473820"
+	},
+	{
+		"Category": "Desk",
+		"Color": "Blue",
+		"Title": "원목 서랍 책상 수납 테이블 고급 가족 단단한 나무 파란색 컴퓨터 연구 가구 ",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=84603600113",
+		"Image": "https://shopping-phinf.pstatic.net/main_8460360/84603600113.jpg",
+		"Brand": "",
+		"Price": "832200"
+	},
+	{
+		"Category": "Desk",
+		"Color": "Blue",
+		"Title": "원목 서랍 책상 수납 테이블 고급 가족 단단한 나무 파란색 컴퓨터 연구 가구 ",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=84513777743",
+		"Image": "https://shopping-phinf.pstatic.net/main_8451377/84513777743.jpg",
+		"Brand": "",
+		"Price": "832200"
 	}
 ]
