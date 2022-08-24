@@ -16,7 +16,7 @@ import CrawRelative
 import pandas as pd
 import MetaRecommend
 import os
-import furniture_classification
+##import furniture_classification
 import requests
 
 
@@ -515,17 +515,17 @@ def GetImageClass():
 ## 이미지 분류 모델
 ## input : 이미지 파일
 ## output : 레이블, 어떤 가구인지
-@app.route('/ReturnFurnitureClass', methods=['POST'])
-def GetFurnitureClass():
-    img_file = request.files['file']
-
-    pred = furniture_classification.predict_furniture(img_file)
-
-    print(pred)
-
-    result_data = {'Data':pred}
-
-    return result_data
+# @app.route('/ReturnFurnitureClass', methods=['POST'])
+# def GetFurnitureClass():
+#     img_file = request.files['file']
+#
+#     pred = furniture_classification.predict_furniture(img_file)
+#
+#     print(pred)
+#
+#     result_data = {'Data':pred}
+#
+#     return result_data
 
 ## 게시판 글 등록
 @app.route('/InsertUsedBoard', methods=['POST'])
