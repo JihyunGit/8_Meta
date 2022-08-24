@@ -29,20 +29,20 @@
 	{
 		"Category": "Chair",
 		"Color": "Red",
-		"Title": "히츠 의자 클로에의자 레드Hits L",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=26721780871",
-		"Image": "https://shopping-phinf.pstatic.net/main_2672178/26721780871.20210411174428.jpg",
-		"Brand": "",
-		"Price": "22350"
-	},
-	{
-		"Category": "Chair",
-		"Color": "Red",
 		"Title": "나무와공간 마르세유체어 레드파인다이닝",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=28620492761",
 		"Image": "https://shopping-phinf.pstatic.net/main_2862049/28620492761.20210829000428.jpg",
 		"Brand": "",
 		"Price": "121000"
+	},
+	{
+		"Category": "Chair",
+		"Color": "Red",
+		"Title": "히츠 의자 클로에의자 레드Hits L",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=26721780871",
+		"Image": "https://shopping-phinf.pstatic.net/main_2672178/26721780871.20210411174428.jpg",
+		"Brand": "",
+		"Price": "22350"
 	},
 	{
 		"Category": "Chair",

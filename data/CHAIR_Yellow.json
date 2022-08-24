@@ -11,20 +11,20 @@
 	{
 		"Category": "Chair",
 		"Color": "Yellow",
-		"Title": "코비아 의자-옐로우 의자 사출의자 카페의자 다용도의",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=32456490392",
-		"Image": "https://shopping-phinf.pstatic.net/main_3245649/32456490392.20220519122357.jpg",
-		"Brand": "",
-		"Price": "24820"
-	},
-	{
-		"Category": "Chair",
-		"Color": "Yellow",
 		"Title": "모던하우스 바틸다 체어 옐로 DL",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=29596771153",
 		"Image": "https://shopping-phinf.pstatic.net/main_2959677/29596771153.20211110031923.jpg",
 		"Brand": "모던하우스",
 		"Price": "86430"
+	},
+	{
+		"Category": "Chair",
+		"Color": "Yellow",
+		"Title": "코비아 의자-옐로우 의자 사출의자 카페의자 다용도의",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=32456490392",
+		"Image": "https://shopping-phinf.pstatic.net/main_3245649/32456490392.20220519122357.jpg",
+		"Brand": "",
+		"Price": "24820"
 	},
 	{
 		"Category": "Chair",

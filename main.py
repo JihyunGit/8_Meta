@@ -545,15 +545,24 @@ def InsertUsed():
     ## 글 정보 보냈으면
     # 카테고리, 가구명, 사진, 가격, 게시판 제목, 내용, 등록자id, 게시판 인덱스
 
-    ## 게시판 인덱스는 최근 추가된 데이터의 인덱스 + 1
+    # 인덱스는 숫자로 저장
     index = 1
-    results = list(usedDB.find({}).sort("_id", -1))
 
-    ## 테이블에 데이터가 하나라도 있어야 조건에 걸림
-    if (len(results) > 0):
-        index = int(results[0]['index']) + index
+    ## 글 수정이면 index값을 받으므로 여기는 글 수정
+    if 'index' in form_data:
+        ## 무조건 인덱스
+        index = int(form_data['index'])
+        form_data['index'] = index
+    else:
+        ## 글 등록이면 여기로
+        results = list(usedDB.find({}).sort("_id", -1))
 
-    form_data['index'] = index
+        ## 테이블에 데이터가 하나라도 있어야 조건에 걸림
+        if (len(results) > 0):
+            ## 게시판 인덱스는 최근 추가된 데이터의 인덱스 + 1
+            index = int(results[0]['index']) + index
+            form_data['index'] = index
+
 
     # 이미지 파일명 (경로는 폴더명 변경에 유의해 넣지 않음)
     # 그대로 넣으면 찾아오기 힘드니까 index + 확장자명 (1.jpg)
@@ -572,14 +581,14 @@ def InsertUsed():
     img_file.filename = tmp_name
     SendFileToUrl(img_file)
 
-    ## 게시판에 글 등록하기
-    result = usedDB.insert_one(form_data)
+    ## 게시판에 글 등록하기 / 수정하기
+    result = usedDB.update({'index': int(index)}, form_data, upsert=True)
 
     ## 결과값 저장
     result_bool = False
 
-    ## 게시판에 글이 등록되었으면
-    if (result.acknowledged):
+    ## 게시판에 글이 등록 혹은 수정되었으면
+    if (len(result) > 0):
         result_bool = True
 
     result_data = {'Result': result_bool}
@@ -590,50 +599,50 @@ def InsertUsed():
 ## 게시판 글 수정
 ## input : 인덱스 및 카테고리, 가구명, 사진, 가격, 게시판제목, 내용
 ## output : 결과값
-@app.route('/UpdateUsedBoard', methods=['POST'])
-def UpdatetUsed():
-    # 이미지 파일 받고
-    img_file = request.files['file']
-
-    # 파일명
-    file_name = secure_filename(img_file.filename)
-
-    # 확장자
-    extension = file_name.split('.')[-1]
-
-    # form 데이터 받기
-    form_data = request.form.to_dict()
-
-    # 수정할 글의 인덱스
-    index = form_data['index']
-
-    # 저장할 폴더, 없으면 생성
-    os.makedirs('./upload_images', exist_ok=True)
-    
-    # 파일명
-    tmp_name = str(index) + '.' + extension
-    # 파일명 변경
-    form_data['imgName'] = tmp_name
-    
-    # DB 테이블에 업데이트
-    result = usedDB.update({'index':index}, form_data, upsert=True)
-
-    print(result)
-
-    result_bool = False
-
-    if (len(result) > 0):
-        ## 이미지 파일 저장
-        img_file.save('./upload_images/' + tmp_name)
-        # 서버로 파일 저장
-        img_file.filename = tmp_name
-        SendFileToUrl(img_file)
-
-        result_bool = True
-
-    result_data = {'result_bool':result_bool}
-
-    return result_data
+# @app.route('/UpdateUsedBoard', methods=['POST'])
+# def UpdatetUsed():
+#     # 이미지 파일 받고
+#     img_file = request.files['file']
+#
+#     # 파일명
+#     file_name = secure_filename(img_file.filename)
+#
+#     # 확장자
+#     extension = file_name.split('.')[-1]
+#
+#     # form 데이터 받기
+#     form_data = request.form.to_dict()
+#
+#     # 수정할 글의 인덱스
+#     index = form_data['index']
+#
+#     # 저장할 폴더, 없으면 생성
+#     os.makedirs('./upload_images', exist_ok=True)
+#
+#     # 파일명
+#     tmp_name = str(index) + '.' + extension
+#     # 파일명 변경
+#     form_data['imgName'] = tmp_name
+#
+#     # DB 테이블에 업데이트
+#     result = usedDB.update({'index':index}, form_data, upsert=True)
+#
+#     print(result)
+#
+#     result_bool = False
+#
+#     if (len(result) > 0):
+#         ## 이미지 파일 저장
+#         img_file.save('./upload_images/' + tmp_name)
+#         # 서버로 파일 저장
+#         img_file.filename = tmp_name
+#         SendFileToUrl(img_file)
+#
+#         result_bool = True
+#
+#     result_data = {'result_bool':result_bool}
+#
+#     return result_data
 
 
 ## 중고거래 게시판 로드하기

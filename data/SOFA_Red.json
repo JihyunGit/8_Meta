@@ -65,6 +65,15 @@
 	{
 		"Category": "Sofa",
 		"Color": "Red",
+		"Title": "에싸 다즈 인 오픈코너형 스윙기능 카시미라 패브릭 소파",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=33589064619",
+		"Image": "https://shopping-phinf.pstatic.net/main_3358906/33589064619.20220720114546.jpg",
+		"Brand": "에싸",
+		"Price": "3180030"
+	},
+	{
+		"Category": "Sofa",
+		"Color": "Red",
 		"Title": "에싸 밀란 인 카시미라 패브릭 소파",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=32438208622",
 		"Image": "https://shopping-phinf.pstatic.net/main_3243820/32438208622.20220518171648.jpg",
@@ -79,14 +88,5 @@
 		"Image": "https://shopping-phinf.pstatic.net/main_2615967/26159679522.20210226140019.jpg",
 		"Brand": "에보니아",
 		"Price": "121440"
-	},
-	{
-		"Category": "Sofa",
-		"Color": "Red",
-		"Title": "에싸 다즈 인 오픈코너형 스윙기능 카시미라 패브릭 소파",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=33589064619",
-		"Image": "https://shopping-phinf.pstatic.net/main_3358906/33589064619.20220720114546.jpg",
-		"Brand": "에싸",
-		"Price": "3180030"
 	}
 ]
