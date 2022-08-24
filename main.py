@@ -16,6 +16,8 @@ import CrawRelative
 import pandas as pd
 import MetaRecommend
 import os
+import furniture_classification
+import requests
 
 
 
@@ -166,9 +168,23 @@ def SimpleMetaRecommend(df, FurnitureType, ColorType):
     return FindMetaRecommend(df, tmp_str)
 
 
+## 파일 전송하기
+def SendFileToUrl(file):
+    upload = {'userfile':file}
+
+    res = requests.post('http://www.mongilmongilgames.com/image/upload.php', files = upload)
+
+    print('파일 업로드 결과코드:', res)
+
+# files = open('./upload_images/1.jpg', 'rb')
+#
+# SendFileToUrl(files)
 
 
 app = Flask(__name__)
+
+
+
 
 
 @app.route('/')
@@ -489,17 +505,31 @@ def GetImageClass():
     # 해킹 방지용 파일이름
     img_file.save('./upload_images/' + secure_filename(img_file.filename))
 
+    # 서버로 파일 저장
+    SendFileToUrl(img_file)
+
     print(secure_filename(img_file.filename))
 
     return 'done!'
 
+## 이미지 분류 모델
+## input : 이미지 파일
+## output : 레이블, 어떤 가구인지
+@app.route('/ReturnFurnitureClass', methods=['POST'])
+def GetFurnitureClass():
+    img_file = request.files['file']
+
+    pred = furniture_classification.predict_furniture(img_file)
+
+    print(pred)
+
+    result_data = {'Data':pred}
+
+    return result_data
+
 ## 게시판 글 등록
 @app.route('/InsertUsedBoard', methods=['POST'])
 def InsertUsed():
-    # 파일 제외한 것들은 json 혹은 form으로 보내기
-    # request.form dict형태
-    ## request.form['input_name']
-
     # 이미지 파일 받기
     ## request.files.getlist("file[]") -> 만약 리스트 형식이면 파라미터명은 file[]
     img_file = request.files['file']
@@ -537,6 +567,10 @@ def InsertUsed():
     
     ## 이미지 파일 저장
     img_file.save('./upload_images/' + tmp_name)
+
+    # 서버로 파일 저장
+    img_file.filename = tmp_name
+    SendFileToUrl(img_file)
 
     ## 게시판에 글 등록하기
     result = usedDB.insert_one(form_data)
@@ -591,11 +625,42 @@ def UpdatetUsed():
     if (len(result) > 0):
         ## 이미지 파일 저장
         img_file.save('./upload_images/' + tmp_name)
+        # 서버로 파일 저장
+        img_file.filename = tmp_name
+        SendFileToUrl(img_file)
+
         result_bool = True
 
     result_data = {'result_bool':result_bool}
 
     return result_data
+
+
+## 중고거래 게시판 로드하기
+## input : 없음
+## output : 게시판 글
+@app.route('/LoadUsed', methods=['POST'])
+def LoadUsedDB():
+    board_list = list(usedDB.find({}).sort("_id", -1))
+
+    result_bool = False
+
+    if (board_list):
+        result_bool = True
+
+        print(len(board_list))
+
+    data_list = {"Result":result_bool,"Data":board_list}
+
+    # bson -> json 형태로
+    result = dumps(data_list, ensure_ascii=False)
+
+    return result
+
+
+
+
+
 
 
 

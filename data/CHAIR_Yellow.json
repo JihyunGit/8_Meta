@@ -2,15 +2,6 @@
 	{
 		"Category": "Chair",
 		"Color": "Yellow",
-		"Title": "모던하우스 바틸다 체어 옐로 DL",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=29596771153",
-		"Image": "https://shopping-phinf.pstatic.net/main_2959677/29596771153.20211110031923.jpg",
-		"Brand": "모던하우스",
-		"Price": "86430"
-	},
-	{
-		"Category": "Chair",
-		"Color": "Yellow",
 		"Title": "러플 우드 부클 인테리어 체어  의자 옐로우 ",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=33949304748",
 		"Image": "https://shopping-phinf.pstatic.net/main_3394930/33949304748.20220809063033.jpg",
@@ -29,6 +20,15 @@
 	{
 		"Category": "Chair",
 		"Color": "Yellow",
+		"Title": "모던하우스 바틸다 체어 옐로 DL",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=29596771153",
+		"Image": "https://shopping-phinf.pstatic.net/main_2959677/29596771153.20211110031923.jpg",
+		"Brand": "모던하우스",
+		"Price": "86430"
+	},
+	{
+		"Category": "Chair",
+		"Color": "Yellow",
 		"Title": "엘앤씨스텐달 아르노 체어 Arno  Chair 옐로우",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=82723721229",
 		"Image": "https://shopping-phinf.pstatic.net/main_8272372/82723721229.3.jpg",
@@ -38,20 +38,20 @@
 	{
 		"Category": "Chair",
 		"Color": "Yellow",
-		"Title": "이노메싸 피암 Spaghetti  S 스파게티 암 체어옐로우 GI",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=27279071337",
-		"Image": "https://shopping-phinf.pstatic.net/main_2727907/27279071337.20210523175912.jpg",
-		"Brand": "",
-		"Price": "434000"
-	},
-	{
-		"Category": "Chair",
-		"Color": "Yellow",
 		"Title": "히츠 의자 마스터체어 옐로우Hits CL",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=26721407116",
 		"Image": "https://shopping-phinf.pstatic.net/main_2672140/26721407116.20210411165102.jpg",
 		"Brand": "",
 		"Price": "29280"
+	},
+	{
+		"Category": "Chair",
+		"Color": "Yellow",
+		"Title": "이노메싸 피암 Spaghetti  S 스파게티 암 체어옐로우 GI",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=27279071337",
+		"Image": "https://shopping-phinf.pstatic.net/main_2727907/27279071337.20210523175912.jpg",
+		"Brand": "",
+		"Price": "434000"
 	},
 	{
 		"Category": "Chair",

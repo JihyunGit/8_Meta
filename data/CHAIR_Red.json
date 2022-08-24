@@ -11,6 +11,15 @@
 	{
 		"Category": "Chair",
 		"Color": "Red",
+		"Title": "미국식 패스트푸드 식당 의자 빨간 레트로 복고",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=28524782799",
+		"Image": "https://shopping-phinf.pstatic.net/main_2852478/28524782799.20210822042022.jpg",
+		"Brand": "",
+		"Price": "155380"
+	},
+	{
+		"Category": "Chair",
+		"Color": "Red",
 		"Title": "미니막스 인테리어 식탁 카페 의자 레드쿠션 SVCI",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=29824620208",
 		"Image": "https://shopping-phinf.pstatic.net/main_2982462/29824620208.20211125020749.jpg",
@@ -69,24 +78,15 @@
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=34043811214",
 		"Image": "https://shopping-phinf.pstatic.net/main_3404381/34043811214.20220813163825.jpg",
 		"Brand": "",
-		"Price": "421080"
+		"Price": "421070"
 	},
 	{
 		"Category": "Chair",
 		"Color": "Red",
-		"Title": "마켓비 빈티지의자 카페의자 레드-완제품 PMMD",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=29277620565",
-		"Image": "https://shopping-phinf.pstatic.net/main_2927762/29277620565.20211018041754.jpg",
+		"Title": "고스트체어 투명의자 투명 마법의자 아크릴 의자 모던 심플 엣지 메쉬 레드의자",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=23743608636",
+		"Image": "https://shopping-phinf.pstatic.net/main_2374360/23743608636.20211004024610.jpg",
 		"Brand": "",
-		"Price": "59890"
-	},
-	{
-		"Category": "Chair",
-		"Color": "Red",
-		"Title": "최다판매 까페 GMEN-비스트로 상담실 체어 레드 스틸",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=34148579618",
-		"Image": "https://shopping-phinf.pstatic.net/main_3414857/34148579618.jpg",
-		"Brand": "",
-		"Price": "130000"
+		"Price": "65900"
 	}
 ]

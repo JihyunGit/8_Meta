@@ -20,6 +20,15 @@
 	{
 		"Category": "Sofa",
 		"Color": "Red",
+		"Title": "에보니아 루비 인 패브릭소파",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=8014189833",
+		"Image": "https://shopping-phinf.pstatic.net/main_8014189/8014189833.20210224113342.jpg",
+		"Brand": "에보니아",
+		"Price": "100870"
+	},
+	{
+		"Category": "Sofa",
+		"Color": "Red",
 		"Title": "에싸 엘로이즈 인 스윙기능 카시미라 패브릭 소파 + 스툴",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=31404884618",
 		"Image": "https://shopping-phinf.pstatic.net/main_3140488/31404884618.20220321124403.jpg",
@@ -29,11 +38,11 @@
 	{
 		"Category": "Sofa",
 		"Color": "Red",
-		"Title": "에보니아 루비 인 패브릭소파",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=8014189833",
-		"Image": "https://shopping-phinf.pstatic.net/main_8014189/8014189833.20210224113342.jpg",
-		"Brand": "에보니아",
-		"Price": "100850"
+		"Title": "에싸 엘로이즈 인 코너형 기능성 카시미라 패브릭 소파",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=27044149522",
+		"Image": "https://shopping-phinf.pstatic.net/main_2704414/27044149522.20210507115518.jpg",
+		"Brand": "에싸",
+		"Price": "3014400"
 	},
 	{
 		"Category": "Sofa",
@@ -42,25 +51,7 @@
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=27317053523",
 		"Image": "https://shopping-phinf.pstatic.net/main_2731705/27317053523.20210526164548.jpg",
 		"Brand": "리바트",
-		"Price": "1097000"
-	},
-	{
-		"Category": "Sofa",
-		"Color": "Red",
-		"Title": "에싸 다즈 인 오픈코너형 스윙기능 카시미라 패브릭 소파",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=33589064619",
-		"Image": "https://shopping-phinf.pstatic.net/main_3358906/33589064619.20220720114546.jpg",
-		"Brand": "에싸",
-		"Price": "3180030"
-	},
-	{
-		"Category": "Sofa",
-		"Color": "Red",
-		"Title": "에싸 엘로이즈 인 코너형 기능성 카시미라 패브릭 소파",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=27044149522",
-		"Image": "https://shopping-phinf.pstatic.net/main_2704414/27044149522.20210507115518.jpg",
-		"Brand": "에싸",
-		"Price": "3014400"
+		"Price": "1104000"
 	},
 	{
 		"Category": "Sofa",
@@ -83,10 +74,19 @@
 	{
 		"Category": "Sofa",
 		"Color": "Red",
-		"Title": "부산가구 부산소파 [레드플래닛] 구스 캄포소파 테티스",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=83574174301",
-		"Image": "https://shopping-phinf.pstatic.net/main_8357417/83574174301.3.jpg",
-		"Brand": "레드플래닛",
-		"Price": "2190000"
+		"Title": "에보니아 브릿지 라텍스폼 인 패브릭 카우치 소파",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=26159679522",
+		"Image": "https://shopping-phinf.pstatic.net/main_2615967/26159679522.20210226140019.jpg",
+		"Brand": "에보니아",
+		"Price": "121440"
+	},
+	{
+		"Category": "Sofa",
+		"Color": "Red",
+		"Title": "에싸 다즈 인 오픈코너형 스윙기능 카시미라 패브릭 소파",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=33589064619",
+		"Image": "https://shopping-phinf.pstatic.net/main_3358906/33589064619.20220720114546.jpg",
+		"Brand": "에싸",
+		"Price": "3180030"
 	}
 ]

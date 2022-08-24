@@ -15,16 +15,7 @@
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=33673178510",
 		"Image": "https://shopping-phinf.pstatic.net/main_3367317/33673178510.20220725054222.jpg",
 		"Brand": "",
-		"Price": "177020"
-	},
-	{
-		"Category": "Chair",
-		"Color": "White",
-		"Title": "바실리체어 디자인 라운지체어 모던 인테리어 의자 흰색",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=30470325771",
-		"Image": "https://shopping-phinf.pstatic.net/main_3047032/30470325771.20220109013207.jpg",
-		"Brand": "",
-		"Price": "112400"
+		"Price": "176980"
 	},
 	{
 		"Category": "Chair",
@@ -38,6 +29,15 @@
 	{
 		"Category": "Chair",
 		"Color": "White",
+		"Title": "바실리체어 디자인 라운지체어 모던 인테리어 의자 흰색",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=30470325771",
+		"Image": "https://shopping-phinf.pstatic.net/main_3047032/30470325771.20220109013207.jpg",
+		"Brand": "",
+		"Price": "112400"
+	},
+	{
+		"Category": "Chair",
+		"Color": "White",
 		"Title": "빈티지 철제 의자 테라스 카페 팔걸이 암체어 흰색 싱글 의자",
 		"Link": "https://search.shopping.naver.com/gate.nhn?id=31859177695",
 		"Image": "https://shopping-phinf.pstatic.net/main_3185917/31859177695.20220416153750.jpg",
@@ -47,11 +47,20 @@
 	{
 		"Category": "Chair",
 		"Color": "White",
-		"Title": "마지스퍼피 달마시안 볼드체어 라지 강아지의자 흰색",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=33674943026",
-		"Image": "https://shopping-phinf.pstatic.net/main_3367494/33674943026.20220725083122.jpg",
+		"Title": "카페의자 인테리어 새집 식당 의자 흰색",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=33215449130",
+		"Image": "https://shopping-phinf.pstatic.net/main_3321544/33215449130.20220630175922.jpg",
 		"Brand": "",
-		"Price": "164330"
+		"Price": "58310"
+	},
+	{
+		"Category": "Chair",
+		"Color": "White",
+		"Title": "북유럽 카페철제의자 야외 테라스 호텔 의자 흰색",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=34148368374",
+		"Image": "https://shopping-phinf.pstatic.net/main_3414836/34148368374.20220818183354.jpg",
+		"Brand": "",
+		"Price": "52000"
 	},
 	{
 		"Category": "Chair",
@@ -65,11 +74,11 @@
 	{
 		"Category": "Chair",
 		"Color": "White",
-		"Title": "카페의자 인테리어 새집 식당 의자 흰색",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=33215449130",
-		"Image": "https://shopping-phinf.pstatic.net/main_3321544/33215449130.20220630175922.jpg",
+		"Title": "마지스퍼피 달마시안 볼드체어 라지 강아지의자 흰색",
+		"Link": "https://search.shopping.naver.com/gate.nhn?id=33674943026",
+		"Image": "https://shopping-phinf.pstatic.net/main_3367494/33674943026.20220725083122.jpg",
 		"Brand": "",
-		"Price": "58290"
+		"Price": "164330"
 	},
 	{
 		"Category": "Chair",
@@ -79,14 +88,5 @@
 		"Image": "https://shopping-phinf.pstatic.net/main_3397945/33979459226.20220810133033.jpg",
 		"Brand": "",
 		"Price": "64970"
-	},
-	{
-		"Category": "Chair",
-		"Color": "White",
-		"Title": "레저 의자 흰색 가죽 식당 커피 테이블 의자 가구",
-		"Link": "https://search.shopping.naver.com/gate.nhn?id=33543984705",
-		"Image": "https://shopping-phinf.pstatic.net/main_3354398/33543984705.20220717131228.jpg",
-		"Brand": "",
-		"Price": "520960"
 	}
 ]
