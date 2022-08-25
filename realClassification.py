@@ -16,7 +16,7 @@ def predict_img(file_path):
     ### 이미지 예측해보기
     ### 이미지 파일 종류
 
-    y_predict = new_model.predict(temp_img)
+    y_predict = new_model.predict(temp_img, batch_size=8)
 
     label = labels[y_predict[0].argmax()]
     confidence = y_predict[0][y_predict[0].argmax()]
