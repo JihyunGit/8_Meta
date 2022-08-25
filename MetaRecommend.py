@@ -71,10 +71,32 @@ def MakeMetaFurnitureCosine():
 
 
 #MakeRandomCSV()
-df = MakeMetaFurnitureCosine()
-result = recommend_stuff(df,'Bed/Blue')
+# df = MakeMetaFurnitureCosine()
+# result = recommend_stuff(df,'Bed/Blue')
 
+def GetRecommendPos():
+    df = MakeMetaFurnitureCosine()
+    result = recommend_stuff(df,'Bed/Blue')
 
+    # 전체 맵 좌표
+    left_up = (-4.2, 2.97)
+    left_down = (-4.2, -1.1)
+    right_down = (4.27, -1.1)
+    right_up = (4.27, 2.97)
+
+    ## 경계선 y값 2, 더하는 값 1.2
+    ## 놓은 x값
+    put_fur_pos = np.array([2, 1])
+    rec_fur_pos = 0
+
+    rec_fur_pos = put_fur_pos + np.array([0, 0.75])
+    if put_fur_pos[1] <= 2.0:
+        rec_fur_pos = put_fur_pos + np.array([0, 1.2])
+    else:
+        rec_fur_pos = put_fur_pos + np.array([0, -1.1])
+
+    print(result)
+    print("추천가구:",result.index[0], "// 좌표:", rec_fur_pos)
 
 
 

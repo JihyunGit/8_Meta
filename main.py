@@ -504,8 +504,10 @@ def GetImageClass():
     # 해킹 방지용 파일이름
     img_file.save('./upload_images/' + secure_filename(img_file.filename))
 
+    img = open('./upload_images/' + secure_filename(img_file.filename), 'rb')
+
     # 서버로 파일 저장
-    SendFileToUrl(img_file)
+    SendFileToUrl(img)
 
     print(secure_filename(img_file.filename))
 
@@ -695,7 +697,7 @@ def DeleteUsedDB():
     # 결과가 있으면
     if (len(board) > 0):
         # state : 1로 변경함
-        usedDB.update_one({'index':index},{'state':1})
+        usedDB.update_one({'index':index},{'$set':{'state':1}})
         result_bool = True
 
     result = {'Result':result_bool}
