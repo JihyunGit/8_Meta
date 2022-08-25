@@ -703,16 +703,6 @@ def DeleteUsedDB():
     result = {'Result':result_bool}
 
     return result
-    
-
-
-
-
-
-
-
-
-
 
 ## --------------------------- 중고거래 게시판 끝 --------------------------
 

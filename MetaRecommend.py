@@ -105,13 +105,6 @@ def GetRecommendPos(category_and_color):
 
 
 
-GetRecommendPos('Sofa/Blue')
-
-
-
-
-
-
 
 
 
