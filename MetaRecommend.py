@@ -9,7 +9,10 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 ## CSV파일 만들기
 def MakeRandomCSV():
-    size = (100, 9 * 7)
+    furlist = ['Bed', 'BookShelf', 'Chair', 'Desk', 'FlowerPot', 'PhotoFrame', 'Sofa', 'Stand']
+    colorlist = ['Yellow', 'Blue', 'Green', 'White', 'Red', 'Brown', 'None']
+
+    size = (100, len(furlist) * len(colorlist))
     random_list = np.random.randint(0, 2, size=size)
 
     # 디렉토리 및 파일명 설정
@@ -20,9 +23,6 @@ def MakeRandomCSV():
     colstr = 'ColorType'
 
     type_list.append('index')
-
-    furlist = ['Bed', 'BookShelf', 'Chair', 'Desk', 'FlowerPot', 'PhotoFrame', 'Sofa', 'Stand', 'Floor']
-    colorlist = ['Yellow', 'Blue', 'Green', 'White', 'Red', 'Brown', 'None']
 
     cnt = 0
 
@@ -37,7 +37,7 @@ def MakeRandomCSV():
         ## 헤더 붙이기
         csv_writer.writerow(type_list)
 
-        tmp = [0] * 9 * 7
+        tmp = [0] * len(furlist) * len(colorlist)
 
         ## 바디 붙이기
         for row in random_list:
@@ -70,13 +70,14 @@ def MakeMetaFurnitureCosine():
 
 
 
-#MakeRandomCSV()
+MakeRandomCSV()
 # df = MakeMetaFurnitureCosine()
 # result = recommend_stuff(df,'Bed/Blue')
 
-def GetRecommendPos():
+def GetRecommendPos(category_and_color):
     df = MakeMetaFurnitureCosine()
-    result = recommend_stuff(df,'Bed/Blue')
+    # category_and_color = 'Bed/Blue' 이런 형태
+    result = recommend_stuff(df, category_and_color)
 
     # 전체 맵 좌표
     left_up = (-4.2, 2.97)
@@ -104,7 +105,7 @@ def GetRecommendPos():
 
 
 
-
+GetRecommendPos('Sofa/Blue')
 
 
 
