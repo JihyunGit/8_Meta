@@ -2,6 +2,7 @@ import os
 from PIL import Image
 import numpy as np
 from keras.models import load_model
+import gc
 
 new_model = load_model("./model/furniture_vgg16_best.h5")
 labels = ['Bed', 'Bookshelf', 'Chair', 'Desk', 'FlowerPot', 'PhotoFrame', 'Stand']
@@ -21,7 +22,7 @@ def predict_img(file_path):
     confidence = y_predict[0][y_predict[0].argmax()]
     # print('predict: {} {:.2f}%'.format(label, confidence * 100))
     # print(y_predict[0])
-
+    gc.collect()
     return label
 
 ## 사용법
