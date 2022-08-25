@@ -4,7 +4,7 @@ import numpy as np
 from keras.models import load_model
 
 new_model = load_model("./model/furniture_vgg16_best.h5")
-labels = ['bed', 'bookshelf', 'chair', 'desk', 'flowerpot', 'photoframe', 'stand']
+labels = ['Bed', 'Bookshelf', 'Chair', 'Desk', 'FlowerPot', 'PhotoFrame', 'Stand']
 
 def predict_img(file_path):
     temp_img = Image.open(file_path)

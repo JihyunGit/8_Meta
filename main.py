@@ -566,13 +566,16 @@ def InsertUsed():
         if (len(results) > 0):
             ## 게시판 인덱스는 최근 추가된 데이터의 인덱스 + 1
             index = int(results[0]['index']) + index
-            form_data['index'] = index
+
+        form_data['index'] = index
 
 
     # 이미지 파일명 (경로는 폴더명 변경에 유의해 넣지 않음)
     # 그대로 넣으면 찾아오기 힘드니까 index + 확장자명 (1.jpg)
     tmp_name = str(index) + '.' + extension
     form_data['imgName'] = tmp_name
+    # 0 : 정상, 1 : 삭제, 2 : 비공개
+    form_data['state'] = 0
 
     print(form_data)
 
@@ -655,10 +658,14 @@ def InsertUsed():
 ## output : 게시판 글
 @app.route('/LoadUsed', methods=['POST'])
 def LoadUsedDB():
-    board_list = list(usedDB.find({}).sort("_id", -1))
+    # state가 0인 정상적인 게시글들만 가져오기
+    board_list = list(usedDB.find({'state':0}).sort("_id", -1))
+
+    print(board_list)
 
     result_bool = False
 
+    # 글이 없거나 못 불러오면 False임
     if (board_list):
         result_bool = True
 
@@ -670,6 +677,32 @@ def LoadUsedDB():
     result = dumps(data_list, ensure_ascii=False)
 
     return result
+
+## 중고거래 게시글 삭제 (실제 삭제는 아님, state를 변경해서 state가 0인 목록만 정상임)
+## state : 0(정상), 1(삭제), 2(비공개)
+## input : 인덱스
+## output : 성공여부
+@app.route('/DeleteUsed', methods=['POST'])
+def DeleteUsedDB():
+    json_data = request.get_json()
+    # 삭제할 게시글의 인덱스
+    index = json_data['index']
+
+    # index로 해당 게시글 하나만
+    board = list(usedDB.find_one({'index':index}))
+
+    result_bool = False
+
+    # 결과가 있으면
+    if (len(board) > 0):
+        # state : 1로 변경함
+        usedDB.update_one({'index':index},{'$set':{'state':1}})
+        result_bool = True
+
+    result = {'Result':result_bool}
+
+    return result
+    
 
 
 
