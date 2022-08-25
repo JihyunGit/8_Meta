@@ -548,13 +548,15 @@ def InsertUsed():
     # 인덱스는 숫자로 저장
     index = 1
 
-    ## 글 수정이면 index값을 받으므로 여기는 글 수정
-    if 'index' in form_data:
+    ## 여기는 글 수정
+    if ('index' in form_data) and (int(form_data['index']) > -1):
         ## 무조건 인덱스
+        print('수정')
         index = int(form_data['index'])
         form_data['index'] = index
     else:
         ## 글 등록이면 여기로
+        print('등록')
         results = list(usedDB.find({}).sort("_id", -1))
 
         ## 테이블에 데이터가 하나라도 있어야 조건에 걸림
@@ -624,7 +626,7 @@ def InsertUsed():
 #     # 파일명 변경
 #     form_data['imgName'] = tmp_name
 #
-#     # DB 테이블에 업데이트
+#     # DB 테이블에 업데이트s
 #     result = usedDB.update({'index':index}, form_data, upsert=True)
 #
 #     print(result)
@@ -700,6 +702,9 @@ sched.start()
 #sched_result = sched.add_job(MakeJsonToDB, 'cron', minute='*/1')
 # 3시간마다
 sched_result = sched.add_job(MakeJsonToDB, 'cron', hour='*/3')
+
+results = list(usedDB.find({}).sort("_id", -1))
+print(results[0])
 
 #MakeJsonToDB()
 #FromJsonToDB()
