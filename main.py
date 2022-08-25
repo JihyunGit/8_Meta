@@ -675,26 +675,26 @@ def LoadUsedDB():
 ## state : 0(정상), 1(삭제), 2(비공개)
 ## input : 인덱스
 ## output : 성공여부
-@app.route('/DeleteUsed', methods=['POST'])
-def DeleteUsedDB():
-    json_data = request.get_json()
-    # 삭제할 게시글의 인덱스
-    index = json_data['index']
-
-    # index로 해당 게시글 하나만
-    board = list(usedDB.find_one({'index':index}))
-
-    result_bool = False
-
-    # 결과가 있으면
-    if (len(board) > 0):
-        # state : 1로 변경함
-        usedDB.update_one({'index':index},{'$set':{'state':1}})
-        result_bool = True
-
-    result = {'Result':result_bool}
-
-    return result
+# @app.route('/DeleteUsed', methods=['POST'])
+# def DeleteUsedDB():
+#     json_data = request.get_json()
+#     # 삭제할 게시글의 인덱스
+#     index = json_data['index']
+#
+#     # index로 해당 게시글 하나만
+#     board = list(usedDB.find_one({'index':index}))
+#
+#     result_bool = False
+#
+#     # 결과가 있으면
+#     if (len(board) > 0):
+#         # state : 1로 변경함
+#         usedDB.update_one({'index':index},{'state':1})
+#         result_bool = True
+#
+#     result = {'Result':result_bool}
+#
+#     return result
     
 
 
