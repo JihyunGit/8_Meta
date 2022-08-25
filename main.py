@@ -1,3 +1,6 @@
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+
 from flask import Flask, render_template, request, jsonify
 from werkzeug.utils import secure_filename
 import pymongo
@@ -15,8 +18,7 @@ import numpy as np
 import CrawRelative
 import pandas as pd
 import MetaRecommend
-import os
-##import furniture_classification
+import realClassification
 import requests
 
 
@@ -512,20 +514,21 @@ def GetImageClass():
 
     return 'done!'
 
-## 이미지 분류 모델
-## input : 이미지 파일
-## output : 레이블, 어떤 가구인지
-# @app.route('/ReturnFurnitureClass', methods=['POST'])
-# def GetFurnitureClass():
-#     img_file = request.files['file']
-#
-#     pred = furniture_classification.predict_furniture(img_file)
-#
-#     print(pred)
-#
-#     result_data = {'Data':pred}
-#
-#     return result_data
+# 이미지 분류 모델
+# input : 이미지 파일
+# output : 레이블, 어떤 가구인지
+@app.route('/ReturnFurnitureClass', methods=['POST'])
+def GetFurnitureClass():
+    img_file = request.files['file']
+
+    pred = realClassification.predict_img(img_file)
+
+    print(pred)
+
+    result_data = {'Data':pred}
+
+    return result_data
+
 
 ## 게시판 글 등록
 @app.route('/InsertUsedBoard', methods=['POST'])
@@ -702,9 +705,6 @@ sched.start()
 #sched_result = sched.add_job(MakeJsonToDB, 'cron', minute='*/1')
 # 3시간마다
 sched_result = sched.add_job(MakeJsonToDB, 'cron', hour='*/3')
-
-results = list(usedDB.find({}).sort("_id", -1))
-print(results[0])
 
 #MakeJsonToDB()
 #FromJsonToDB()

@@ -3,10 +3,10 @@ from PIL import Image
 import numpy as np
 from keras.models import load_model
 
+new_model = load_model("./model/furniture_vgg16_best.h5")
+labels = ['bed', 'bookshelf', 'chair', 'desk', 'flowerpot', 'photoframe', 'stand']
 
 def predict_img(file_path):
-    new_model = load_model("./model/furniture_vgg16_best.h5")
-
     temp_img = Image.open(file_path)
     temp_img = temp_img.resize((224, 224))
     temp_img = np.array(temp_img)
@@ -14,19 +14,15 @@ def predict_img(file_path):
 
     ### 이미지 예측해보기
     ### 이미지 파일 종류
-    labels = ['bed', 'bookshelf', 'chair', 'desk', 'flowerpot', 'photoframe', 'stand']
-    # plt.figure(figsize=(12, 6))
-    # plt.axis(False)
-    n = 1
 
     y_predict = new_model.predict(temp_img)
 
     label = labels[y_predict[0].argmax()]
     confidence = y_predict[0][y_predict[0].argmax()]
-    print('predict: {} {:.2f}%'.format(label, confidence * 100))
-    print(y_predict[0])
+    # print('predict: {} {:.2f}%'.format(label, confidence * 100))
+    # print(y_predict[0])
 
-    return(label)
+    return label
 
 ## 사용법
 """
@@ -37,6 +33,6 @@ print(predict_label)
 """
 
 
-file_path = "./upload_images/desk1.jpg"
-predict_label = predict_img(file_path)
-print(predict_label)
+# file_path = "./upload_images/desk1.jpg"
+# predict_label = predict_img(file_path)
+# print(predict_label)
