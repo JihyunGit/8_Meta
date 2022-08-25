@@ -2,8 +2,8 @@ import os
 from PIL import Image
 import numpy as np
 from keras.models import load_model
-
-
+import gc
+import tensorflow as tf
 
 def predict_img(file_path):
     new_model = load_model("./model/furniture_vgg16_best.h5")
@@ -24,6 +24,9 @@ def predict_img(file_path):
     # print('predict: {} {:.2f}%'.format(label, confidence * 100))
     # print(y_predict[0])
 
+    tf.keras.backend.clear_session()
+    gc.collect()
+    del new_model
     return label
 
 ## 사용법
