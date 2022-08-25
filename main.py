@@ -174,7 +174,11 @@ def SimpleMetaRecommend(df, FurnitureType, ColorType):
 def SendFileToUrl(file):
     upload = {'userfile':file}
 
+    print(file)
+
     res = requests.post('http://www.mongilmongilgames.com/image/upload.php', files = upload)
+
+    print(res.text)
 
     print('파일 업로드 결과코드:', res)
 
@@ -578,9 +582,11 @@ def InsertUsed():
     ## 이미지 파일 저장
     img_file.save('./upload_images/' + tmp_name)
 
+    ## 다시 열기
+    img = open('./upload_images/' + tmp_name, 'rb')
+    
     # 서버로 파일 저장
-    img_file.filename = tmp_name
-    SendFileToUrl(img_file)
+    SendFileToUrl(img)
 
     ## 게시판에 글 등록하기 / 수정하기
     result = usedDB.update({'index': int(index)}, form_data, upsert=True)
