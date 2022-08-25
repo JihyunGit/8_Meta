@@ -729,15 +729,15 @@ def after_request(response):
 
 
 # 스케쥴 설정
-sched = BackgroundScheduler(daemon=True)
+#sched = BackgroundScheduler(daemon=True)
 # sched_result = sched.add_job(Craw.makeJsonItem, 'cron', week='1-4', day_of_week='0-6', minute='2', 'interval')
-sched.start()
+#sched.start()
 # sched.add_job(job, 'interval', seconds=3, id="test_2")
 
 # 1분마다
 #sched_result = sched.add_job(MakeJsonToDB, 'cron', minute='*/1')
 # 3시간마다
-sched_result = sched.add_job(MakeJsonToDB, 'cron', hour='*/3')
+#sched_result = sched.add_job(MakeJsonToDB, 'cron', hour='*/3')
 
 #MakeJsonToDB()
 #FromJsonToDB()
