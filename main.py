@@ -178,16 +178,9 @@ def SendFileToUrl(file):
 
     print('파일 업로드 결과코드:', res)
 
-# files = open('./upload_images/1.jpg', 'rb')
-#
-# SendFileToUrl(files)
-
 
 app = Flask(__name__)
 
-
-
-#123321
 
 @app.route('/')
 def index():
