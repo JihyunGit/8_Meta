@@ -3,10 +3,12 @@ from PIL import Image
 import numpy as np
 from keras.models import load_model
 
-new_model = load_model("./model/furniture_vgg16_best.h5")
-labels = ['Bed', 'Bookshelf', 'Chair', 'Desk', 'FlowerPot', 'PhotoFrame', 'Stand']
+
 
 def predict_img(file_path):
+    new_model = load_model("./model/furniture_vgg16_best.h5")
+    labels = ['Bed', 'Bookshelf', 'Chair', 'Desk', 'FlowerPot', 'PhotoFrame', 'Stand']
+
     temp_img = Image.open(file_path)
     temp_img = temp_img.resize((224, 224))
     temp_img = np.array(temp_img)
