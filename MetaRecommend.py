@@ -9,7 +9,6 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 ## CSV파일 만들기
 def MakeRandomCSV():
-
     ## 서랍장 10개, 책상 7개, 화분 4개, 액자6개
     furlist = ['Bed','Chair', 'Sofa', 'Stand']
     non_color_furlist = ['BookShelf', 'Desk', 'FlowerPot', 'PhotoFrame' ]
@@ -80,7 +79,6 @@ def MakeMetaFurnitureCosine():
 
 ## 추천된 가구의 위치 좌표// 원래 가구 위치 좌표 x,y
 def rec_fur_position(furname=None, pos=None):
-    df = MakeMetaFurnitureCosine()
     recommend_item = recommend_stuff(df, furname).index[0]
     put_fur_pos = pos
     rec_fur_pos = 0
@@ -92,41 +90,6 @@ def rec_fur_position(furname=None, pos=None):
         rec_fur_pos = put_fur_pos + np.array([0, -1.1])
 
     return rec_fur_pos
-
-
-
-
-
-
-
-
-
-
-
-<<<<<<< Updated upstream
-=======
-
-
-
-
-
-
->>>>>>> Stashed changes
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
