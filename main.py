@@ -254,8 +254,16 @@ def Recommend():
 
     result_bool = False
 
-    # DB에 결과 있으면
     if len(product_list) > 0:
+
+        # 제목이 일치하는 애들끼리 정렬하고 price오름차순으로 가격이 싼 것만 남기고 중복은 제거함
+        df = pd.DataFrame(product_list)
+        df_sorted = df.sort_values(by=['Title', 'Price'], ascending=True)
+        df_drop = df_sorted.drop_duplicates(['Title'],keep='first')
+
+        product_list = df_drop.to_dict('records')
+        print(product_list)
+
         result_bool = True
 
     # 결과값과 데이터
