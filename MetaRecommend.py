@@ -9,10 +9,17 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 ## CSV파일 만들기
 def MakeRandomCSV():
-    furlist = ['Bed', 'BookShelf', 'Chair', 'Desk', 'FlowerPot', 'PhotoFrame', 'Sofa', 'Stand']
-    colorlist = ['Yellow', 'Blue', 'Green', 'White', 'Red', 'Brown', 'None']
 
-    size = (100, len(furlist) * len(colorlist))
+    ## 서랍장 10개, 책상 7개, 화분 4개, 액자6개
+    furlist = ['Bed','Chair', 'Sofa', 'Stand']
+    non_color_furlist = ['BookShelf', 'Desk', 'FlowerPot', 'PhotoFrame' ]
+    colorlist = ['Yellow', 'Blue', 'Green', 'White', 'Red', 'Brown']
+    non_color_furlist_num = {'BookShelf': 10, 'Desk': 7, 'FlowerPot': 4, 'PhotoFrame': 6}
+
+    num_row = 300
+    num_column = len(furlist) * len(colorlist) + sum(non_color_furlist_num.values())
+
+    size = (num_row, num_column)
     random_list = np.random.randint(0, 2, size=size)
 
     # 디렉토리 및 파일명 설정
@@ -24,11 +31,14 @@ def MakeRandomCSV():
 
     type_list.append('index')
 
-    cnt = 0
-
+    ## make column names
     for fur in furlist:
         for color in colorlist:
             type_list.append(fur + '/' + color)
+    for fur in non_color_furlist:
+        for num in range(non_color_furlist_num[fur]):
+            type_list.append(fur + '/' + str(num))
+    print(type_list)
 
     # tsv 파일 쓰기
     with open(filename, "w", newline="") as result_file:
@@ -37,10 +47,10 @@ def MakeRandomCSV():
         ## 헤더 붙이기
         csv_writer.writerow(type_list)
 
-        tmp = [0] * len(furlist) * len(colorlist)
+        tmp = [0] * num_row * num_column
 
         ## 바디 붙이기
-        for row in random_list:
+        for cnt, row in enumerate(random_list):
             tmp[1:] = row
             tmp[0] = cnt
             cnt += 1
@@ -68,26 +78,11 @@ def MakeMetaFurnitureCosine():
 
     return similarity_df
 
-
-
-MakeRandomCSV()
-# df = MakeMetaFurnitureCosine()
-# result = recommend_stuff(df,'Bed/Blue')
-
-def GetRecommendPos(category_and_color):
+## 추천된 가구의 위치 좌표// 원래 가구 위치 좌표 x,y
+def rec_fur_position(furname=None, pos=None):
     df = MakeMetaFurnitureCosine()
-    # category_and_color = 'Bed/Blue' 이런 형태
-    result = recommend_stuff(df, category_and_color)
-
-    # 전체 맵 좌표
-    left_up = (-4.2, 2.97)
-    left_down = (-4.2, -1.1)
-    right_down = (4.27, -1.1)
-    right_up = (4.27, 2.97)
-
-    ## 경계선 y값 2, 더하는 값 1.2
-    ## 놓은 x값
-    put_fur_pos = np.array([2, 1])
+    recommend_item = recommend_stuff(df, furname).index[0]
+    put_fur_pos = pos
     rec_fur_pos = 0
 
     rec_fur_pos = put_fur_pos + np.array([0, 0.75])
@@ -96,8 +91,7 @@ def GetRecommendPos(category_and_color):
     else:
         rec_fur_pos = put_fur_pos + np.array([0, -1.1])
 
-    print(result)
-    print("추천가구:",result.index[0], "// 좌표:", rec_fur_pos)
+    return rec_fur_pos
 
 
 
@@ -105,6 +99,19 @@ def GetRecommendPos(category_and_color):
 
 
 
+
+
+
+
+<<<<<<< Updated upstream
+=======
+
+
+
+
+
+
+>>>>>>> Stashed changes
 
 
 
