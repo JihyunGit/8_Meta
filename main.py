@@ -3,7 +3,6 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 from flask import Flask, render_template, request, jsonify
 from werkzeug.utils import secure_filename
-import pymongo
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 from apscheduler.schedulers.background import BackgroundScheduler    # apscheduler 라이브러리 선언
@@ -20,6 +19,7 @@ import pandas as pd
 import MetaRecommend
 import realClassification
 import requests
+import new_pos
 
 
 
@@ -312,6 +312,30 @@ def RandomRecommend():
 # 유니티에서 가구 선택시 추천 위치 반환
 # input : furniture type, color type (str)
 # output : Result, pos_x,pos_y 추천 위치
+# @app.route('/RecommendPos', methods=['POST'])
+# def RecommendPosition():
+#     print('추천 위치 반환')
+#
+#     json_data = request.get_json()
+#     PosRequestData = json_data['PosRequestData']
+#
+#     recom_list = recom_position_unity.load_best_area(PosRequestData['FurnitureType'], PosRequestData['ColorType'])
+#
+#     print(recom_list)
+#
+#     result_bool = False
+#
+#     if len(recom_list) > 0:
+#         result_bool = True
+#
+#     data_list = {"Result": result_bool, "Data": recom_list}
+#
+#     return data_list
+
+
+# 가구 위치 반환 최신버전
+# input : 가구 타입, 가구 색상, 해당 사용자의 DeviceId
+# output : 추천할 가구타입/색상, 해당 가구의 위치정보
 @app.route('/RecommendPos', methods=['POST'])
 def RecommendPosition():
     print('추천 위치 반환')
@@ -319,18 +343,34 @@ def RecommendPosition():
     json_data = request.get_json()
     PosRequestData = json_data['PosRequestData']
 
-    recom_list = recom_position_unity.load_best_area(PosRequestData['FurnitureType'], PosRequestData['ColorType'])
+    deviceId = json_data['DeviceId']
 
-    print(recom_list)
+    result = None
+
+    map = memberDB.find_one({'DeviceId': deviceId}, sort=[('_id', pymongo.DESCENDING)])
+
+    # 사용자에게 맵이 있을 경우에만
+    if ('Map' in map):
+        user_data = json.loads(map['Map'])
+
+        # 추천 가구 위치
+        result = new_pos.ReturnRecomFurniture(user_data, PosRequestData['FurnitureType'], PosRequestData['ColorType'])
+
+    # 추천 가구 결과가 하나도 없으면 구역별 빈도수로 구한 값 반환
+    if (result == None):
+        result = recom_position_unity.load_best_area(PosRequestData['FurnitureType'], PosRequestData['ColorType'])
+
+    print(result)
 
     result_bool = False
 
-    if len(recom_list) > 0:
+    if len(result) > 0:
         result_bool = True
 
-    data_list = {"Result": result_bool, "Data": recom_list}
+    data_list = {"Result": result_bool, "Data": result}
 
     return data_list
+
 
 
 ## Basket ------------------------------- 장바구니 -------------------------------
@@ -718,4 +758,4 @@ def after_request(response):
 if __name__ == '__main__':
     # serve(app, host="0.0.0.0", port=5000)
     # app.run(debug=True) # host = 127.0.0.1 port = 5000
-    app.run(host='0.0.0.0', port='5080', debug=False)
+    app.run(host='0.0.0.0', port='5100', debug=False)
