@@ -200,11 +200,8 @@ def ReturnRecomFurniture(user_data, furniture_type, color_type):
                     result_list.append(result)
                     break
 
-    sorted_dict = sorted(result_list, key=lambda d: d['vaule'], reverse=True)
-
-    # 높은 관계성 순으로 정렬한 후
-    if (len(sorted_dict) > 0):
-        return sorted_dict
+    if (len(result_list) > 0):
+        sorted_dict = sorted(result_list, key=lambda d: d['vaule'], reverse=True)
 
     return sorted_dict
 
