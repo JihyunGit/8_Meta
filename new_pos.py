@@ -202,11 +202,9 @@ def ReturnRecomFurniture(user_data, furniture_type, color_type):
 
     sorted_dict = sorted(result_list, key=lambda d: d['vaule'], reverse=True)
 
-    print(sorted_dict)
-
-    # 가장 높은 관계성을 가진 아이템 반환
+    # 높은 관계성 순으로 정렬한 후
     if (len(sorted_dict) > 0):
-        return sorted_dict[0]
+        return sorted_dict
 
     return sorted_dict
 
