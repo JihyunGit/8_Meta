@@ -247,6 +247,8 @@ def ReturnRecomFurniture(user_data, furniture_type, color_type):
     # 관계가 높은 가구들 리스트 반환
     recom_list = recom_best(final_df, recom_str)
 
+    print(recom_list)
+
     for data in user_data:
         fur_num = data['FurnitureType']
         color_num = data['Index']

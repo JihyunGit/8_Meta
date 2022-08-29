@@ -569,6 +569,9 @@ def GetImageClass():
     SendFileToUrl(img)
 
     print(file_name)
+    
+    # 메모리 누수 막기
+    img.close()
 
     return 'done!'
 
@@ -655,6 +658,8 @@ def InsertUsed():
     
     # 서버로 파일 저장
     SendFileToUrl(img)
+
+    img.close()
 
     ## 게시판에 글 등록하기 / 수정하기
     result = usedDB.update({'index': int(index)}, form_data, upsert=True)
