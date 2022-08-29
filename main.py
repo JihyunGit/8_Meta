@@ -484,8 +484,8 @@ def LoadRelativeDB():
 
     product_name = relative_data['Title']
 
-    # list로 감싸서 가져오기, 문자열이 일치하는 것과 포함하는 경우 둘 다 가져옴
-    relative_list = list(relativeDB.find({'Relative':{'$regex':product_name}}))
+    # list로 감싸서 가져오기, 문자열이 일치하는 것과 포함하는 경우 둘 다 가져옴, 4개로 제한
+    relative_list = list(relativeDB.find({'Relative':{'$regex':product_name}}).limit(4))
 
     result_bool = False
 
