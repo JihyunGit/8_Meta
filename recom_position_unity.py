@@ -21,7 +21,7 @@ def load_best_area(furType, colType):
     recom_best_df = pd.read_csv('./data_csv/recom_area.csv')
 
     # 숫자로 들어옴 furType, colType
-    FurnitureType = {'Floor':0,'Bed':1,'BookShelf':2,'Chair':3,'Desk':4,'FlowerPot':5,'PhotoFrame':6,'Sofa':7,'Stand':8}
+    FurnitureType = {'Bed':0,'BookShelf':1,'Chair':2,'Desk':3,'FlowerPot':4,'PhotoFrame':5,'Sofa':6,'Stand':7}
     ColorType = {'Yellow':0,'Blue':1,'Green':2,'White':3,'Red':4,'Brown':5,'None':6}
 
     # 문자열이면
@@ -30,6 +30,9 @@ def load_best_area(furType, colType):
     #                 recom_best_df['color'] == int(ColorType[colType]))]
 
     furType = int(FurnitureType[furType])
+
+    print(furType)
+    print(colType)
 
     test = lambda x: ColorType[colType] if ((x > 5) or (x == 0) or (x == 2)) else colType
     colType = test(furType)
