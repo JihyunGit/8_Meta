@@ -357,7 +357,7 @@ def RecommendPosition():
         result = new_pos.ReturnRecomFurniture(user_data, PosRequestData['FurnitureType'], PosRequestData['ColorType'])
 
     # 추천 가구 결과가 하나도 없으면 구역별 빈도수로 구한 값 반환
-    if (result == None):
+    if ((result == None) or (len(result) < 1)):
         result = recom_position_unity.load_best_area(PosRequestData['FurnitureType'], PosRequestData['ColorType'])
 
     print(result)
@@ -758,4 +758,4 @@ def after_request(response):
 if __name__ == '__main__':
     # serve(app, host="0.0.0.0", port=5000)
     # app.run(debug=True) # host = 127.0.0.1 port = 5000
-    app.run(host='0.0.0.0', port='5100', debug=False)
+    app.run(host='0.0.0.0', port='5080', debug=False)
