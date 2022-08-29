@@ -413,9 +413,9 @@ def LoadBasketDB():
 
     basket_list = basketDB.find_one({'DeviceId':deviceId})
 
-    result = 'saaaaaa'
-
     result_data = []
+
+    result_bool = False
 
     # 장바구니가 존재하면
     if (basket_list):
@@ -428,8 +428,6 @@ def LoadBasketDB():
 
         tmp_str = '.*'
 
-        result_bool = False
-
         if (len(product_list) > 0):
             result_bool = True
             for prod in product_list:
@@ -437,10 +435,10 @@ def LoadBasketDB():
                 product_info = productDB.find_one({'Link':{'$regex' : tmp_str+prod}})
                 result_data.append(product_info)
 
-        data_list = {"Result":result_bool,"Data":result_data}
+    data_list = {"Result":result_bool,"Data":result_data}
 
-        # bson -> json 형태로
-        result = dumps(data_list, ensure_ascii=False)
+    # bson -> json 형태로
+    result = dumps(data_list, ensure_ascii=False)
 
     return result
 
