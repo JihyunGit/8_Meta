@@ -34,8 +34,11 @@ def LoadMapList():
             for num in range(non_color[fur]):
                 col_list.append(str(fur) + '/' + str(num))
         else:
-            for color in colorlist:
+             for color in colorlist:
                 col_list.append(fur + '/' + color)
+             if fur == 'Chair':
+                # Chair만 개수가 하나 더 많음
+                col_list.append(fur + '/' + 'None')
 
     return col_list, all_member
 
@@ -67,6 +70,9 @@ def MakeMemberCsv(col_list, all_member):
                         try:
                             test = lambda x: colorlist[color_num] if ((x > 5) or (x == 0) or (x == 2)) else color_num
                             index = test(fur_num)
+                            # Chair만
+                            if (fur_num == 2) and (color_num == 6):
+                                index = 'None'
                             col_num = col_list.index(furlist[fur_num] + '/' + str(index))
                             tmp[col_num] = str(x) + '/' + str(y)
                         except:
@@ -131,10 +137,16 @@ def makeRelationCsv(col_list):
     # 관계 카운트에 따라 자주 나타났을 경우 값을 크게 해줌
     final_df = new_df * count_arr
 
-    # result_df.to_csv('./data_csv/resultdf.csv')
-    # new_df.to_csv('./data_csv/newdf.csv')
-    # final_df.to_csv('./data_csv/finaldf.csv')
-    # np.savetxt('./data_csv/count1.csv',count_arr,delimiter=",")
+    result_df.to_csv('./data_csv/resultdf.csv')
+    new_df.to_csv('./data_csv/newdf.csv')
+    final_df.to_csv('./data_csv/finaldf.csv')
+    np.savetxt('./data_csv/count1.csv',count_arr,delimiter=",")
+
+## 사용법
+# col_list, all_member = LoadMapList()
+# MakeMemberCsv(col_list, all_member)
+# makeRelationCsv(col_list)
+
 
 final_df = pd.read_csv('./data_csv/finaldf.csv')
 final_df = final_df.set_index('Unnamed: 0')
@@ -144,11 +156,6 @@ def recom_best(tmp_df, title):
     return tmp_df[title].sort_values(ascending=False)
 
 
-
-## 사용법
-# col_list, all_member = LoadMapList()
-# MakeMemberCsv(col_list, all_member)
-# makeRelationCsv(col_list)
 # tmp = recom_best(final_df, 'Chair/White')
 # print(tmp)
 
@@ -202,6 +209,7 @@ def ReturnRecomFurniture(user_data, furniture_type, color_type):
 
     if (len(result_list) > 0):
         sorted_dict = sorted(result_list, key=lambda d: d['vaule'], reverse=True)
+        print(sorted_dict)
 
     return sorted_dict
 
