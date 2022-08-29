@@ -387,6 +387,9 @@ def UpdateBasketDB():
     deviceId = json_data['DeviceId']
     productList = json_data['Product']
 
+
+    print(productList)
+
     # DeviceId에 장바구니 없으면 생성하고 있으면 update한다
     result = basketDB.update({'DeviceId': deviceId}, {'DeviceId': deviceId, 'ProductList': productList}, upsert=True)
 
@@ -424,8 +427,6 @@ def LoadBasketDB():
         # str형태를 다시 리스트로
         product_list = json.loads(product_list_str)
 
-        print(product_list)
-
         tmp_str = '.*'
 
         if (len(product_list) > 0):
@@ -436,6 +437,8 @@ def LoadBasketDB():
                 result_data.append(product_info)
 
     data_list = {"Result":result_bool,"Data":result_data}
+
+    print(data_list)
 
     # bson -> json 형태로
     result = dumps(data_list, ensure_ascii=False)

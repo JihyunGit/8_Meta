@@ -20,11 +20,21 @@ y_pos_list = [-0.82,0.43,1.68,2.92]
 def load_best_area(furType, colType):
     recom_best_df = pd.read_csv('./data_csv/recom_area.csv')
 
+    # 숫자로 들어옴 furType, colType
     FurnitureType = {'Floor':0,'Bed':1,'BookShelf':2,'Chair':3,'Desk':4,'FlowerPot':5,'PhotoFrame':6,'Sofa':7,'Stand':8}
     ColorType = {'Yellow':0,'Blue':1,'Green':2,'White':3,'Red':4,'Brown':5,'None':6}
 
-    # 조건을 만족하는 것들, 리스트일 확률도 있음
-    pos_df = recom_best_df[(recom_best_df['Furniture'] == int(FurnitureType[furType])) & (recom_best_df['color'] == int(ColorType[colType]))]
+    # 문자열이면
+    # if ((type(furType)) == str):
+    #     pos_df = recom_best_df[(recom_best_df['Furniture'] == int(FurnitureType[furType])) & (
+    #                 recom_best_df['color'] == int(ColorType[colType]))]
+
+    furType = int(FurnitureType[furType])
+
+    test = lambda x: ColorType[colType] if ((x > 5) or (x == 0) or (x == 2)) else colType
+    colType = test(furType)
+
+    pos_df = recom_best_df[(recom_best_df['Furniture'] == int(furType)) & (recom_best_df['color'] == int(colType))]
 
     print('------------------------------')
     print(list(pos_df.T.to_dict()))
