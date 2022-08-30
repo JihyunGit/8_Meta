@@ -187,8 +187,9 @@ def SendFileToUrl(file):
 app = Flask(__name__)
 CORS(app, resources={r"*": {"origins": "*"}})
 
+request.headers.add('origin','*')
+
 @app.route('/')
-@cross_origin(origin='*')
 def index():
     return '안녕하세요'
 
