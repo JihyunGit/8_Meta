@@ -20,6 +20,7 @@ import MetaRecommend
 import realClassification
 import requests
 import new_pos
+from flask_cors import CORS
 
 
 
@@ -184,6 +185,7 @@ def SendFileToUrl(file):
 
 
 app = Flask(__name__)
+CORS(app)
 
 
 @app.route('/')
