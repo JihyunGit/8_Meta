@@ -31,9 +31,6 @@ def load_best_area(furType, colType):
 
     furType = int(FurnitureType[furType])
 
-    print(furType)
-    print(colType)
-
     test = lambda x: ColorType[colType] if ((x > 5) or (x == 0) or (x == 2)) else colType
     colType = test(furType)
 
@@ -43,8 +40,6 @@ def load_best_area(furType, colType):
     print(list(pos_df.T.to_dict()))
 
     pos_list = list(pos_df.T.to_dict().values())
-
-    print(pos_list)
 
     recom_list = []
 
