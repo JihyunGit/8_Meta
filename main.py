@@ -20,7 +20,7 @@ import MetaRecommend
 import realClassification
 import requests
 import new_pos
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 
 
 
@@ -188,10 +188,11 @@ app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
 @app.route('/')
+@cross_origin(origin='*')
 def index():
     return '안녕하세요'
 
-# 로그인
+# 로그인s
 # input : deviceId
 # 중간과정 : DB에서 deviceId로 검색해서 결과 없으면 DB에 디바이스 아이디 저장
 # DB에서 deviceId로 검색해서 맵 결과 있으면 그 결과 가져오기
