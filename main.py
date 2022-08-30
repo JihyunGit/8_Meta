@@ -21,6 +21,7 @@ import realClassification
 import requests
 import new_pos
 from flask_cors import CORS, cross_origin
+from requests import get
 
 
 
@@ -185,12 +186,11 @@ def SendFileToUrl(file):
 
 
 app = Flask(__name__)
-CORS(app, resources={r"*": {"origins": "*"}})
+# CORS(app, resources={r"*": {"origins": "*"}})
 
 # request.headers.add('origin','*')
 
 @app.route('/')
-@cross_origin(origins='*')
 def index():
     return '안녕하세요'
 
@@ -200,7 +200,6 @@ def index():
 # DB에서 deviceId로 검색해서 맵 결과 있으면 그 결과 가져오기
 # output : 사용자의 배치한 인테리어 배치도
 @app.route('/Login', methods=['POST'])
-@cross_origin(origins='*')
 def login():
     print("로그인")
     json_data = request.get_json()
@@ -221,6 +220,12 @@ def login():
     else:
         return MakeResultJson(True, result['Map'])
 
+
+@app.route('/proxy', defaults={'path': ''})
+@app.route('/proxy/<path:path>')
+def proxy(path):
+    print(path)
+    return get(f'{path}').content
 
 # 맵 저장
 # input : DeviceId, Map
@@ -737,10 +742,6 @@ def DeleteUsedDB():
 
 ## --------------------------- 중고거래 게시판 끝 --------------------------
 
-
-@app.before_request
-def before_request():
-    request.headers.add('origin','*')
 
 @app.after_request
 def after_request(response):
