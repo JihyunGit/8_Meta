@@ -187,18 +187,20 @@ def SendFileToUrl(file):
 app = Flask(__name__)
 CORS(app, resources={r"*": {"origins": "*"}})
 
-request.headers.add('origin','*')
+# request.headers.add('origin','*')
 
 @app.route('/')
+@cross_origin(origins='*')
 def index():
     return '안녕하세요'
 
-# 로그인s
+# 로그인
 # input : deviceId
 # 중간과정 : DB에서 deviceId로 검색해서 결과 없으면 DB에 디바이스 아이디 저장
 # DB에서 deviceId로 검색해서 맵 결과 있으면 그 결과 가져오기
 # output : 사용자의 배치한 인테리어 배치도
 @app.route('/Login', methods=['POST'])
+@cross_origin(origins='*')
 def login():
     print("로그인")
     json_data = request.get_json()
@@ -736,7 +738,9 @@ def DeleteUsedDB():
 ## --------------------------- 중고거래 게시판 끝 --------------------------
 
 
-
+@app.before_request
+def before_request():
+    request.headers.add('origin','*')
 
 @app.after_request
 def after_request(response):
