@@ -740,6 +740,27 @@ def DeleteUsedDB():
 
     return result
 
+
+@app.route('/stt')
+def stt():
+    client_id = "k02yljn90d"
+    client_secret = "tg9OSR7RIhfzRriVbV8WxQnTm1C2knZsyXWcodJ4"
+    lang = "Kor"  # 언어 코드 ( Kor )
+    url = "https://naveropenapi.apigw-pub.fin-ntruss.com/recog/v1/stt?lang=" + lang
+    data = open('./audio/hello.wav', 'rb')
+    headers = {
+        "X-NCP-APIGW-API-KEY-ID": client_id,
+        "X-NCP-APIGW-API-KEY": client_secret,
+        "Content-Type": "application/octet-stream"
+    }
+
+    response = requests.post(url, data=data, headers=headers)
+    rescode = response.status_code
+    if (rescode == 200):
+        print(response.text)
+    else:
+        print("Error : " + response.text)
+
 ## --------------------------- 중고거래 게시판 끝 --------------------------
 
 
@@ -751,15 +772,15 @@ def after_request(response):
     return response
 
 # 스케쥴 설정
-#sched = BackgroundScheduler(daemon=True)
+# sched = BackgroundScheduler(daemon=True)
 # sched_result = sched.add_job(Craw.makeJsonItem, 'cron', week='1-4', day_of_week='0-6', minute='2', 'interval')
-#sched.start()
-# sched.add_job(job, 'interval', seconds=3, id="test_2")
-
-# 1분마다
-#sched_result = sched.add_job(MakeJsonToDB, 'cron', minute='*/1')
-# 3시간마다
-#sched_result = sched.add_job(MakeJsonToDB, 'cron', hour='*/3')
+# sched.start()
+# #sched.add_job(job, 'interval', seconds=3, id="test_2")
+#
+# #1분마다
+# sched_result = sched.add_job(MakeJsonToDB, 'cron', minute='*/1')
+# #3시간마다
+# sched_result = sched.add_job(MakeJsonToDB, 'cron', hour='*/3')
 
 #MakeJsonToDB()
 #FromJsonToDB()
